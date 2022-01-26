@@ -79,10 +79,9 @@ public:
     }
 
     void sendServeur(char *requete){
-        cout<<"aaah";
-        int l = 6;
+        strcat(requete, "\r\n");
+        int l = strlen(requete);
         send(sock, requete, l, 0);
-        cout<<"aaa";
         char reponse[L];
         int r;
         r = recv(sock, reponse, l,
@@ -91,7 +90,6 @@ public:
         // reçoit au plus l octets
         // en cas de succès, r contient le nombre d'octets reçus
         cout << reponse << endl;
-
     }
 };
 

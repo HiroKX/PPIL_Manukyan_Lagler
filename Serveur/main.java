@@ -23,7 +23,9 @@ public class main {
                 Socket socket = serveur.accept();
                 noClient++;
                 System.out.println("--Connexion réussie avec le client " + noClient + "--");
+                Interlocuteur interlocuteur = new Interlocuteur(socket, groupe, noClient);
 
+                interlocuteur.start();
             }
         }
         catch (IOException e) {

@@ -5,13 +5,14 @@ public class ExpertRect extends ExpertFormes{
     }
 
     @Override
-    public Formes comprendreFormes(String s) throws Erreur{
+    public boolean comprendreFormes(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("rect")){
+            w.visit(new Rectangle(new Point(10,10),10,10));
             System.out.println("rectangle");
-            return new Rectangle(new Point(10.3,45.2),50, 60);
+            return true;
         }
         else{
-            return null;
+            return false;
         }
     }
 }

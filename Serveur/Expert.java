@@ -1,3 +1,3 @@
 public interface Expert {
-    Formes resoudre(String s) ;
+    boolean resoudre(String s, WindowVisitor w) ;
 }

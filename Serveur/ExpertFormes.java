@@ -7,26 +7,26 @@ public abstract class ExpertFormes implements Expert{
     }
 
     @Override
-    public Formes resoudre(String s) {
-        Formes formes = null;
+    public boolean resoudre(String s, WindowVisitor w) {
+        boolean res = false;
         try {
-            formes = comprendreFormes(s);
+            res = comprendreFormes(s, w);
         } catch (Erreur e) {
             e.printStackTrace();
         }
 
-        if(formes != null){
-            return formes;
+        if(res){
+            return true;
         }
         else{
             if(this.suivant !=null){
-                return this.suivant.resoudre(s);
+                return this.suivant.resoudre(s,w);
             }
             else{
-                return null;
+                return false;
             }
         }
     }
 
-    public abstract Formes comprendreFormes(String s) throws Erreur;
+    public abstract boolean comprendreFormes(String s, WindowVisitor w) throws Erreur;
 }

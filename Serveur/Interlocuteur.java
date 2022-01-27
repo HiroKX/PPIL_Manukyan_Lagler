@@ -29,14 +29,14 @@ public class Interlocuteur extends  Thread{
 
                 /*Affiche la requête*/
                 System.out.println("Le client a envoyé : " + requete);
+                /**
+                /*Traitement demandé
+                String reponse = this.exp.resoudre(requete,w).toString();
 
-                /*Traitement demandé*/
-                String reponse = this.exp.resoudre(requete).toString();
-
-                /*Affiche résultat et ré-envoie le flux traité*/
+                /*Affiche résultat et ré-envoie le flux traité
                 System.out.println(reponse);
                 this.fluxSortant.println(reponse);
-                //sleep(5);  // est-ce utile ?
+                //sleep(5);  // est-ce utile ?*/
             }
         }
         //catch(InterruptedException erreur){}

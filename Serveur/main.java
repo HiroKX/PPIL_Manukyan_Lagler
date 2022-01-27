@@ -1,7 +1,5 @@
+import java.awt.*;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 public class main {
     public static void main(String[] args) throws IOException {
@@ -9,9 +7,10 @@ public class main {
         ExpertFormes exp = null;
         exp = new ExpertCercle(exp);
         exp = new ExpertRect(exp);
-        exp.resoudre("Cercle");
+        WindowVisitor w = new WindowSwing();
+        exp.resoudre("Cercle",w);
+        exp.resoudre("rect",w);
 
-        Window w = new Window();
 
         /*try {
             int portServeur = 9112;

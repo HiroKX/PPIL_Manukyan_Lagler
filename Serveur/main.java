@@ -10,14 +10,9 @@ public class main {
         ExpertFormes exp = null;
         exp = new ExpertCercle(exp);
         exp = new ExpertRect(exp);
-        exp.resoudre("Cercle");
-        //exp.resoudre("rect");
 
-
-
-        /**
         try {
-            int portServeur = 9111;
+            int portServeur = 9112;
             ServerSocket serveur = new ServerSocket(portServeur);
 
             System.out.println("--Serveur Majuscule créé--");
@@ -34,7 +29,7 @@ public class main {
                 Socket socket = serveur.accept();
                 noClient++;
                 System.out.println("--Connexion réussie avec le client " + noClient + "--");
-                Interlocuteur interlocuteur = new Interlocuteur(socket, groupe, noClient);
+                Interlocuteur interlocuteur = new Interlocuteur(socket, groupe, exp);
 
                 interlocuteur.start();
             }
@@ -42,6 +37,6 @@ public class main {
         catch (IOException e) {
             e.printStackTrace();
         }
-         */
+
     }
 }

@@ -81,10 +81,11 @@ public:
     void sendServeur(char *requete){
         strcat(requete, "\r\n");
         int l = strlen(requete);
+        cout << l <<endl;
         send(sock, requete, l, 0);
         char reponse[L];
         int r;
-        r = recv(sock, reponse, l,
+        r = recv(sock, reponse, 200,
                  0);
 
         // reçoit au plus l octets

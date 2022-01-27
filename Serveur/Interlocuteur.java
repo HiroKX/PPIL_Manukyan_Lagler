@@ -9,14 +9,14 @@ public class Interlocuteur extends  Thread{
     BufferedReader fluxEntrant;
     PrintStream fluxSortant;
     Socket socket;
-    int noclient;
+    ExpertFormes exp;
 
-    public Interlocuteur(Socket socket, ThreadGroup groupe, int noclient)throws IOException {
+    public Interlocuteur(Socket socket, ThreadGroup groupe, ExpertFormes exp)throws IOException {
         super(groupe,"ReceveurEnvoyeur");
         this.fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         this.fluxSortant = new PrintStream(socket.getOutputStream());
         this.socket = socket;
-        this.noclient = noclient;
+        this.exp = exp;
     }
 
     @Override
@@ -28,10 +28,10 @@ public class Interlocuteur extends  Thread{
                 requete = requete.trim();
 
                 /*Affiche la requête*/
-                System.out.println("Le client numéro " + this.noclient + " a envoyé : " + requete);
+                System.out.println("Le client a envoyé : " + requete);
 
                 /*Traitement demandé*/
-                String reponse = requete.toUpperCase();
+                String reponse = this.exp.resoudre(requete).toString();
 
                 /*Affiche résultat et ré-envoie le flux traité*/
                 System.out.println(reponse);
@@ -44,7 +44,7 @@ public class Interlocuteur extends  Thread{
             System.err.println("On ne peut pas lire sur le socket provenant du client");
         }
         catch (NullPointerException erreur) {
-            System.out.println("Le client numéro " + this.noclient + " s'est déconnecté.");
+            System.out.println("Le client s'est déconnecté.");
         }
     }
 }

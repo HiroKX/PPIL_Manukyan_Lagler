@@ -1,28 +1,30 @@
 import java.util.ArrayList;
 
-public class Formes {
+public abstract class Formes {
     String nom;
-    ArrayList<Point> lCoords= new ArrayList<Point>();
-    private int rayon;
+    Point p;
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public Point getP() {
+        return p;
+    }
+
+    public void setP(Point p) {
+        this.p = p;
+    }
 
     @Override
     public String toString() {
-        return "Formes de" +
+        return "Formes{" +
                 "nom='" + nom + '\'' +
-                ", lCoords=" + lCoords +
-                ", rayon=" + rayon +
+                ", p=" + p +
                 '}';
-    }
-
-    public Formes(int r, Point x) {
-        this.nom = "Cercle";
-        lCoords.add(x);
-        rayon=r;
-    }
-
-    public Formes( Point x, Point point) {
-        this.nom = "Rectangle";
-        lCoords.add(x);
-        lCoords.add(point);
     }
 }

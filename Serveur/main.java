@@ -6,12 +6,14 @@ import java.net.Socket;
 public class main {
     public static void main(String[] args) throws IOException {
 
-
         ExpertFormes exp = null;
         exp = new ExpertCercle(exp);
         exp = new ExpertRect(exp);
+        exp.resoudre("Cercle");
 
-        try {
+        Window w = new Window();
+
+        /*try {
             int portServeur = 9112;
             ServerSocket serveur = new ServerSocket(portServeur);
 
@@ -36,7 +38,7 @@ public class main {
         }
         catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 }

@@ -5,10 +5,10 @@ public class ExpertCercle extends ExpertFormes{
     }
 
     @Override
-    public Formes comprendreFormes(String s) {
+    public Formes comprendreFormes(String s) throws Erreur{
         if(s.startsWith("Cercle")){
             System.out.println("Cercle");
-            return new Formes(10,new Point(10.3,45.2));
+            return new Cercle(new Point(10.3,45.2), 10);
         }
         else{
             return null;

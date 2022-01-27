@@ -8,7 +8,13 @@ public abstract class ExpertFormes implements Expert{
 
     @Override
     public Formes resoudre(String s) {
-        Formes formes = comprendreFormes(s);
+        Formes formes = null;
+        try {
+            formes = comprendreFormes(s);
+        } catch (Erreur e) {
+            e.printStackTrace();
+        }
+
         if(formes != null){
             return formes;
         }
@@ -22,5 +28,5 @@ public abstract class ExpertFormes implements Expert{
         }
     }
 
-    public abstract Formes comprendreFormes(String s);
+    public abstract Formes comprendreFormes(String s) throws Erreur;
 }

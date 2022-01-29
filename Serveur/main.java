@@ -7,9 +7,14 @@ public class main {
         ExpertFormes exp = null;
         exp = new ExpertCercle(exp);
         exp = new ExpertRect(exp);
-        WindowVisitor w = new WindowSwing();
-        exp.resoudre("Cercle",w);
-        exp.resoudre("rect",w);
+
+        ExpertDessins expD = null;
+        expD = new ExpertSwing(expD);
+        expD = new ExpertJavaFX(expD);
+
+        WindowVisitor w = expD.resoudre("Swing");
+        exp.resoudre("Cercle", w);
+        exp.resoudre("rect", w);
 
 
         /*try {

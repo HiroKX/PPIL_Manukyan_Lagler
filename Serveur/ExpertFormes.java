@@ -29,4 +29,9 @@ public abstract class ExpertFormes implements Expert{
     }
 
     public abstract boolean comprendreFormes(String s, WindowVisitor w) throws Erreur;
+
+    @Override
+    public WindowVisitor resoudre(String s) {
+        return null;
+    }
 }

@@ -35,6 +35,9 @@
 
 .DS_STORE
 Client/cmake-build-debug
+/cmake-build-debug
 serveur/out
 Client/.idea
 serveur/.idea
+CMakeLists.txt
+Client/CMakeLists.txt

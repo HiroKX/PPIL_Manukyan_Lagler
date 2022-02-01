@@ -34,21 +34,18 @@ public class WindowSwing implements WindowVisitor {
 
     @Override
     public void visit(Rectangle rectangle) {
-        System.out.println(" dessin Rect");
         BufferStrategy stratégie = frame.getBufferStrategy();
         Graphics graphics = stratégie.getDrawGraphics();
-        graphics.drawRect(50, 50, 100, 100);
+        graphics.drawRect((int) rectangle.getP().getX(), (int) rectangle.getP().getY()+rectangle.getHauteur(), rectangle.getHauteur(), rectangle.getLargeur());
         stratégie.show();
-
         graphics.dispose();
     }
 
     @Override
     public void visit(Cercle circle) {
-        System.out.println("dessin cercle");
         BufferStrategy stratégie = frame.getBufferStrategy();
         Graphics graphics = stratégie.getDrawGraphics();
-        graphics.drawOval(50, 50, 100, 100);
+        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2), (int) circle.getP().getY(), circle.getRayon(), circle.getRayon());
         stratégie.show();
         graphics.dispose();
     }

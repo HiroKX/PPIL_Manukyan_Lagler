@@ -7,7 +7,12 @@ public class ExpertRect extends ExpertFormes{
     @Override
     public boolean comprendreFormes(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("rect")){
-            w.visit(new Rectangle(new Point(10,10),10,10));
+            String[] coord= s.split("-");
+            w.visit(new Rectangle(new Point(Double.parseDouble(coord[1]),
+                                            Double.parseDouble(coord[2])),
+                                            Integer.parseInt(coord[3]),
+                                            Integer.parseInt(coord[4])));
+
             System.out.println("rectangle");
             return true;
         }

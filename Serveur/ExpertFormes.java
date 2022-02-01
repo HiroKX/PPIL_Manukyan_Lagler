@@ -6,6 +6,12 @@ public abstract class ExpertFormes implements Expert{
         this.suivant = suivant;
     }
 
+    /**
+     * Dessine une forme en fonction de la lib graphique en paramètre
+     * @param s
+     * @param w
+     * @return true si dessiné
+     */
     @Override
     public boolean resoudre(String s, WindowVisitor w) {
         boolean res = false;
@@ -30,6 +36,12 @@ public abstract class ExpertFormes implements Expert{
 
     public abstract boolean comprendreFormes(String s, WindowVisitor w) throws Erreur;
 
+    /**
+     * Méthode non utilisé (hérité de Expert)
+     * Qui sert dans ExpertDessin pour retourner une lib graphique
+     * @param s
+     * @return
+     */
     @Override
     public WindowVisitor resoudre(String s) {
         return null;

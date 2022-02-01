@@ -1,6 +1,6 @@
-public class ExpertSwing extends ExpertDessins{
+public class ExpertSwing extends ExpertLibGraphique {
 
-    public ExpertSwing(ExpertDessins suivant) {
+    public ExpertSwing(ExpertLibGraphique suivant) {
         super(suivant);
     }
 
@@ -8,7 +8,7 @@ public class ExpertSwing extends ExpertDessins{
     public WindowVisitor comprendreDessins(String s) throws Erreur {
         if(s.startsWith("Swing")){
             System.out.println("Swing");
-            return new WindowSwing();
+            return new WindowAWT();
         }
         else{
             return null;

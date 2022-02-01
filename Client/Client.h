@@ -60,7 +60,7 @@ public:
 
         // TODO : Rajouter erreur quand connect pas ok
 
-        cout << "connexion au serveur de déssin réussie " << r << endl;
+        cout << "connexion au serveur réussie " << r << endl;
 
     }
 
@@ -74,15 +74,11 @@ public:
        // TODO : Rajouter erreur quand deconnect pas ok
 
 
-       cout << "Déconnexion au serveur de déssin réussie" << endl;
+       cout << "Déconnexion au serveur réussie" << endl;
 
     }
 
-    void sendServeur(char *requete){
-        strcat(requete, "\r\n");
-        int l = strlen(requete);
-        cout << l <<endl;
-        send(sock, requete, l, 0);
+    void receiveServeur(){
         char reponse[L];
         int r;
         r = recv(sock, reponse, 200,
@@ -91,6 +87,18 @@ public:
         // reçoit au plus l octets
         // en cas de succès, r contient le nombre d'octets reçus
         cout << reponse << endl;
+        sendServeur();
+
+    }
+
+    void sendServeur(){
+        string requete;
+        cout << "Texte à envoyer : ";
+        cin >> requete;
+        requete += "\r\n";
+        int l = requete.length();
+        send(sock, requete.c_str(), l, 0);
+        receiveServeur();
     }
 };
 

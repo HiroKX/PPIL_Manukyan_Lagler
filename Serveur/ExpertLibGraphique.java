@@ -1,11 +1,16 @@
-public abstract class ExpertDessins implements Expert{
+public abstract class ExpertLibGraphique implements Expert{
 
-    private ExpertDessins suivant;
+    private ExpertLibGraphique suivant;
 
-    public ExpertDessins(ExpertDessins suivant){
+    public ExpertLibGraphique(ExpertLibGraphique suivant){
         this.suivant = suivant;
     }
 
+    /**
+     * Retourne la librairie graphique dans laquelle dessiné
+     * @param s
+     * @return Lib graphique
+     */
     @Override
     public WindowVisitor resoudre(String s) {
         WindowVisitor w = null;
@@ -30,6 +35,12 @@ public abstract class ExpertDessins implements Expert{
 
     public abstract WindowVisitor comprendreDessins(String s) throws Erreur;
 
+    /**
+     * Fonction non utilisé qui dessine dans Expert Formes
+     * @param s
+     * @param w
+     * @return
+     */
     @Override
     public boolean resoudre(String s, WindowVisitor w) {
         return false;

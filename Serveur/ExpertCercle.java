@@ -4,6 +4,13 @@ public class ExpertCercle extends ExpertFormes{
         super(suivant);
     }
 
+    /**
+     * Dessine un Cercle
+     * @param s
+     * @param w
+     * @return
+     * @throws Erreur
+     */
     @Override
     public boolean comprendreFormes(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("Cercle")){

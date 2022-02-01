@@ -1,5 +1,6 @@
-import java.awt.*;
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 public class main {
     public static void main(String[] args) throws IOException {
@@ -7,12 +8,21 @@ public class main {
         ExpertFormes exp = null;
         exp = new ExpertCercle(exp);
         exp = new ExpertRect(exp);
-        ExpertDessins expD = null;
-        expD = new ExpertSwing(expD);
 
-        WindowVisitor w = expD.resoudre("Swing");
-        exp.resoudre("Cercle-0-0-50",w);
-        exp.resoudre("rect-0-0-30-30",w);
+        ExpertLibGraphique expD = null;
+        expD = new ExpertSwing(expD);
+        Serveur server = new Serveur();
+        ThreadGroup groupe = server.getGroupe();
+        ServerSocket serveurSocket= server.getServer();
+        int noClient = 0;
+        while (true) {
+            Socket socket = serveurSocket.accept();
+            noClient++;
+            System.out.println("--Connexion réussie avec le client " + noClient + "--");
+            Interlocuteur interlocuteur = new Interlocuteur(socket, groupe, exp, expD);
+            interlocuteur.start();
+        }
+
 
 
         /*try {

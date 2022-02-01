@@ -8,6 +8,8 @@ public class ExpertRect extends ExpertFormes{
     public boolean comprendreFormes(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("rect")){
             String[] coord= s.split("-");
+            if(coord.length != 5)
+                throw new Erreur("Pas assez d'argument passer");
             w.visit(new Rectangle(new Point(Double.parseDouble(coord[1]),
                                             Double.parseDouble(coord[2])),
                                             Integer.parseInt(coord[3]),

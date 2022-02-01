@@ -1,15 +1,14 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferStrategy;
 
-public class WindowSwing implements WindowVisitor {
+public class WindowAWT implements WindowVisitor {
     private Frame frame;
     private BufferStrategy strategie;
     private Graphics graphics;
 
-    public WindowSwing() {
+    public WindowAWT() {
         this.frame = new Frame("Frame toute simple");
         this.frame.setBounds(0, 0, 400, 400);
         this.frame.setVisible(true);

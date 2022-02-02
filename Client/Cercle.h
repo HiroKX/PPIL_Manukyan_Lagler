@@ -11,6 +11,7 @@ class Cercle : public Forme{
     private:
         Point2D point;
         double rayon;
+
     public:
         Cercle(const string &nom, const Point2D &point, double rayon);
         double getRayon() const;

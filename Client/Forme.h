@@ -18,14 +18,10 @@ class Forme {
 
     public:
         Forme(const string &nom, const Point2D &point);
-
-    const string &getNom() const;
-
-    void setNom(const string &nom);
-
-    const Point2D &getPoint() const;
-
-    void setPoint(const Point2D &point);
+        const string &getNom() const;
+        void setNom(const string &nom);
+        const Point2D &getPoint() const;
+        void setPoint(const Point2D &point);
 };
 
 

@@ -30,7 +30,7 @@ public:
             int r;
             WSADATA wsaData;        // structure contenant les données de la librairie winsock à initialiser
 
-            r = WSAStartup(MAKEWORD(2, 0),
+            this->r = WSAStartup(MAKEWORD(2, 0),
                            &wsaData);       // MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
 
 /* en cas de succès, wsaData a été initialisée et l'appel a renvoyé la valeur 0 */
@@ -41,16 +41,16 @@ public:
 
 //---------------------- création socket -------------------------------------------------
 
-            SOCKET sock;  // informations concernant le socket à créer : famille d'adresses acceptées, mode connecté ou non, protocole
+             // informations concernant le socket à créer : famille d'adresses acceptées, mode connecté ou non, protocole
 
             int familleAdresses = AF_INET;         // IPv4
             int typeSocket = SOCK_STREAM;           // mode connecté TCP
             int protocole = IPPROTO_TCP;            // protocole. On peut aussi mettre 0 et la fct choisit le protocole en fct des 2 1ers paramètres
             // pour les valeurs des paramètres : cf. fct socket dans la doc sur winsock
 
-            sock = socket(familleAdresses, typeSocket, protocole);
+            this->sock = socket(familleAdresses, typeSocket, protocole);
 
-            if (sock == INVALID_SOCKET) {
+            if (this->sock == INVALID_SOCKET) {
                 ostringstream oss;
                 oss << "la création du socket a échoué : code d'erreur = " << WSAGetLastError()
                     << endl;    // pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock

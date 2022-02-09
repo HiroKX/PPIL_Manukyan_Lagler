@@ -5,22 +5,20 @@
 #ifndef PPIL_MANUKYAN_LAGLER_TRIANGLE_H
 #define PPIL_MANUKYAN_LAGLER_TRIANGLE_H
 
-
-#include <ostream>
-#include "Point2D.h"
+#include "Vecteur2D.h"
 #include "Forme.h"
 
 class Triangle : public Forme {
     private:
-        Point2D point2;
-        Point2D point3;
+        Vecteur2D vecteur2;
+        Vecteur2D vecteur3;
 
     public:
-        Triangle(const string &nom, const Point2D &point, const Point2D &point2, const Point2D &point3);
-        const Point2D &getPoint2() const;
-        void setPoint2(const Point2D &point2);
-        const Point2D &getPoint3() const;
-        void setPoint3(const Point2D &point3);
+        Triangle(const string &nom, const char* vecteur, const char* vecteur2, const char* vecteur3);
+        const Vecteur2D &getVecteur2() const;
+        void setVecteur2(const Vecteur2D &vecteur2);
+        const Vecteur2D &getVecteur3() const;
+        void setVecteur3(const Vecteur2D &vecteur3);
         string toString() const;
 };
 

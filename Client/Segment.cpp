@@ -4,18 +4,18 @@
 
 #include "Segment.h"
 
-Segment::Segment(const string &nom, const Point2D &point, const Point2D &point2) : Forme(nom, point), point2(point2) {}
+Segment::Segment(const string &nom, const char * vecteur, const char * vecteur2) : Forme(nom, vecteur), vecteur2(vecteur2) {}
 
-const Point2D &Segment::getPoint2() const {
-    return point2;
+const Vecteur2D &Segment::getVecteur2() const {
+    return vecteur2;
 }
 
-void Segment::setPoint2(const Point2D &point2) {
-    Segment::point2 = point2;
+void Segment::setVecteur2(const Vecteur2D &point2) {
+    Segment::vecteur2 = point2;
 }
 
 string Segment::toString() const {
-    return getNom() + " " + getPoint().toString() + " : " + getPoint2().toString();
+    return getNom() + " : " + getVecteur().toString() + " : " + getVecteur2().toString();
 }
 
 ostream &operator<<(ostream &os, const Segment &segment) {

@@ -4,26 +4,26 @@
 
 #include "Triangle.h"
 
-Triangle::Triangle(const string &nom, const Point2D &point, const Point2D &point2, const Point2D &point3) : Forme(nom, point), point2(point2), point3(point3) {}
+Triangle::Triangle(const string &nom, const char* vecteur, const char* vecteur2, const char* vecteur3) : Forme(nom, vecteur), vecteur2(vecteur2), vecteur3(vecteur3) {}
 
-const Point2D &Triangle::getPoint2() const {
-    return point2;
+const Vecteur2D &Triangle::getVecteur2() const {
+    return vecteur2;
 }
 
-void Triangle::setPoint2(const Point2D &point2) {
-    Triangle::point2 = point2;
+void Triangle::setVecteur2(const Vecteur2D &vecteur2) {
+    Triangle::vecteur2 = vecteur2;
 }
 
-const Point2D &Triangle::getPoint3() const {
-    return point3;
+const Vecteur2D &Triangle::getVecteur3() const {
+    return vecteur3;
 }
 
-void Triangle::setPoint3(const Point2D &point3) {
-    Triangle::point3 = point3;
+void Triangle::setVecteur3(const Vecteur2D &vecteur3) {
+    Triangle::vecteur3 = vecteur3;
 }
 
 string Triangle::toString() const {
-    return getNom() + " p1:" + getPoint().toString() + " p2" + getPoint2().toString() +" p3" + getPoint3().toString();
+    return getNom() + " v1" + getVecteur().toString() + " v2" + getVecteur2().toString() +" v3" + getVecteur3().toString();
 }
 
 ostream &operator<<(ostream &os, const Triangle &triangle) {

@@ -4,7 +4,7 @@
 
 #include "Forme.h"
 
-Forme::Forme(const string &nom, const Point2D &point) : nom(nom), point(point) {}
+Forme::Forme(const string &nom, const char * s) : nom(nom), vecteur(s) {}
 
 const string &Forme::getNom() const {
     return nom;
@@ -14,10 +14,10 @@ void Forme::setNom(const string &nom) {
     Forme::nom = nom;
 }
 
-const Point2D &Forme::getPoint() const {
-    return point;
+const Vecteur2D &Forme::getVecteur() const {
+    return vecteur;
 }
 
-void Forme::setPoint(const Point2D &point) {
-    Forme::point = point;
+void Forme::setVecteur(const Vecteur2D &vecteur) {
+    Forme::vecteur = vecteur;
 }

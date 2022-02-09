@@ -5,11 +5,10 @@
 /**
 mise en oeuvre de la classe Erreur
 */
-
+#include "Erreur.h"
 #include <cstring>
 #include <iostream>
 #include <string>
-#include "Erreur.h"
 using namespace std;
 
 Erreur::Erreur()

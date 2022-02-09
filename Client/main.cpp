@@ -22,8 +22,10 @@ int main(){
 
         ClientWin cw;
         cw.lancerClient();
-        cw.receiveServeur();
         cw.sendServeur();
+        while(true){
+            cout<< " ";
+        }
         //cw.receiveServeur();
 
         return 0;

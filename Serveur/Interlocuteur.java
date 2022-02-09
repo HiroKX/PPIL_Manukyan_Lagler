@@ -28,7 +28,7 @@ public class Interlocuteur extends  Thread{
     public void run() {
         try {
             while(!isInterrupted()){
-                this.fluxSortant.println("Veuillez entrer une lib graphique parmis : 'Swing' et une taille, de cette façon : 'Swing' ou pour desinner : 'Cercle-10-10-30'");
+                //this.fluxSortant.println("Veuillez entrer une lib graphique parmis : 'Swing' et une taille, de cette façon : 'Swing' ou pour desinner : 'Cercle-10-10-30'");
                 /*Lit le flux et le nettoye*/
                 String requete = fluxEntrant.readLine();
                 requete = requete.trim();

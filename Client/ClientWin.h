@@ -31,7 +31,7 @@ public:
             WSADATA wsaData;        // structure contenant les données de la librairie winsock à initialiser
 
             this->r = WSAStartup(MAKEWORD(2, 0),
-                           &wsaData);       // MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
+                                 &wsaData);       // MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
 
 /* en cas de succès, wsaData a été initialisée et l'appel a renvoyé la valeur 0 */
 
@@ -41,7 +41,7 @@ public:
 
 //---------------------- création socket -------------------------------------------------
 
-             // informations concernant le socket à créer : famille d'adresses acceptées, mode connecté ou non, protocole
+            // informations concernant le socket à créer : famille d'adresses acceptées, mode connecté ou non, protocole
 
             int familleAdresses = AF_INET;         // IPv4
             int typeSocket = SOCK_STREAM;           // mode connecté TCP
@@ -84,8 +84,29 @@ public:
 
             cout << "connexion au serveur réussie" << endl;
 
-        }catch(Erreur e){
+        } catch (Erreur e) {
+            cout << e << endl;
+        }
+    }
 
+    void shutClient() {
+        try {
+            r = shutdown(sock,
+                         SD_BOTH);                            // on coupe la connexion pour l'envoi et la réception
+            // Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
+
+            if (r == SOCKET_ERROR)
+                throw Erreur("la coupure de connexion a échoué");
+
+            r = closesocket(
+                    sock);                          // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
+            if (r) throw Erreur("La fermeture du socket a échoué");
+            cout << "connexion au serveur réussie" << endl;
+
+        } catch (Erreur e) {
+
+            WSACleanup();
+            cout << "arrêt normal du client" << endl;
         }
     }
 
@@ -108,9 +129,13 @@ public:
         string requete;
         cout << "Texte à envoyer : ";
         cin >> requete;
+        if (requete == "quitter") {
+
+
+        }
         requete += "\r\n";
         int l = requete.length();
-        send(sock, requete.c_str(), l, 0);
+        send(this->sock, requete.c_str(), l, 0);
 
         if (r == SOCKET_ERROR)
             throw Erreur("échec de l'envoi de la requête");

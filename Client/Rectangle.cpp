@@ -4,8 +4,7 @@
 
 #include "Rectangle.h"
 
-Rectangle::Rectangle(const string &nom, const Point2D &point, double hauteur, double largeur)
-        : Forme(nom, point), hauteur(hauteur), largeur(largeur) {}
+Rectangle::Rectangle(const string &nom, const char *s, double hauteur, double largeur) : Forme(nom, s), hauteur(hauteur), largeur(largeur) {}
 
 double Rectangle::getHauteur() const {
     return hauteur;
@@ -24,7 +23,7 @@ void Rectangle::setLargeur(double largeur) {
 }
 
 string Rectangle::toString() const {
-    return getNom() + " " + getPoint().toString() + " : hauteur=" + to_string(getHauteur()) + ", largeur=" + to_string(getLargeur());
+    return getNom() + " " + getVecteur().toString() + " : hauteur=" + to_string(getHauteur()) + ", largeur=" + to_string(getLargeur());
 }
 
 ostream &operator<<(ostream &os, const Rectangle &rectangle) {

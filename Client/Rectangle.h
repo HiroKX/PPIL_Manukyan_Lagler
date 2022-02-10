@@ -5,10 +5,9 @@
 #ifndef PPIL_MANUKYAN_LAGLER_RECTANGLE_H
 #define PPIL_MANUKYAN_LAGLER_RECTANGLE_H
 
-
-#include <ostream>
-#include "Point2D.h"
+#include "Vecteur2D.h"
 #include "Forme.h"
+
 
 class Rectangle : public Forme{
     private:
@@ -16,7 +15,8 @@ class Rectangle : public Forme{
         double largeur;
 
     public:
-        Rectangle(const string &nom, const Point2D &point, double hauteur, double largeur);
+
+        Rectangle(const string &nom, const char *s, double hauteur, double largeur);
         double getHauteur() const;
         void setHauteur(double hauteur);
         double getLargeur() const;

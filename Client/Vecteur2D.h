@@ -38,6 +38,7 @@ public:
     inline const Vecteur2D operator - () const;
 
     operator string() const;
+    inline string toString() const;
 
 };
 
@@ -54,8 +55,8 @@ inline Vecteur2D::Vecteur2D(const char * s){
     string x = str.substr(2, str.find(',') - 2);
     string y = str.substr(str.find(',') + 2, str.find(')') - str.find(',') - 2);
 
-    this->x = stoi(x);
-    this->y = stoi(y);
+    this->x = stod(x);
+    this->y = stod(y);
 }
 
 inline const Vecteur2D Vecteur2D::operator + (const Vecteur2D & u) const
@@ -81,17 +82,20 @@ inline const Vecteur2D operator -(const Vecteur2D & u, const Vecteur2D & v) {
     return Vecteur2D( u.x - v.x, u.y - v.y);
 }
 
-Vecteur2D::operator string() const
+inline Vecteur2D::operator string() const//
 {
     ostringstream os;
     os << "( " << x <<", " << y << ")";
     return os.str();
 }
 
-ostream & operator << (ostream & os, const Vecteur2D & u)
+inline string Vecteur2D::toString() const{
+    return "( " + to_string(x) + ", " + to_string(y) + ")";
+}
+
+inline ostream &operator<<(ostream & os, const Vecteur2D & u)//
 {
-    os << (string) u;
-    return os;
+    return os << u.toString();
 }
 
 #endif //PPIL_MANUKYAN_LAGLER_VECTEUR2D_H

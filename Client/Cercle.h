@@ -5,15 +5,17 @@
 #ifndef PPIL_MANUKYAN_LAGLER_CERCLE_H
 #define PPIL_MANUKYAN_LAGLER_CERCLE_H
 
+#include "Vecteur2D.h"
 #include "Forme.h"
+
+
 
 class Cercle : public Forme{
     private:
-        Point2D point;
         double rayon;
 
     public:
-        Cercle(const string &nom, const Point2D &point, double rayon);
+        Cercle(const string &nom, const char * vecteur, double rayon);
         double getRayon() const;
         void setRayon(double rayon);
         string toString() const;

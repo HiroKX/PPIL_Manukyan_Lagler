@@ -5,19 +5,19 @@
 #ifndef PPIL_MANUKYAN_LAGLER_SEGMENT_H
 #define PPIL_MANUKYAN_LAGLER_SEGMENT_H
 
-
-#include <ostream>
+#include "Vecteur2D.h"
 #include "Forme.h"
 
 class Segment : public Forme{
 private:
-    Point2D point2;
+    Vecteur2D vecteur2;
+
 public:
-    Segment(const string &nom, const Point2D &point, const Point2D &point2);
+    Segment(const string &nom, const char * vecteur, const char * vecteur2);
 
-    const Point2D &getPoint2() const;
+    const Vecteur2D &getVecteur2() const;
 
-    void setPoint2(const Point2D &point2);
+    void setVecteur2(const Vecteur2D &vecteur2);
     string toString() const;
 
 };

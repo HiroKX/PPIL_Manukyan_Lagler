@@ -7,22 +7,21 @@
 
 #include <string>
 #include <ostream>
-#include "Point2D.h"
+#include "Vecteur2D.h"
 
 using namespace std;
 
 class Forme {
     private:
         string nom;
-        Point2D point;
+        Vecteur2D vecteur;
 
     public:
-        Forme(const string &nom, const Point2D &point);
+        Forme(const string &nom, const char * s);
         const string &getNom() const;
         void setNom(const string &nom);
-        const Point2D &getPoint() const;
-        void setPoint(const Point2D &point);
+        const Vecteur2D &getVecteur() const;
+        void setVecteur(const Vecteur2D &vecteur);
 };
-
 
 #endif //PPIL_MANUKYAN_LAGLER_FORME_H

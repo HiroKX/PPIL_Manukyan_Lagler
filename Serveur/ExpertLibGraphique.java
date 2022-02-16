@@ -16,7 +16,7 @@ public abstract class ExpertLibGraphique implements Expert{
         WindowVisitor w = null;
         try {
             w = comprendreDessins(s);
-        } catch (Erreur e) {
+        } catch (Erreur e) { //TODO: à déplacer plus haut / un throw?
             e.printStackTrace();
         }
 

@@ -16,8 +16,8 @@ public abstract class ExpertFormes implements Expert{
     public boolean resoudre(String s, WindowVisitor w) {
         boolean res = false;
         try {
-            res = comprendreFormes(s, w);
-        } catch (Erreur e) {
+            res = dessinerForme(s, w);
+        } catch (Erreur e) {//TODO
             e.printStackTrace();
         }
 
@@ -34,7 +34,7 @@ public abstract class ExpertFormes implements Expert{
         }
     }
 
-    public abstract boolean comprendreFormes(String s, WindowVisitor w) throws Erreur;
+    public abstract boolean dessinerForme(String s, WindowVisitor w) throws Erreur;
 
     /**
      * Méthode non utilisé (hérité de Expert)

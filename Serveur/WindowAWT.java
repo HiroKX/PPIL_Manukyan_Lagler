@@ -44,7 +44,7 @@ public class WindowAWT implements WindowVisitor {
     public void visit(Cercle circle) {
         BufferStrategy stratégie = frame.getBufferStrategy();
         Graphics graphics = stratégie.getDrawGraphics();
-        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2), (int) circle.getP().getY(), circle.getRayon(), circle.getRayon());
+        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2), (int) circle.getP().getY()-(circle.getRayon()/2), circle.getRayon(), circle.getRayon());
         stratégie.show();
         graphics.dispose();
     }

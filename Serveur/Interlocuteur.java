@@ -33,7 +33,7 @@ public class Interlocuteur extends  Thread{
                 String requete = fluxEntrant.readLine();
                 requete = requete.trim();
                 if(nbRequete ==0){
-                    w = expD.resoudre(requete);
+                    w = expD.resoudre(requete);//TODO : peut t'on se debarasser du test?
                 }
                 else{
                     exp.resoudre(requete,w);

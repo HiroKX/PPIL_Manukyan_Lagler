@@ -1,0 +1,4 @@
+Cercle, Groupe... herite de Forme
+Groupe est composer de Forme
+L'enregistrement se fait côté Client
+Vecteur2D v(1.5, 5), pas de pointeur sur un Vecteur2D (new), même chose pour les Matrices

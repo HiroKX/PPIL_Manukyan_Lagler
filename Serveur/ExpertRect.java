@@ -5,7 +5,7 @@ public class ExpertRect extends ExpertFormes{
     }
 
     @Override
-    public boolean comprendreFormes(String s, WindowVisitor w) throws Erreur{
+    public boolean dessinerForme(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("rect")){
             String[] coord= s.split("-");
             if(coord.length != 5)

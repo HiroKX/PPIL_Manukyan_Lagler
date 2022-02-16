@@ -12,5 +12,5 @@ public interface Expert {
      * @param s
      * @return
      */
-    WindowVisitor resoudre(String s);
+    WindowVisitor resoudre(String s);//TODO: à éliminer ?
 }

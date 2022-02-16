@@ -11,6 +11,7 @@ public class main {
 
         ExpertLibGraphique expD = null;
         expD = new ExpertSwing(expD);
+
         Serveur server = new Serveur();
         ThreadGroup groupe = server.getGroupe();
         ServerSocket serveurSocket= server.getServer();

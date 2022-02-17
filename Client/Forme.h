@@ -13,13 +13,10 @@ using namespace std;
 
 class Forme {
     private:
-        string nom;
         Vecteur2D vecteur;
 
     public:
-        Forme(const string &nom, const char * s);
-        const string &getNom() const;
-        void setNom(const string &nom);
+        Forme(const char * s);
         const Vecteur2D &getVecteur() const;
         void setVecteur(const Vecteur2D &vecteur);
 };

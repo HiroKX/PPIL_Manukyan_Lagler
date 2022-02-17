@@ -51,6 +51,7 @@ inline const Vecteur2D operator *(const double & a, const Vecteur2D & u) {
 inline  Vecteur2D::Vecteur2D(const double & x, const double & y): x(x),y(y){}
 
 inline Vecteur2D::Vecteur2D(const char * s){
+    //cout << "deeguzhduzidijzdojdzodzjjodzjozdjozjodoj" << endl;
     string str = string(s);
     string x = str.substr(2, str.find(',') - 2);
     string y = str.substr(str.find(',') + 2, str.find(')') - str.find(',') - 2);

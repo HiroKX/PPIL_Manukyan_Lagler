@@ -13,7 +13,7 @@ private:
     Vecteur2D vecteur2;
 
 public:
-    Segment(const string &nom, const char * vecteur, const char * vecteur2);
+    Segment(const char * vecteur, const char * vecteur2);
 
     const Vecteur2D &getVecteur2() const;
 

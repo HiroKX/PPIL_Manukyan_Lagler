@@ -16,7 +16,7 @@ class Rectangle : public Forme{
 
     public:
 
-        Rectangle(const string &nom, const char *s, double hauteur, double largeur);
+        Rectangle(const char *s, double hauteur, double largeur);
         double getHauteur() const;
         void setHauteur(double hauteur);
         double getLargeur() const;

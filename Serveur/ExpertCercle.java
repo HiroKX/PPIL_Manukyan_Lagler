@@ -30,7 +30,7 @@ public class ExpertCercle extends ExpertFormes{
         }
     }
 
-    public boolean dessinerForme1(String s, WindowVisitor1 w) throws Erreur{
+/*    public boolean dessinerForme1(String s, WindowVisitor1 w) throws Erreur{
         if(s.startsWith("Cercle")){
             String[] coord = s.split("-");
             if(coord.length != 4)
@@ -46,5 +46,5 @@ public class ExpertCercle extends ExpertFormes{
         else{
             return false;
         }
-    }
+    }*/
 }

@@ -15,7 +15,7 @@ class Cercle : public Forme{
         double rayon;
 
     public:
-        Cercle(const string &nom, const char * vecteur, double rayon);
+        Cercle(const char * vecteur, double rayon);
         double getRayon() const;
         void setRayon(double rayon);
         string toString() const;

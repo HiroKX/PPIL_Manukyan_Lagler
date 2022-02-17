@@ -4,7 +4,7 @@
 
 #include "Cercle.h"
 
-Cercle::Cercle(const string &nom, const char* vecteur, double rayon) : Forme(nom, vecteur), rayon(rayon) {}
+Cercle::Cercle(const char* vecteur, double rayon) : Forme(vecteur), rayon(rayon) {}
 
 double Cercle::getRayon() const {
     return rayon;
@@ -15,7 +15,7 @@ void Cercle::setRayon(double rayon) {
 }
 
 string Cercle::toString() const {
-    return getNom() + " " + getVecteur().toString() + " : r=" + to_string(getRayon());
+    return "Cercle " + getVecteur().toString() + " : r=" + to_string(getRayon());
 }
 
 ostream &operator<<(ostream &os, const Cercle &cercle) {

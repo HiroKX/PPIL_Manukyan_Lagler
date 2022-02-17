@@ -1,6 +1,9 @@
-
+#include <vector>
+#include <string>
 #include "Erreur.h"     // ma petite classe d'erreur personnelle
 #include "ClientWin.h"
+#include "Forme.h"
+#include "Cercle.h"
 
 
 using namespace std;
@@ -20,13 +23,17 @@ int main(){
     c.receiveServeur();
     c.shutClient();*/
 
-        ClientWin cw;
+    string s = "Cerlce-10-50-60";
+    Cercle c("( 10, 50)", 50);
+    cout << c.toString() << endl;
+
+        /*ClientWin cw;
         cw.lancerClient();
         cw.sendServeur();
         while(true){
             cw.receiveServeur();
             cw.sendServeur();
-        }
+        }*/
         //cw.receiveServeur();
 
         return 0;

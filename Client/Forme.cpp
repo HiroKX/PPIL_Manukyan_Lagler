@@ -4,15 +4,7 @@
 
 #include "Forme.h"
 
-Forme::Forme(const string &nom, const char * s) : nom(nom), vecteur(s) {}
-
-const string &Forme::getNom() const {
-    return nom;
-}
-
-void Forme::setNom(const string &nom) {
-    Forme::nom = nom;
-}
+Forme::Forme(const char * s) : vecteur(s) {}
 
 const Vecteur2D &Forme::getVecteur() const {
     return vecteur;

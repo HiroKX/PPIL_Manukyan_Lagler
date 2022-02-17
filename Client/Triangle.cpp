@@ -4,7 +4,7 @@
 
 #include "Triangle.h"
 
-Triangle::Triangle(const string &nom, const char* vecteur, const char* vecteur2, const char* vecteur3) : Forme(nom, vecteur), vecteur2(vecteur2), vecteur3(vecteur3) {}
+Triangle::Triangle(const char* vecteur, const char* vecteur2, const char* vecteur3) : Forme(vecteur), vecteur2(vecteur2), vecteur3(vecteur3) {}
 
 const Vecteur2D &Triangle::getVecteur2() const {
     return vecteur2;
@@ -23,7 +23,7 @@ void Triangle::setVecteur3(const Vecteur2D &vecteur3) {
 }
 
 string Triangle::toString() const {
-    return getNom() + " v1" + getVecteur().toString() + " v2" + getVecteur2().toString() +" v3" + getVecteur3().toString();
+    return "Triangle v1" + getVecteur().toString() + " v2" + getVecteur2().toString() +" v3" + getVecteur3().toString();
 }
 
 ostream &operator<<(ostream &os, const Triangle &triangle) {

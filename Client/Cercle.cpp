@@ -18,6 +18,10 @@ string Cercle::toString() const {
     return "Cercle " + getVecteur().toString() + " : r=" + to_string(getRayon());
 }
 
+void Cercle::translation(Vecteur2D v) {
+    //TODO
+}
+
 ostream &operator<<(ostream &os, const Cercle &cercle) {
     return os << cercle.toString();
 }

@@ -19,6 +19,8 @@ class Forme {
         Forme(const char * s);
         const Vecteur2D &getVecteur() const;
         void setVecteur(const Vecteur2D &vecteur);
+
+        virtual void translation(Vecteur2D v) = 0;
 };
 
 #endif //PPIL_MANUKYAN_LAGLER_FORME_H

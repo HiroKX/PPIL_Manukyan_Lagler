@@ -19,6 +19,8 @@ class Cercle : public Forme{
         double getRayon() const;
         void setRayon(double rayon);
         string toString() const;
+
+        void translation(Vecteur2D v) override;
 };
 
     ostream &operator<<(ostream &os, const Cercle &cercle);

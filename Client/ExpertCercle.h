@@ -8,8 +8,8 @@
 #include "ExpertForme.h"
 
 class ExpertCercle : public ExpertForme{
-public:
-    Forme * retrouverForme(string s) override;
+    public:
+        Forme * retrouverForme(string s) override;
 };
 
 

@@ -20,6 +20,8 @@ class Triangle : public Forme {
         const Vecteur2D &getVecteur3() const;
         void setVecteur3(const Vecteur2D &vecteur3);
         string toString() const;
+
+        void translation(Vecteur2D v) override;
 };
 
     ostream &operator<<(ostream &os, const Triangle &triangle);

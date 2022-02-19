@@ -20,6 +20,8 @@ public:
     void setVecteur2(const Vecteur2D &vecteur2);
     string toString() const;
 
+    void translation(Vecteur2D v) override;
+
 };
     ostream &operator<<(ostream &os, const Segment &segment);
 

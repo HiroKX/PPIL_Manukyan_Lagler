@@ -29,3 +29,9 @@ string Triangle::toString() const {
 ostream &operator<<(ostream &os, const Triangle &triangle) {
     return os << triangle.toString();
 }
+
+void Triangle::translation(Vecteur2D v) {
+    setVecteur(getVecteur() + v);
+    setVecteur2(getVecteur2() + v);
+    setVecteur3(getVecteur3() + v);
+}

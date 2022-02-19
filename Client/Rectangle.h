@@ -22,6 +22,8 @@ class Rectangle : public Forme{
         double getLargeur() const;
         void setLargeur(double largeur);
         string toString() const;
+
+        void translation(Vecteur2D v) override;
 };
 
     ostream &operator<<(ostream &os, const Rectangle &rectangle);

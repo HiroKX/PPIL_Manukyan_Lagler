@@ -29,3 +29,7 @@ string Rectangle::toString() const {
 ostream &operator<<(ostream &os, const Rectangle &rectangle) {
     return os << rectangle.toString();
 }
+
+void Rectangle::translation(Vecteur2D v) {
+    setVecteur(getVecteur() + v);
+}

@@ -21,3 +21,8 @@ string Segment::toString() const {
 ostream &operator<<(ostream &os, const Segment &segment) {
     return os << segment.toString();
 }
+
+void Segment::translation(Vecteur2D v) {
+    setVecteur(getVecteur() + v);
+    setVecteur2(getVecteur2() + v);
+}

@@ -3,6 +3,7 @@
 //
 
 #include "Cercle.h"
+#include "Matrice2x2.h"
 
 Cercle::Cercle(const char* vecteur, double rayon) : Forme(vecteur), rayon(rayon) {}
 
@@ -22,6 +23,11 @@ ostream &operator<<(ostream &os, const Cercle &cercle) {
     return os << cercle.toString();
 }
 
-void Cercle::translation(Vecteur2D v) {
+void Cercle::translation(const Vecteur2D& v) {
     setVecteur(getVecteur() + v);
+}
+
+void Cercle::rotation(double rot, const Vecteur2D& v) {
+    Matrice2x2 m(rot);
+    m = m * ((getVecteur() - v) + v);//TODO
 }

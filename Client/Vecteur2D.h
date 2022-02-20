@@ -8,7 +8,6 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include "Matrice.h"
 
 using namespace std;
 
@@ -41,9 +40,10 @@ public:
     operator string() const;
     inline string toString() const;
 
+/*    const void translation(const Vecteur2D& v) const;
     const Vecteur2D rotation(const Vecteur2D& V, const double rad, const Vecteur2D& invariant);
-    const Vecteur2D homotetie(const Vecteur2D& V, const double k, const Vecteur2D& invariant);
-    const Vecteur2D translation(const Vecteur2D& V, const Vecteur2D& u);
+    const Vecteur2D homotetie(const Vecteur2D& V, const double k, const Vecteur2D& invariant);*/
+
 
 };
 
@@ -88,23 +88,6 @@ inline Vecteur2D::operator string() const//
 
 inline string Vecteur2D::toString() const{
     return "( " + to_string(x) + ", " + to_string(y) + ")";
-}
-
-const Vecteur2D Vecteur2D::rotation(const Vecteur2D& V, const double rad, const Vecteur2D& invariant)
-{
-    /*Matrice m(2, 2);
-    return Vecteur2D(m * (V - invariant) + invariant);*/
-    return nullptr;
-}
-
-const Vecteur2D Vecteur2D::homotetie(const Vecteur2D& V, const double k, const Vecteur2D& invariant)
-{
-    return Vecteur2D(k * V + (1 - k) * invariant);
-}
-
-const Vecteur2D Vecteur2D::translation(const Vecteur2D& v, const Vecteur2D& u)
-{
-    return Vecteur2D(v + u);
 }
 
 inline ostream &operator<<(ostream & os, const Vecteur2D & u)//

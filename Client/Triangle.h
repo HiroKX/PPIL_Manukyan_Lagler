@@ -21,7 +21,8 @@ class Triangle : public Forme {
         void setVecteur3(const Vecteur2D &vecteur3);
         string toString() const;
 
-        void translation(Vecteur2D v) override;
+        void translation(const Vecteur2D& v) override;
+        void rotation(double rot, const Vecteur2D& v) override;
 };
 
     ostream &operator<<(ostream &os, const Triangle &triangle);

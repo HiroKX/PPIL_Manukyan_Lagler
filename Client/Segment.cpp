@@ -22,7 +22,11 @@ ostream &operator<<(ostream &os, const Segment &segment) {
     return os << segment.toString();
 }
 
-void Segment::translation(Vecteur2D v) {
+void Segment::translation(const Vecteur2D& v) {
     setVecteur(getVecteur() + v);
     setVecteur2(getVecteur2() + v);
+}
+
+void Segment::rotation(double rot, const Vecteur2D& v) {
+
 }

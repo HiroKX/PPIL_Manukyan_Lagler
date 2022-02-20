@@ -1,10 +1,5 @@
-#include <vector>
-#include <string>
 #include "Erreur.h"     // ma petite classe d'erreur personnelle
-#include "ClientWin.h"
-#include "Forme.h"
-#include "Cercle.h"
-
+#include "Matrice2x2.h"
 
 using namespace std;
 
@@ -23,9 +18,15 @@ int main(){
     c.receiveServeur();
     c.shutClient();*/
 
-    string s = "Cerlce-10-50-60";
+    /*string s = "Cerlce-10-50-60";
     Cercle c("( 10, 50)", 50);
-    cout << c.toString() << endl;
+    cout << c.toString() << endl;*/
+
+    /*Matrice2x2 m(5);
+    cout << m << endl;
+    Vecteur2D v(1, 10);
+    Matrice2x2 a = m * v;
+    cout << a << endl;*/
 
         /*ClientWin cw;
         cw.lancerClient();

@@ -4,6 +4,8 @@
 
 #include "Forme.h"
 
+Forme::Forme() = default;
+
 Forme::Forme(const char * s) : vecteur(s) {}
 
 const Vecteur2D &Forme::getVecteur() const {
@@ -13,3 +15,5 @@ const Vecteur2D &Forme::getVecteur() const {
 void Forme::setVecteur(const Vecteur2D &vecteur) {
     Forme::vecteur = vecteur;
 }
+
+

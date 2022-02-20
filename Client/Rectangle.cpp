@@ -30,6 +30,10 @@ ostream &operator<<(ostream &os, const Rectangle &rectangle) {
     return os << rectangle.toString();
 }
 
-void Rectangle::translation(Vecteur2D v) {
+void Rectangle::translation(const Vecteur2D& v) {
     setVecteur(getVecteur() + v);
+}
+
+void Rectangle::rotation(double rot, const Vecteur2D& v) {
+
 }

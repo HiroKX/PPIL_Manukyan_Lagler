@@ -23,7 +23,8 @@ class Rectangle : public Forme{
         void setLargeur(double largeur);
         string toString() const;
 
-        void translation(Vecteur2D v) override;
+        void translation(const Vecteur2D& v) override;
+        void rotation(double rot, const Vecteur2D& v) override;
 };
 
     ostream &operator<<(ostream &os, const Rectangle &rectangle);

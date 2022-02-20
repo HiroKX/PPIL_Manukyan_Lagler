@@ -8,8 +8,6 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
-
-
 class Cercle : public Forme{
     private:
         double rayon;
@@ -20,7 +18,8 @@ class Cercle : public Forme{
         void setRayon(double rayon);
         string toString() const;
 
-        void translation(Vecteur2D v) override;
+        void translation(const Vecteur2D& v) override;
+        void rotation(double rot, const Vecteur2D& v) override;
 };
 
     ostream &operator<<(ostream &os, const Cercle &cercle);

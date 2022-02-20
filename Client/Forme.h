@@ -16,11 +16,13 @@ class Forme {
         Vecteur2D vecteur;
 
     public:
+        Forme();
         Forme(const char * s);
         const Vecteur2D &getVecteur() const;
         void setVecteur(const Vecteur2D &vecteur);
 
-        virtual void translation(Vecteur2D v) = 0;
+        virtual void translation(const Vecteur2D& v) = 0;
+        virtual void rotation(double rot, const Vecteur2D& v) = 0;
 };
 
 #endif //PPIL_MANUKYAN_LAGLER_FORME_H

@@ -6,8 +6,5 @@
 
 GroupeForme::GroupeForme() = default;
 
-void GroupeForme::addForme(Forme f) {
-    this->groupe.push_back(f);
-}
 
 

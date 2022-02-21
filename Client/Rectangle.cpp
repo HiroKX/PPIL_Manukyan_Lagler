@@ -34,6 +34,10 @@ void Rectangle::translation(const Vecteur2D& v) {
     setVecteur(getVecteur() + v);
 }
 
-void Rectangle::rotation(double rot, const Vecteur2D& v) {
+void Rectangle::rotation(const double rot, const Vecteur2D& v) {
 
+}
+
+Vecteur2D Rectangle::getCentre() {
+    return Vecteur2D();
 }

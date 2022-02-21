@@ -14,8 +14,6 @@ class GroupeForme : public Forme{
 
     public:
         GroupeForme();
-        void addForme(Forme f);
 };
-
 
 #endif //CLIENT_GROUPEFORME_H

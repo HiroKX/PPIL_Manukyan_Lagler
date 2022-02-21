@@ -24,7 +24,9 @@ class Rectangle : public Forme{
         string toString() const;
 
         void translation(const Vecteur2D& v) override;
-        void rotation(double rot, const Vecteur2D& v) override;
+        void rotation(const double rot, const Vecteur2D& v) override;
+
+        Vecteur2D getCentre() override;
 };
 
     ostream &operator<<(ostream &os, const Rectangle &rectangle);

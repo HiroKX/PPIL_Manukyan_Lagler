@@ -1,5 +1,6 @@
 #include "Erreur.h"     // ma petite classe d'erreur personnelle
 #include "Matrice2x2.h"
+#include "ClientWin.h"
 
 using namespace std;
 
@@ -11,12 +12,12 @@ using namespace std;
 
 #define L 200
 int main(){
-    /*cin.clear();
-    Client c;
+    cin.clear();
+    ClientWin c;
     c.lancerClient();
     char requete[L];
     c.receiveServeur();
-    c.shutClient();*/
+    c.shutClient();
 
     /*string s = "Cerlce-10-50-60";
     Cercle c("( 10, 50)", 50);

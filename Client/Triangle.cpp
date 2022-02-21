@@ -3,6 +3,7 @@
 //
 
 #include "Triangle.h"
+#include "Matrice2x2.h"
 
 Triangle::Triangle(const char* vecteur, const char* vecteur2, const char* vecteur3) : Forme(vecteur), vecteur2(vecteur2), vecteur3(vecteur3) {}
 
@@ -36,6 +37,22 @@ void Triangle::translation(const Vecteur2D& v) {
     setVecteur3(getVecteur3() + v);
 }
 
-void Triangle::rotation(double rot, const Vecteur2D& v) {
-
+void Triangle::rotation(const double rot, const Vecteur2D& v) {
+    Matrice2x2 m(rot);
+    setVecteur(m * (getVecteur() - v) + v);
+    setVecteur2(m * (getVecteur2() - v) + v);
+    setVecteur3(m * (getVecteur3() - v) + v);
 }
+
+void Triangle::homotetie(const double k, const Vecteur2D &v) {
+    setVecteur(k * (getVecteur() - v) + v);
+    setVecteur2(k * (getVecteur2() - v) + v);
+    setVecteur3(k * (getVecteur3() - v) + v);
+}
+
+Vecteur2D Triangle::getCentre() {
+    double c_x = (getVecteur().x + getVecteur2().x + getVecteur3().x) / 3;
+    double c_y = (getVecteur().y + getVecteur2().y + getVecteur3().y) / 3;
+    return Vecteur2D(c_x , c_y);
+}
+

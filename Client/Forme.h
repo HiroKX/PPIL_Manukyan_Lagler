@@ -22,7 +22,10 @@ class Forme {
         void setVecteur(const Vecteur2D &vecteur);
 
         virtual void translation(const Vecteur2D& v) = 0;
-        virtual void rotation(double rot, const Vecteur2D& v) = 0;
+        virtual void rotation(const double rot, const Vecteur2D& v) = 0;
+        virtual void homotetie(const double k, const Vecteur2D& v) = 0;
+
+        virtual Vecteur2D getCentre() = 0;
 };
 
 #endif //PPIL_MANUKYAN_LAGLER_FORME_H

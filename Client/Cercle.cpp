@@ -27,7 +27,16 @@ void Cercle::translation(const Vecteur2D& v) {
     setVecteur(getVecteur() + v);
 }
 
-void Cercle::rotation(double rot, const Vecteur2D& v) {
+void Cercle::rotation(const double rot, const Vecteur2D& v) {
     Matrice2x2 m(rot);
-    m = m * ((getVecteur() - v) + v);//TODO
+    setVecteur(m * (getVecteur() - v) + v);
+}
+
+void Cercle::homotetie(const double k, const Vecteur2D &v) {
+    setRayon(k * getRayon());
+}
+
+
+Vecteur2D Cercle::getCentre() {
+    return getVecteur();
 }

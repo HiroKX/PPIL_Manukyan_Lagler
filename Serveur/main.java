@@ -7,7 +7,7 @@ public class main {
 
         ExpertFormes exp = null;
         exp = new ExpertCercle(exp);
-        exp = new ExpertRect(exp);
+        exp = new ExpertPolygon(exp);
 
         ExpertLibGraphique expD = null;
         expD = new ExpertSwing(expD);

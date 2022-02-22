@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.Polygon;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferStrategy;
@@ -32,10 +33,11 @@ public class WindowAWT implements WindowVisitor {
     }
 
     @Override
-    public void visit(Rectangle rectangle) {
+    public void visit(Polygone polygon) {
         BufferStrategy stratégie = frame.getBufferStrategy();
         Graphics graphics = stratégie.getDrawGraphics();
-        graphics.drawRect((int) rectangle.getP().getX(), (int) rectangle.getP().getY()+rectangle.getHauteur(), rectangle.getHauteur(), rectangle.getLargeur());
+        Polygon poly = new Polygon(polygon.getxCoord(), polygon.getyCoord(), polygon.getxCoord().length);
+        graphics.drawPolygon(poly);
         stratégie.show();
         graphics.dispose();
     }

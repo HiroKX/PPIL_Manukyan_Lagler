@@ -8,12 +8,11 @@
 #include <vector>
 #include "Forme.h"
 
-class GroupeForme : public Forme{
+class GroupeForme {
     private:
         vector<Forme> groupe;
 
-    public:
-        GroupeForme();
+
 };
 
 #endif //CLIENT_GROUPEFORME_H

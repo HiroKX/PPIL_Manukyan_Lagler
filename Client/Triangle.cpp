@@ -5,7 +5,7 @@
 #include "Triangle.h"
 #include "Matrice2x2.h"
 
-Triangle::Triangle(const char* vecteur, const char* vecteur2, const char* vecteur3) : Forme(vecteur), vecteur2(vecteur2), vecteur3(vecteur3) {}
+Triangle::Triangle(const char *v1, const char *v2, const char *v3, const string &couleur) : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
 
 const Vecteur2D &Triangle::getVecteur2() const {
     return vecteur2;
@@ -24,7 +24,7 @@ void Triangle::setVecteur3(const Vecteur2D &vecteur3) {
 }
 
 string Triangle::toString() const {
-    return "Triangle v1" + getVecteur().toString() + " v2" + getVecteur2().toString() +" v3" + getVecteur3().toString();
+    return "Triangle-" + getVecteur().toString() + "-" + getVecteur2().toString() +"-" + getVecteur3().toString() + "-" + getCouleur();
 }
 
 ostream &operator<<(ostream &os, const Triangle &triangle) {
@@ -55,4 +55,6 @@ Vecteur2D Triangle::getCentre() {
     double c_y = (getVecteur().y + getVecteur2().y + getVecteur3().y) / 3;
     return Vecteur2D(c_x , c_y);
 }
+
+
 

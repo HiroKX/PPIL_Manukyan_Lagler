@@ -5,7 +5,7 @@
 #include "Segment.h"
 #include "Matrice2x2.h"
 
-Segment::Segment(const char * vecteur, const char * vecteur2) : Forme(vecteur), vecteur2(vecteur2) {}
+Segment::Segment(const char *v1, const char *v2, const string &couleur) : Forme(v1, couleur), vecteur2(v2) {}
 
 const Vecteur2D &Segment::getVecteur2() const {
     return vecteur2;
@@ -16,7 +16,7 @@ void Segment::setVecteur2(const Vecteur2D &point2) {
 }
 
 string Segment::toString() const {
-    return "Segment : " + getVecteur().toString() + " : " + getVecteur2().toString();
+    return "Segment-" + getVecteur().toString() + "-" + getVecteur2().toString() + "-" + getCouleur();
 }
 
 ostream &operator<<(ostream &os, const Segment &segment) {
@@ -44,4 +44,5 @@ Vecteur2D Segment::getCentre() {
     double c_y = (getVecteur().y + getVecteur2().y) / 2;
     return Vecteur2D(c_x, c_y);
 }
+
 

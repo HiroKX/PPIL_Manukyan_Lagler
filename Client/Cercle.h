@@ -13,7 +13,7 @@ class Cercle : public Forme{
         double rayon;
 
     public:
-        Cercle(const char * vecteur, double rayon);
+        Cercle(const char *s, double rayon, const string &couleur);
         double getRayon() const;
         void setRayon(double rayon);
         string toString() const;

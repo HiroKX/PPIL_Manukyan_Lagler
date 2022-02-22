@@ -14,7 +14,7 @@ class Triangle : public Forme {
         Vecteur2D vecteur3;
 
     public:
-        Triangle(const char* vecteur, const char* vecteur2, const char* vecteur3);
+        Triangle(const char *v1, const char *v2, const char *v3, const string &couleur);
         const Vecteur2D &getVecteur2() const;
         void setVecteur2(const Vecteur2D &vecteur2);
         const Vecteur2D &getVecteur3() const;

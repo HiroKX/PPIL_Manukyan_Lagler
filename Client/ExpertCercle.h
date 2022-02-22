@@ -12,5 +12,4 @@ class ExpertCercle : public ExpertForme{
         Forme * retrouverForme(string s) override;
 };
 
-
 #endif //CLIENT_EXPERTCERCLE_H

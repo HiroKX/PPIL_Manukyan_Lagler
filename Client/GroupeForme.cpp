@@ -4,7 +4,3 @@
 
 #include "GroupeForme.h"
 
-GroupeForme::GroupeForme() = default;
-
-
-

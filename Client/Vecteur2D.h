@@ -39,12 +39,6 @@ public:
 
     operator string() const;
     inline string toString() const;
-
-/*    const void translation(const Vecteur2D& v) const;
-    const Vecteur2D rotation(const Vecteur2D& V, const double rad, const Vecteur2D& invariant);
-    const Vecteur2D homotetie(const Vecteur2D& V, const double k, const Vecteur2D& invariant);*/
-
-
 };
 
 inline const Vecteur2D operator *(const double & a, const Vecteur2D & u) {

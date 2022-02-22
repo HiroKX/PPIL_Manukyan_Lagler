@@ -15,25 +15,13 @@ add_executable(Client
         Vecteur2D.cpp Vecteur2D.h
         Forme.cpp Forme.h
         Cercle.cpp Cercle.h
-        Rectangle.cpp Rectangle.h
+        Polygone.cpp Polygone.h
         Triangle.cpp Triangle.h
         Segment.cpp Segment.h
         Expert.cpp Expert.h
         ExpertForme.cpp ExpertForme.h
         ExpertCercle.cpp ExpertCercle.h
-        ExpertRectangle.cpp ExpertRectangle.cpp
+        ExpertPolygone.cpp ExpertPolygone.cpp
         ExpertTriangle.cpp ExpertTriangle.h
         ExpertSegment.cpp ExpertSegment.h
         GroupeForme.cpp GroupeForme.h)
-#[[
-Forme.cpp Forme.h
-        Cercle.cpp Cercle.h
-        Rectangle.cpp Rectangle.h
-        Triangle.cpp Triangle.h
-        Segment.cpp Segment.h
-        Expert.cpp Expert.h
-        ExpertForme.cpp ExpertForme.h
-        ExpertCercle.cpp ExpertCercle.h
-        ExpertRectangle.cpp ExpertRectangle.cpp
-        ExpertTriangle.cpp ExpertTriangle.h
-        ExpertSegment.cpp ExpertSegment.h]]

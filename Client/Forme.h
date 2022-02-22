@@ -14,12 +14,15 @@ using namespace std;
 class Forme {
     private:
         Vecteur2D vecteur;
+        string couleur;
 
     public:
-        Forme();
-        Forme(const char * s);
+        Forme(const string &couleur);
+        Forme(const char * s, const string & couleur);
         const Vecteur2D &getVecteur() const;
         void setVecteur(const Vecteur2D &vecteur);
+        const string &getCouleur() const;
+        void setCouleur(const string &couleur);
 
         virtual void translation(const Vecteur2D& v) = 0;
         virtual void rotation(const double rot, const Vecteur2D& v) = 0;

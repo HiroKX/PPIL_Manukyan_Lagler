@@ -1,9 +1,10 @@
-public class Polygone {
+public class Polygone extends Formes {
 
     private int[] xCoord;
     private int[] yCoord;
 
-    public Polygone(int[] xP, int[] yP) {
+    public Polygone(int[] xP, int[] yP,String s) {
+        super(s);
         this.setxCoord(xP);
         this.setyCoord(yP);
     }

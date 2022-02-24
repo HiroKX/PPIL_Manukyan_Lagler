@@ -18,7 +18,9 @@ int main(){
     char requete[L];
     c.receiveServeur();
     c.shutClient();
-
+    Triangle T = Trangle(point x , point y, etc...);
+    client->envoie(t)
+    client->dessine()
     /*string s = "Cerlce-10-50-60";
     Cercle c("( 10, 50)", 50);
     cout << c.toString() << endl;*/

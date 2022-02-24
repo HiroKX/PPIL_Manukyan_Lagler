@@ -11,20 +11,20 @@ public class ExpertPolygon extends ExpertFormes{
 
     @Override
     public boolean dessinerForme(String s, WindowVisitor w) throws Erreur{
-        if(s.startsWith("polygon")){
+        if(s.startsWith("polygon") || s.startsWith("segment") || s.startsWith("triangle")){
             String[] coord= s.split("-");
             if(coord.length < 2)
                 throw new Erreur("Pas assez d'argument passer");
             ArrayList<Integer> lX = new ArrayList<Integer>();
             ArrayList<Integer> lY = new ArrayList<Integer>();
-            for (int i = 1 ; i < coord.length ; i++) {
+            for (int i = 1 ; i < coord.length-1 ; i++) {
                 String[] point = coord[i].replace("(","").replace(")","").replace(" ","").split(",");
                 lX.add(Integer.parseInt(point[0]));
                 lY.add(Integer.parseInt(point[1]));
             }
             int[] tabX = lX.stream().mapToInt(i -> i).toArray();
             int[] tabY = lY.stream().mapToInt(i -> i).toArray();
-            w.visit(new Polygone(tabX,tabY));
+            w.visit(new Polygone(tabX,tabY,coord[coord.length-1]));
             return true;
         }
         else{

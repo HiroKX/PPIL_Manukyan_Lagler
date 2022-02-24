@@ -2,7 +2,8 @@ public class Cercle extends Formes{
 
     private int rayon;
 
-    public Cercle(Point p, int rayon) throws Erreur {
+    public Cercle(Point p, int rayon,String s) throws Erreur {
+        super(s);
         this.setP(p);
         this.setRayon(rayon);
     }
@@ -17,12 +18,16 @@ public class Cercle extends Formes{
         this.rayon = rayon;
     }
 
+
     @Override
     public String toString() {
         return "Cercle{" +
                 "rayon=" + rayon +
                 ", nom='" + nom + '\'' +
                 ", p=" + p +
+                ", color green =" + color.getGreen() +
+                ", color blue =" + color.getBlue() +
+                ", color red =" + color.getRed() +
                 '}';
     }
 }

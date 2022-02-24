@@ -1,5 +1,7 @@
 import java.awt.Polygon;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ExpertPolygon extends ExpertFormes{
 
@@ -13,16 +15,16 @@ public class ExpertPolygon extends ExpertFormes{
             String[] coord= s.split("-");
             if(coord.length < 2)
                 throw new Erreur("Pas assez d'argument passer");
-            int[] tabX ={};
-            int[] tabY ={};
-            ArrayList<Integer> yP = new ArrayList<Integer>();
-            for (int i = 1 ; i < coord.length-1 ; i+=2) {
-                tabX[i] = Integer.parseInt(coord[i]);
-                tabY[i] = Integer.parseInt(coord[i + 1]);
+            ArrayList<Integer> lX = new ArrayList<Integer>();
+            ArrayList<Integer> lY = new ArrayList<Integer>();
+            for (int i = 1 ; i < coord.length ; i++) {
+                String[] point = coord[i].replace("(","").replace(")","").replace(" ","").split(",");
+                lX.add(Integer.parseInt(point[0]));
+                lY.add(Integer.parseInt(point[1]));
             }
+            int[] tabX = lX.stream().mapToInt(i -> i).toArray();
+            int[] tabY = lY.stream().mapToInt(i -> i).toArray();
             w.visit(new Polygone(tabX,tabY));
-
-            System.out.println("rectangle");
             return true;
         }
         else{

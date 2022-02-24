@@ -39,8 +39,6 @@ public class Interlocuteur extends  Thread{
                     exp.resoudre(requete,w);
                 }
                 nbRequete++;
-                /*Affiche la requête*/
-                System.out.println("Le client a envoyé : "+requete);
 
             }
         }

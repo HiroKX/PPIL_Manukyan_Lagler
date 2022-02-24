@@ -7,9 +7,9 @@ using namespace std;
 #define L 200 // longueur max d'une chaîne de caractères
 
 //
+
 // Created by Robin Lagler on 25/01/2022.
 //
-
 #define L 200
 int main(){
     cin.clear();

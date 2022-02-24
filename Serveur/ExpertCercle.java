@@ -16,12 +16,11 @@ public class ExpertCercle extends ExpertFormes{
         if(s.startsWith("Cercle")){
             String[] coord = s.split("-");
             if(coord.length != 4)
-                throw new Erreur("Pas assez d'argument passer");
+                throw new Erreur("Pas assez ou trop d'argument passer");
             w.visit(new Cercle(
                     new Point(Double.parseDouble(coord[1]),
                               Double.parseDouble(coord[2])),
-                              Integer.parseInt(coord[3])
-                              )
+                              Integer.parseInt(coord[3]))
             );
             return true;
         }

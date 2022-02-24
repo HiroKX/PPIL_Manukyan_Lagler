@@ -61,12 +61,9 @@ public:
 //------------------------------ création du représentant du serveur ----------------------------------------
 
             char adresseServeur[L];
-            short portServeur;
+            short portServeur = 9112;
 
-            cout << "tapez l'adresse IP du serveur de majuscule : " << endl;
-            cin >> adresseServeur;
-            cout << "tapez le port du serveur du serveur de majuscule : " << endl;
-            cin >> portServeur;
+            strcpy(adresseServeur,"192.168.56.1");
 
             SOCKADDR_IN sockaddr; // informations concernant le serveur avec lequel on va communiquer
 

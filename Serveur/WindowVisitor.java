@@ -5,4 +5,6 @@ public interface WindowVisitor {
 
     public void visit(Cercle circle);
 
+    void visit();
+
 }

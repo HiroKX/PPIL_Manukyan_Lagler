@@ -19,8 +19,8 @@ public class ExpertPolygon extends ExpertFormes{
             ArrayList<Integer> lY = new ArrayList<Integer>();
             for (int i = 1 ; i < coord.length-1 ; i++) {
                 String[] point = coord[i].replace("(","").replace(")","").replace(" ","").split(",");
-                lX.add(Integer.parseInt(point[0]));
-                lY.add(Integer.parseInt(point[1]));
+                lX.add((int)Double.parseDouble(point[0]));
+                lY.add((int) Double.parseDouble(point[1]));
             }
             int[] tabX = lX.stream().mapToInt(i -> i).toArray();
             int[] tabY = lY.stream().mapToInt(i -> i).toArray();

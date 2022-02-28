@@ -25,9 +25,7 @@ public class Cercle extends Formes{
                 "rayon=" + rayon +
                 ", nom='" + nom + '\'' +
                 ", p=" + p +
-                ", color green =" + color.getGreen() +
-                ", color blue =" + color.getBlue() +
-                ", color red =" + color.getRed() +
+                ", color =" + color +
                 '}';
     }
 }

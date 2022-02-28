@@ -19,7 +19,7 @@ class Polygone : public Forme{
 
         void addVecteur(const Vecteur2D &vecteur);
 
-        string toString() const;
+        string toString() const override;
 
         void translation(const Vecteur2D& v) override;
         void rotation(const double rot, const Vecteur2D& v) override;

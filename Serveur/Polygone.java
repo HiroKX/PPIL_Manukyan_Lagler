@@ -1,9 +1,19 @@
+import java.util.Arrays;
+
 public class Polygone extends Formes {
 
     private int[] xCoord;
     private int[] yCoord;
 
-    public Polygone(int[] xP, int[] yP,String s) {
+    @Override
+    public String toString() {
+        return "Polygone{" +
+                "xCoord=" + Arrays.toString(xCoord) +
+                ", yCoord=" + Arrays.toString(yCoord) +
+                '}';
+    }
+
+    public Polygone(int[] xP, int[] yP, String s) {
         super(s);
         this.setxCoord(xP);
         this.setyCoord(yP);

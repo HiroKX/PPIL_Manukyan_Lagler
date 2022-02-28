@@ -12,6 +12,9 @@
 #include <sstream>
 #include <string>
 #include "Erreur.h"
+#include "Forme.h"
+#include "Fenetre.h"
+#include "Triangle.h"
 
 using namespace std;
 
@@ -21,6 +24,7 @@ class ClientWin {
 private:
     SOCKET sock;
     int r;
+    Fenetre f;
 
 public:
     void lancerClient() {
@@ -118,26 +122,26 @@ public:
         // reçoit au plus l octets
         // en cas de succès, r contient le nombre d'octets reçus
         cout << reponse << endl;
-        sendServeur();
-
     }
 
-    void sendServeur() {
-        string requete;
-        cout << "Texte à envoyer : ";
-        cin >> requete;
-        if (requete == "quitter") {
-
-
-        }
+    void sendServeur(string requete) {
         requete += "\r\n";
         int l = requete.length();
+        cout << requete.c_str();
         send(this->sock, requete.c_str(), l, 0);
 
         if (r == SOCKET_ERROR)
             throw Erreur("échec de l'envoi de la requête");
+    }
 
-        receiveServeur();
+    void dessine(Triangle &f){
+        string requete = f.toString();
+        sendServeur(requete);
+    }
+
+    void ouvreFenetre(Fenetre &fen){
+        f=fen;
+        sendServeur(f.toString());
     }
 
 };

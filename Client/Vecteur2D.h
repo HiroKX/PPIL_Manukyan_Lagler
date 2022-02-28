@@ -22,7 +22,8 @@ class Vecteur2D
 public:
     double x, y;
 
-    inline explicit Vecteur2D(const double & x = 0, const double & y = 0);
+
+    inline explicit Vecteur2D::Vecteur2D(const double & x=0, const double & y=0): x(x),y(y){}
 
 /**
  * DONNEES : s respectant le format "(  nombre réel, nombre réel)"
@@ -31,6 +32,10 @@ public:
     inline Vecteur2D(const char * s);
     inline const Vecteur2D operator + (const Vecteur2D & u) const;
     inline const Vecteur2D operator * (const double & a) const;
+    inline double operator * (const Vecteur2D &v) const { return this->x * v.x + this->y * v.y; }
+    inline double longueur2() const { return (*this) * (*this); }
+    inline double longueur() const { return sqrt(longueur2()); }
+    inline double det(const Vecteur2D &v) const { return this->x * v.y - this->y * v.x; } // aire signée du parallélogramme engendré par (*this) et v
 
 /**
  * - unaire (c'est-à- dire opposé d'un vecteur)
@@ -47,7 +52,7 @@ inline const Vecteur2D operator *(const double & a, const Vecteur2D & u) {
 
 //------------ implémentation des fonctions inline ----------------------
 
-inline  Vecteur2D::Vecteur2D(const double & x, const double & y): x(x),y(y){}
+
 
 inline Vecteur2D::Vecteur2D(const char * s){
     string str = string(s);
@@ -72,11 +77,12 @@ inline const Vecteur2D Vecteur2D::operator - () const
 {
     return Vecteur2D(-x,-y);
 }
+//TODO : produit scalaire et determinant et longueur
 
 inline Vecteur2D::operator string() const//
 {
     ostringstream os;
-    os << "( " << x <<", " << y << ")";
+    os << this->toString();
     return os.str();
 }
 

@@ -11,7 +11,7 @@ public class main {
         exp = new ExpertDessine(exp);
 
         ExpertLibGraphique expD = null;
-        expD = new ExpertSwing(expD);
+        expD = new ExpertAwt(expD);
 
         Serveur server = new Serveur();
         ThreadGroup groupe = server.getGroupe();

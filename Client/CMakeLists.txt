@@ -24,4 +24,4 @@ add_executable(Client
         ExpertPolygone.cpp ExpertPolygone.cpp
         ExpertTriangle.cpp ExpertTriangle.h
         ExpertSegment.cpp ExpertSegment.h
-        GroupeForme.cpp GroupeForme.h)
+        GroupeForme.cpp GroupeForme.h Fenetre.h)

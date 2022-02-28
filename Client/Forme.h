@@ -19,6 +19,7 @@ class Forme {
     public:
         Forme(const string &couleur);
         Forme(const char * s, const string & couleur);
+        Forme(const Vecteur2D  &v1, const string & couleur);
         const Vecteur2D &getVecteur() const;
         void setVecteur(const Vecteur2D &vecteur);
         const string &getCouleur() const;
@@ -27,8 +28,10 @@ class Forme {
         virtual void translation(const Vecteur2D& v) = 0;
         virtual void rotation(const double rot, const Vecteur2D& v) = 0;
         virtual void homotetie(const double k, const Vecteur2D& v) = 0;
+        virtual string toString() const =0;
 
-        virtual Vecteur2D getCentre() = 0;
+    virtual Vecteur2D getCentre() = 0;
+
 };
 
 #endif //PPIL_MANUKYAN_LAGLER_FORME_H

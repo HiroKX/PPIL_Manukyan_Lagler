@@ -10,9 +10,14 @@ public class WindowAWT implements WindowVisitor {
     private BufferStrategy strategy;
     private Graphics graphics;
 
-    public WindowAWT() {
+    private int width, height;
+
+    public WindowAWT(int s, int s1) {
+        width = s;
+        height=s1;;
         this.frame = new Frame("Frame toute simple");
-        this.frame.setBounds(0, 0, 400, 400);
+        System.out.println(this.frame.getInsets());
+        this.frame.setBounds(0, 0, width, height);
         this.frame.setVisible(true);
         this.frame.createBufferStrategy(2);
         try {
@@ -36,16 +41,57 @@ public class WindowAWT implements WindowVisitor {
 
     @Override
     public void visit(Polygone polygon) {
-        graphics.drawPolygon(polygon.getxCoord(), polygon.getyCoord(), polygon.getxCoord().length);
+        try {
+            graphics.setColor((Color) Color.class.getField(polygon.getColor()).get(null));
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        System.out.println(polygon.getColor().toString());
+        int[] tabY = polygon.getyCoord();
+        for(int i = 0 ; i< tabY.length;i++ ){
+            tabY[i] = tabY[i]+getInsetHeight();
+        }
+        int[] tabX = polygon.getxCoord();
+        for(int i = 0 ; i< tabX.length;i++ ){
+            tabX[i] = tabX[i]+getInsetMargin();
+        }
+
+        graphics.drawPolygon(tabX, tabY, polygon.getxCoord().length);
     }
 
     @Override
     public void visit(Cercle circle) {
-        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/4),(int) circle.getP().getY()+(circle.getRayon()/2), circle.getRayon(), circle.getRayon());
+        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2)+ this.frame.getInsets().top,(int) circle.getP().getY()+(circle.getRayon()/2), circle.getRayon(), circle.getRayon());
     }
 
     @Override
     public void visit() {
         strategy.show();
     }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getInsetHeight(){
+        return this.frame.getInsets().top;
+    }
+    public int getInsetMargin(){
+        return this.frame.getInsets().left;
+    }
+
 }

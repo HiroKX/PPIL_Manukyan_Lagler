@@ -24,7 +24,7 @@ void Triangle::setVecteur3(const Vecteur2D &vecteur3) {
 }
 
 string Triangle::toString() const {
-    return "Triangle-" + getVecteur().toString() + "-" + getVecteur2().toString() +"-" + getVecteur3().toString() + "-" + getCouleur();
+    return "triangle-" + getVecteur().toString() + "-" + getVecteur2().toString() +"-" + getVecteur3().toString() + "-" + getCouleur();
 }
 
 ostream &operator<<(ostream &os, const Triangle &triangle) {
@@ -55,6 +55,7 @@ Vecteur2D Triangle::getCentre() {
     double c_y = (getVecteur().y + getVecteur2().y + getVecteur3().y) / 3;
     return Vecteur2D(c_x , c_y);
 }
+
 
 
 

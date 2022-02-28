@@ -14,8 +14,14 @@ class Triangle : public Forme {
         Vecteur2D vecteur3;
 
     public:
+    //TODO : rajouter un constructeur avec vecteur
         Triangle(const char *v1, const char *v2, const char *v3, const string &couleur);
-        const Vecteur2D &getVecteur2() const;
+        Triangle(const Vecteur2D &v1, const Vecteur2D &v2, const Vecteur2D &v3, const string &couleur):Forme(v1,couleur) {
+            vecteur2 = v2;
+            vecteur3 = v3;
+        }
+
+    const Vecteur2D &getVecteur2() const;
         void setVecteur2(const Vecteur2D &vecteur2);
         const Vecteur2D &getVecteur3() const;
         void setVecteur3(const Vecteur2D &vecteur3);

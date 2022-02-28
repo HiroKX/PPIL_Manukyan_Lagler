@@ -31,9 +31,9 @@ public class Interlocuteur extends  Thread{
             requete = requete.trim();
             w = expD.resoudre(requete);
             while(!isInterrupted()){
-                this.fluxSortant.println("Veuillez entrer une lib graphique parmis : 'Swing' et une taille, de cette façon : 'Swing' ou pour desinner : 'Cercle-10-10-30'");
                 /*Lit le flux et le nettoye*/
                 requete = fluxEntrant.readLine();
+                System.out.println(requete);
                 requete = requete.trim();
                 exp.resoudre(requete,w);
                 nbRequete++;

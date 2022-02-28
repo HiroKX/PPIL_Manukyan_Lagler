@@ -23,3 +23,9 @@ const string &Forme::getCouleur() const {
 void Forme::setCouleur(const string &couleur) {
     Forme::couleur = couleur;
 }
+
+Forme::Forme(const Vecteur2D &v1, const string &couleur) {
+    vecteur =v1;
+    this->couleur = couleur;
+}
+

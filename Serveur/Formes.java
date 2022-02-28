@@ -1,24 +1,25 @@
-import javafx.scene.paint.Color;
-
-import java.util.ArrayList;
+import java.awt.Color ;
 
 public abstract class Formes {
     String nom;
     Point p;
 
+
+    String color;
+
     public Formes(String s) {
-        this.color = Color.valueOf(s);
+        this.nom = "forme";
+        this.color = s;
+        this.p=new Point(0,0);
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
-
-    Color color;
 
     public String getNom() {
         return nom;
@@ -40,7 +41,7 @@ public abstract class Formes {
     public String toString() {
         return "Formes{" +
                 "nom='" + nom + '\'' +
-                ", p=" + p +
+                ", couleur=" + color.toString() +
                 '}';
     }
 

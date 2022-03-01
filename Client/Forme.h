@@ -9,6 +9,7 @@
 #include <ostream>
 #include "Vecteur2D.h"
 
+class VisiteurAbstrait;
 using namespace std;
 
 class Forme {
@@ -28,6 +29,7 @@ class Forme {
         virtual void translation(const Vecteur2D& v) = 0;
         virtual void rotation(const double rot, const Vecteur2D& v) = 0;
         virtual void homotetie(const double k, const Vecteur2D& v) = 0;
+        virtual void draw(VisiteurAbstrait *vis) const = 0;
         virtual string toString() const =0;
 
     virtual Vecteur2D getCentre() = 0;

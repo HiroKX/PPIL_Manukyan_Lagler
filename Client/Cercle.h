@@ -16,14 +16,14 @@ class Cercle : public Forme{
         Cercle(const char *s, double rayon, const string &couleur);
         double getRayon() const;
         void setRayon(double rayon);
-        string toString() const;
+        string toString() const override;
 
-        void translation(const Vecteur2D& v) override;
+        void translation(const Vecteur2D& v) override ;
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
+        void draw(VisiteurAbstrait *vis) const override;
 
-
-    Vecteur2D getCentre() override;
+        Vecteur2D getCentre() override;
 };
 
     ostream &operator<<(ostream &os, const Cercle &cercle);

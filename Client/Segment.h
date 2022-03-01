@@ -22,7 +22,7 @@ class Segment : public Forme{
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
 
-
+        void draw(VisiteurAbstrait *vis) const override;
         Vecteur2D getCentre() override;
 };
         ostream &operator<<(ostream &os, const Segment &segment);

@@ -4,6 +4,7 @@
 #include "Triangle.h"
 #include "Polygone.h"
 #include "Fenetre.h"
+#include "VisiteurDessine.h"
 
 using namespace std;
 
@@ -20,6 +21,23 @@ int main(){
     vector<Vecteur2D> v = {A,B,E};
     Polygone p("( 180, 100)",v,"blue");
     Triangle t(A, B, C, "red");
+    Fenetre f("awt");
+    GroupeForme g("red");
+    GroupeForme g2("blue");
+    g2.addForme(&p);
+    g.addForme(&t);
+    g.addForme(&g2);
+    ClientWin c;
+    c.lancerClient();
+    c.ouvreFenetre(f);
+    VisiteurDessine vis(c);
+    g.draw(&vis);
+
+    c.sendServeur("dessin");
+    while(true){
+
+    }
+    /**
     ClientWin c;
     c.lancerClient();
     char requete[L];

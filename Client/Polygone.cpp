@@ -4,7 +4,7 @@
 
 #include "Polygone.h"
 #include "Matrice2x2.h"
-
+#include "VisiteurAbstrait.h"
 Polygone::Polygone(const char *s, const vector<Vecteur2D> &vecteurs, const string &couleur) : Forme(s, couleur), vecteurs(vecteurs) {
     this->vecteurs.push_back(getVecteur());
 }
@@ -56,5 +56,9 @@ Vecteur2D Polygone::getCentre() {
     c_x = c_x / this->vecteurs.size();
     c_y = c_y / this->vecteurs.size();
     return Vecteur2D(c_x, c_y);
+}
+
+void Polygone::draw(VisiteurAbstrait *vis) const{
+    vis->visit(this);
 }
 

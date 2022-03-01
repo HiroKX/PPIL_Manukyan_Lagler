@@ -4,7 +4,7 @@
 
 #include "Cercle.h"
 #include "Matrice2x2.h"
-
+#include "VisiteurAbstrait.h"
 Cercle::Cercle(const char *s, double rayon, const string &couleur) : Forme(s, couleur), rayon(rayon) {}
 
 double Cercle::getRayon() const {
@@ -38,4 +38,8 @@ void Cercle::homotetie(const double k, const Vecteur2D &v) {
 
 Vecteur2D Cercle::getCentre() {
     return getVecteur();
+}
+
+void Cercle::draw(VisiteurAbstrait *vis) const {
+    vis->visit(this);
 }

@@ -8,11 +8,30 @@
 #include <vector>
 #include "Forme.h"
 
-class GroupeForme {
+class GroupeForme: public Forme {
     private:
-        vector<Forme> groupe;
+    vector<Forme*> groupe;
+public:
+
+    const vector<struct Forme *> & getGroupe() const;
+    void translation(const Vecteur2D& v) override;
+    void rotation(double rot, const Vecteur2D& v) override;
+    void homotetie(const double k, const Vecteur2D& v) override;
+    Vecteur2D getCentre() override;
+
+    void addForme(Forme* f){
+        groupe.push_back(f);
+    }
 
 
+    string toString() const override {
+        return std::string();
+    }
+
+    void draw(VisiteurAbstrait *vis)const  override;
+    void setGroupe(const vector<Forme*> &gro);
+
+    GroupeForme(const string &couleur);
 };
 
 #endif //CLIENT_GROUPEFORME_H

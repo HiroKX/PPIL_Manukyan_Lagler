@@ -4,7 +4,7 @@
 
 #include "Segment.h"
 #include "Matrice2x2.h"
-
+#include "VisiteurAbstrait.h"
 Segment::Segment(const char *v1, const char *v2, const string &couleur) : Forme(v1, couleur), vecteur2(v2) {}
 
 const Vecteur2D &Segment::getVecteur2() const {
@@ -43,6 +43,10 @@ Vecteur2D Segment::getCentre() {
     double c_x = (getVecteur().x + getVecteur2().x) / 2;
     double c_y = (getVecteur().y + getVecteur2().y) / 2;
     return Vecteur2D(c_x, c_y);
+}
+
+void Segment::draw(VisiteurAbstrait *vis) const {
+    vis->visit(this);
 }
 
 

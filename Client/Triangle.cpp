@@ -4,7 +4,7 @@
 
 #include "Triangle.h"
 #include "Matrice2x2.h"
-
+#include "VisiteurAbstrait.h"
 Triangle::Triangle(const char *v1, const char *v2, const char *v3, const string &couleur) : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
 
 const Vecteur2D &Triangle::getVecteur2() const {
@@ -54,6 +54,10 @@ Vecteur2D Triangle::getCentre() {
     double c_x = (getVecteur().x + getVecteur2().x + getVecteur3().x) / 3;
     double c_y = (getVecteur().y + getVecteur2().y + getVecteur3().y) / 3;
     return Vecteur2D(c_x , c_y);
+}
+
+void Triangle::draw(VisiteurAbstrait *vis) const {
+    vis->visit(this);
 }
 
 

@@ -19,19 +19,19 @@ int main(){
     cin.clear();
     Vecteur2D A(200,300), B(250, 250), C(400,400),D(100,100),E(400,400);
     vector<Vecteur2D> v = {A,B,E};
-    Polygone p("( 180, 100)",v,"blue");
+    Polygone p("( 180, 100)",v,"red");
     Triangle t(A, B, C, "red");
     Fenetre f("awt");
     GroupeForme g("red");
     GroupeForme g2("blue");
     g2.addForme(&p);
     g.addForme(&t);
-    g.addForme(&g2);
     ClientWin c;
     c.lancerClient();
     c.ouvreFenetre(f);
     VisiteurDessine vis(c);
     g.draw(&vis);
+    g2.draw(&vis);
 
     c.sendServeur("dessin");
     while(true){

@@ -18,12 +18,14 @@ void VisiteurDessine::visit(const Triangle *t) {
 
 void VisiteurDessine::visit(const GroupeForme *g) {
     for(auto &Forme: g->getGroupe()){
+        Forme->setCouleur(g->getCouleur());
+        cout << Forme->toString();
         Forme->draw(this);
     }
 }
 
 void VisiteurDessine::visit(const Segment *s) {
-
+    c.sendServeur(s->toString());
 }
 
 VisiteurDessine::VisiteurDessine(const ClientWin &c) : c(c) {}

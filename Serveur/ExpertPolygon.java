@@ -29,7 +29,7 @@ public class ExpertPolygon extends ExpertFormes{
             int[] tabY = lY.stream().mapToInt(i -> i).toArray();
             w.visit(new Polygone(tabX,tabY,coord[coord.length-1]));
             return true;
-        }
+        } 
         else{
             return false;
         }

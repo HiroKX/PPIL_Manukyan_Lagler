@@ -1,9 +1,7 @@
 #include "Erreur.h"     // ma petite classe d'erreur personnelle
 #include "Matrice2x2.h"
 #include "ClientWin.h"
-#include "Triangle.h"
 #include "Polygone.h"
-#include "Fenetre.h"
 #include "VisiteurDessine.h"
 
 using namespace std;

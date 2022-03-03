@@ -22,6 +22,7 @@ string Polygone::toString() const {
     for(Vecteur2D v : this->vecteurs){
         s += "-" + v.toString();
     }
+    s+="-"+vecteur.toString();
     s += "-" + string(getCouleur());
     return s;
 }
@@ -67,10 +68,15 @@ void Polygone::draw(VisiteurAbstrait *vis) const{
 }
 
 Forme *Polygone::transform(const TransformationAffine &tf) const {
+    cout << this->toString();
     vector<Vecteur2D> v;
+    cout<< "\n";
     for(Vecteur2D vec : vecteurs){
         v.push_back(tf.transAffine(vec));
+        cout << tf.transAffine(vec).toString();
+        cout<< "\n";
     }
+    cout << tf.transAffine(vecteur).toString();
     Polygone* p = new Polygone(tf.transAffine(vecteur),v,couleur);
     return p;
 }

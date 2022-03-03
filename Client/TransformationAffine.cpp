@@ -9,7 +9,7 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     double tempY = abs(P2e.y-P1e.y)/abs(P2.y-P1.y);
     double lambda = min(tempX,tempY);
     int epsilon1;
-    if(P2.x-P2.x == P2e.x-P1e.x){
+    if(P2.x-P1.x == P2e.x-P1e.x){
         epsilon1=1;
     }
     else{
@@ -17,15 +17,16 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     }
 
     int epsilon2;
-    if(P2.y-P2.y == P2e.y-P1e.y){
+    if(P2.y-P1.y == P2e.y-P1e.y){
         epsilon2=1;
     }
     else{
         epsilon2=-1;
     }
 
-    lambda1 = epsilon1*lambda;
-    lambda2 = epsilon2*lambda;
+
+    lambda1 = 1*lambda;
+    lambda2 = -1*lambda;
     double Cxe = (P2e.x+P1e.x)/2;
     double Cye = (P2e.y+P1e.y)/2;
     double Cx = (P2.x+P1.x)/2;
@@ -35,7 +36,5 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
 }
 
 Vecteur2D TransformationAffine::transAffine(Vecteur2D p) const {
-    cout << "\n";
-    cout << (a);
     return Vecteur2D(lambda1*p.x+a, lambda2*p.y+b);
 }

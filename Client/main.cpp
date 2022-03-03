@@ -17,11 +17,11 @@ using namespace std;
 #define L 200
 int main(){
     cin.clear();
-    Vecteur2D A(200,300), B(250, 250), C(400,400),D(100,100),E(400,400);
+    Vecteur2D A(-10,5), B(-3.2, 12), C(5,-6),D(100,100),E(400,400);
     vector<Vecteur2D> v = {A,B};
-    Polygone p("( 180, 100)",v,"red");
+    Polygone p("( 3.2, 1.6)",v,"red");
     Triangle t(A, B, C, "red");
-    Fenetre f("awt",1500,2000);
+    Fenetre f("awt",1500,1000);
     GroupeForme g("red");
     GroupeForme g2("blue");
     g2.addForme(&p);
@@ -32,7 +32,7 @@ int main(){
     c.lancerClient();
     c.ouvreFenetre(f);
     VisiteurDessine vis(&c);
-    t.draw(&vis);
+    g.draw(&vis);
     c.dessine();
     //vis.sauvegarder( &t);
     // vis.sauvegarder(&t);

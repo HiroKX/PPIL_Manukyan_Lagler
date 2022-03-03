@@ -149,10 +149,6 @@ public:
         Vecteur2D P1(p1x,p1y) , P2(p2x,p2y), P1e(0,f.getHeight()), P2e(f.getWidth(),0);
 
         TransformationAffine tf(P1,P2,P1e,P2e);
-        cout << tf.lambda1;
-        cout << tf.lambda2;
-        cout << tf.a;
-        cout << tf.b;
         for(Forme* forme : formes){
             cout << forme->toString();
             sendServeur(forme->transform(tf)->toString());

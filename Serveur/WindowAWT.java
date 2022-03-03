@@ -14,10 +14,9 @@ public class WindowAWT implements WindowVisitor {
 
     public WindowAWT(int s, int s1) {
         width = s;
-        height=s1;;
+        height=s1;
         this.frame = new Frame("Frame toute simple");
-        System.out.println(this.frame.getInsets());
-        this.frame.setBounds(0, 0, width, height);
+        this.frame.setBounds(300, 300, width+30, height+40);
         this.frame.setVisible(true);
         this.frame.setResizable(false);
         this.frame.createBufferStrategy(2);

@@ -60,8 +60,7 @@ vector<Forme *> VisiteurDessine::charger(string fileName) {
     }
     else
         cerr << "Erreur a l'ouverture !" << endl;
-
-    return vf;
+    return lFormes;
 }
 
 void VisiteurDessine::enregistrer(const string& fileName) const {

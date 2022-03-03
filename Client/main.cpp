@@ -33,9 +33,9 @@ int main(){
     c.ouvreFenetre(f);
     VisiteurDessine vis(c);
     //g.draw(&vis);
-    vis.sauvegarder( &g);
+    //vis.sauvegarder( &t);
     // vis.sauvegarder(&t);
-    vis.enregistrer("monfichier.txt");
+    //vis.enregistrer("monfichier.txt");
     vector<Forme*> lformes = vis.charger("monfichier.txt");
     cout << lformes.size();
     for(Forme* a : lformes){

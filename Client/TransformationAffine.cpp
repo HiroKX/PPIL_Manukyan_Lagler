@@ -9,7 +9,7 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     double tempY = abs(P2e.y-P1e.y)/abs(P2.y-P1.y);
     double lambda = min(tempX,tempY);
     int epsilon1;
-    if(P2.x-P1.x == P2e.x-P1e.x){
+    if((P2.x-P1.x<0 && P2e.x-P1e.x <0) || P2.x-P1.x>0 && P2e.x-P1e.x>0){
         epsilon1=1;
     }
     else{
@@ -17,7 +17,7 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     }
 
     int epsilon2;
-    if(P2.y-P1.y == P2e.y-P1e.y){
+    if((P2.y-P1.y<0 && P2e.y-P1e.y<0) || (P2.y-P1.y>0 && P2e.y-P1e.y>0)){
         epsilon2=1;
     }
     else{
@@ -25,10 +25,11 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     }
 
 
-    lambda1 = 1*lambda;
-    lambda2 = -1*lambda;
+    lambda1 = epsilon1*lambda;
+    lambda2 = epsilon2*lambda;
     double Cxe = (P2e.x+P1e.x)/2;
     double Cye = (P2e.y+P1e.y)/2;
+
     double Cx = (P2.x+P1.x)/2;
     double Cy = (P2.y+P1.y)/2;
     a = Cxe - lambda1*Cx;

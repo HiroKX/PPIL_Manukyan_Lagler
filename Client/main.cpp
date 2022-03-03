@@ -17,7 +17,7 @@ using namespace std;
 #define L 200
 int main(){
     cin.clear();
-    Vecteur2D A(-10,5), B(-3.2, 12), C(5,-6),D(100,100),E(400,400);
+    Vecteur2D A(-10,5), B(-3.2, 400), C(5,-6),D(100,100),E(400,400);
     vector<Vecteur2D> v = {A,B};
     Polygone p("( 3.2, 1.6)",v,"red");
     Triangle t(A, B, C, "red");

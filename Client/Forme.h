@@ -7,6 +7,7 @@
 
 #include <string>
 #include <ostream>
+#include <vector>
 #include "Vecteur2D.h"
 
 class VisiteurAbstrait;
@@ -16,8 +17,8 @@ class Forme {
     private:
         Vecteur2D vecteur;
         string couleur;
-
     public:
+
         Forme(const string &couleur);
         Forme(const char * s, const string & couleur);
         Forme(const Vecteur2D  &v1, const string & couleur);

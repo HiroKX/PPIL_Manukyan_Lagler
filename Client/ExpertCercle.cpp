@@ -11,3 +11,5 @@ Forme *ExpertCercle::retrouverForme(string s) {
     }
     return nullptr;
 }
+
+ExpertCercle::ExpertCercle(ExpertForme *ex): ExpertForme(ex) {}

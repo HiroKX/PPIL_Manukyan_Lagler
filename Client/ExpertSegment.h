@@ -10,8 +10,11 @@
 
 class ExpertSegment : public ExpertForme{
     public:
-        Forme * retrouverForme(string s) override;
+    ExpertSegment(ExpertForme *suivant);
+
+    Forme * retrouverForme(string s) override;
 };
 
 
 #endif //CLIENT_EXPERTSEGMENT_H
+

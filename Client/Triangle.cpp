@@ -24,7 +24,7 @@ void Triangle::setVecteur3(const Vecteur2D &vecteur3) {
 }
 
 string Triangle::toString() const {
-    return "triangle-" + getVecteur().toString() + "-" + getVecteur2().toString() +"-" + getVecteur3().toString() + "-" + getCouleur();
+    return "Triangle-" + getVecteur().toString() + "-" + getVecteur2().toString() +"-" + getVecteur3().toString() + "-" + getCouleur();
 }
 
 ostream &operator<<(ostream &os, const Triangle &triangle) {

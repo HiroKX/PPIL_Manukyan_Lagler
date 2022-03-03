@@ -11,7 +11,7 @@ public class ExpertPolygon extends ExpertFormes{
 
     @Override
     public boolean dessinerForme(String s, WindowVisitor w) throws Erreur{
-        if(s.startsWith("polygon") || s.startsWith("segment") || s.startsWith("triangle")){
+        if(s.startsWith("Polygone") || s.startsWith("Segment") || s.startsWith("Triangle")){
             String[] coord= s.split("-");
             if(coord.length < 2)
                 throw new Erreur("Pas assez d'argument passer");

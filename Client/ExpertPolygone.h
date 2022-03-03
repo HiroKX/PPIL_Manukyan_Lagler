@@ -10,7 +10,9 @@
 
 class ExpertPolygone : public ExpertForme{
     public:
-        Forme * retrouverForme(string s) override;
+    ExpertPolygone(ExpertForme *suivant);
+
+    Forme * retrouverForme(string s) override;
 };
 
 

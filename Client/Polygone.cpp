@@ -14,7 +14,7 @@ void Polygone::addVecteur(const Vecteur2D &vecteur){
 }
 
 string Polygone::toString() const {
-    string s = "polygon";
+    string s = "Polygone";
     for(Vecteur2D v : this->vecteurs){
         s += "-" + v.toString();
     }

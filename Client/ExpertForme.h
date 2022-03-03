@@ -15,7 +15,7 @@ private:
 public:
     ExpertForme(ExpertForme *suivant);
     ExpertForme *getSuivant() const;
-    Forme* resoudre(string s) override;
+    Forme *resoudre(string s) override;
 
     virtual Forme * retrouverForme(string s) = 0;
 

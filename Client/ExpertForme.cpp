@@ -10,7 +10,7 @@ ExpertForme *ExpertForme::getSuivant() const {
     return suivant;
 }
 
-Forme* ExpertForme::resoudre(string s) {
+Forme * ExpertForme::resoudre(string s) {
     Forme *f = retrouverForme(s);
 
     if (f != nullptr){

@@ -10,7 +10,7 @@
 
 class Expert {
     public:
-        virtual Forme* resoudre(string s) = 0;
+        virtual Forme *resoudre(string s) = 0;
 };
 
 

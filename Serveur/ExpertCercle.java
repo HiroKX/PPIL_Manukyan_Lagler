@@ -29,22 +29,4 @@ public class ExpertCercle extends ExpertFormes{
             return false;
         }
     }
-
-/*    public boolean dessinerForme1(String s, WindowVisitor1 w) throws Erreur{
-        if(s.startsWith("Cercle")){
-            String[] coord = s.split("-");
-            if(coord.length != 4)
-                throw new Erreur("Pas assez d'argument passer");
-            w.dessineCercle(
-                            new Point(Double.parseDouble(coord[1]),
-                                    Double.parseDouble(coord[2])),
-                            Integer.parseInt(coord[3])
-                    );
-
-            return true;
-        }
-        else{
-            return false;
-        }
-    }*/
 }

@@ -25,7 +25,12 @@ public:
 
 
     string toString() const override {
-        return std::string();
+        string s = "Groupe;"+getCouleur()+";";
+        s+= std::to_string(groupe.size());
+        for(auto* a : groupe){
+            s+=";"+a->toString();
+        }
+        return s;
     }
 
     void draw(VisiteurAbstrait *vis)const  override;

@@ -18,73 +18,35 @@ using namespace std;
 int main(){
     cin.clear();
     Vecteur2D A(200,300), B(250, 250), C(400,400),D(100,100),E(400,400);
-    vector<Vecteur2D> v = {A,B,E};
+    vector<Vecteur2D> v = {A,B,E,D};
     Polygone p("( 180, 100)",v,"red");
     Triangle t(A, B, C, "red");
-    Fenetre f("awt");
+    Fenetre f("awt",1500,2000);
     GroupeForme g("red");
     GroupeForme g2("blue");
     g2.addForme(&p);
+    g.addForme(&g2);
     g.addForme(&t);
+
     ClientWin c;
     c.lancerClient();
     c.ouvreFenetre(f);
     VisiteurDessine vis(c);
-    g.draw(&vis);
-    g2.draw(&vis);
-
+    //g.draw(&vis);
+    vis.sauvegarder( &g);
+    // vis.sauvegarder(&t);
+    vis.enregistrer("monfichier.txt");
+    vector<Forme*> lformes = vis.charger("monfichier.txt");
+    cout << lformes.size();
+    for(Forme* a : lformes){
+        a->draw(&vis);
+    }
     c.sendServeur("dessin");
+
+    cout << "oui";
     while(true){
 
     }
-    /**
-    ClientWin c;
-    c.lancerClient();
-    char requete[L];
-    Fenetre f("awt");
-    cout << f.toString();
-    c.sendServeur(f.toString());
-    cin >> requete;
-    c.dessine(t);
-    cin >> requete;
-    c.sendServeur(p.toString());
-    cin >> requete;
-    c.sendServeur("dessine");
-    cin >> requete;
-    c.shutClient();
-    /**
-   Vecteur2D A(-0.5,-3.8), B(-5.6, 0.3), C(11.5,0.4);
-
-   Triangle t(A,B,C,"red");
-   Cercle c(Vector2D(6.3,-2.5),1.3,"blue");
-   Cercle c2(Vector2D(100,25),10,"blue");
-   Groupe g();
-   g->ajouter(t);
-   g->ajouter(c2);
-   g->ajouter(c);
-   Fenetre f("AWT", 600,300);
-   f->dessine(g);
-    */
-    // il lui faut dessiner g sur f
-
-    /*string s = "Cerlce-10-50-60";
-    Cercle c("( 10, 50)", 50);
-    cout << c.toString() << endl;*/
-
-    /*Matrice2x2 m(5);
-    cout << m << endl;
-    Vecteur2D v(1, 10);
-    Matrice2x2 a = m * v;
-    cout << a << endl;*/
-
-        /*ClientWin cw;
-        cw.lancerClient();
-        cw.sendServeur();
-        while(true){
-            cw.receiveServeur();
-            cw.sendServeur();
-        }*/
-        //cw.receiveServeur();
 
         return 0;
 }

@@ -13,3 +13,5 @@ Forme *ExpertPolygone::retrouverForme(string s) {
     }
     return nullptr;
 }
+
+ExpertPolygone::ExpertPolygone(ExpertForme *suivant) : ExpertForme(suivant) {}

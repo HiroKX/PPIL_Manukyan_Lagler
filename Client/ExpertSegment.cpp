@@ -12,3 +12,4 @@ Forme *ExpertSegment::retrouverForme(string s) {
     }
     return nullptr;
 }
+ExpertSegment::ExpertSegment(ExpertForme *suivant) : ExpertForme(suivant) {}

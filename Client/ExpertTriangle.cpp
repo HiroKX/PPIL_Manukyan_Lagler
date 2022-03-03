@@ -12,3 +12,6 @@ Forme *ExpertTriangle::retrouverForme(string s) {
     }
     return nullptr;
 }
+
+
+ExpertTriangle::ExpertTriangle(ExpertForme *suivant) : ExpertForme(suivant) {}

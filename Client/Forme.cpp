@@ -3,6 +3,7 @@
 //
 
 #include "Forme.h"
+#include <fstream>
 
 Forme::Forme(const string &couleur) : couleur(couleur) {}
 
@@ -28,4 +29,5 @@ Forme::Forme(const Vecteur2D &v1, const string &couleur) {
     vecteur =v1;
     this->couleur = couleur;
 }
+
 

@@ -11,10 +11,10 @@
 #include <fstream>
 
 class VisiteurDessine: public VisiteurAbstrait {
-    ClientWin c;
+    ClientWin* c;
 public:
     vector<Forme*> lFormes;
-    VisiteurDessine(const ClientWin &c);
+    VisiteurDessine(ClientWin *c);
     void visit(const Cercle *c) override;
     void visit(const Polygone *p) override;
     void visit(const Triangle *t) override;

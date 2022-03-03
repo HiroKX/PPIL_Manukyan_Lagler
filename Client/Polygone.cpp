@@ -5,12 +5,12 @@
 #include "Polygone.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
-Polygone::Polygone(const char *s, const vector<Vecteur2D> &vecteurs, const char *couleur) : Forme(s, couleur) {
-    this->vecteurs.push_back(getVecteur());
+Polygone::Polygone(const char *s, vector<Vecteur2D> &vec, const char *couleur) : Forme(s, couleur) {
+    vecteurs = vec;
 }
 
-Polygone::Polygone(const Vecteur2D& v, const vector<Vecteur2D> &vecteurs, const char *couleur) : Forme(v, couleur) {
-    this->vecteurs.push_back(getVecteur());
+Polygone::Polygone(const Vecteur2D& v, vector<Vecteur2D> &vec, const char *couleur) : Forme(v, couleur) {
+    vecteurs = vec;
 }
 
 void Polygone::addVecteur(const Vecteur2D &vecteur){
@@ -73,5 +73,37 @@ Forme *Polygone::transform(const TransformationAffine &tf) const {
     }
     Polygone* p = new Polygone(tf.transAffine(vecteur),v,couleur);
     return p;
+}
+
+double Polygone::getHighestX() const {
+    double m = vecteur.x;
+    for(Vecteur2D v : vecteurs){
+        m = max(m,v.x);
+    }
+    return m;
+}
+
+double Polygone::getHighestY() const {
+    double m = vecteur.y;
+    for(Vecteur2D v : vecteurs){
+        m = max(m,v.y);
+    }
+    return m;
+}
+
+double Polygone::getLowestX() const {
+    double m = vecteur.x;
+    for(Vecteur2D v : vecteurs){
+        m = min(m,v.x);
+    }
+    return m;
+}
+
+double Polygone::getLowestY() const {
+    double m = vecteur.y;
+    for(Vecteur2D v : vecteurs){
+        m = min(m,v.y);
+    }
+    return m;
 }
 

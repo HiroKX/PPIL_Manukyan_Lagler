@@ -23,6 +23,22 @@ public:
     inline string toString(){
         return type+"-"+to_string(width)+"-"+to_string(height);
     }
+
+    int getWidth() const{
+        return width;
+    }
+
+    void setWidth(int w){
+        width = w;
+    }
+
+    int getHeight() const{
+        return height;
+    }
+
+    void setHeight(int h){
+        height = h;
+    }
 };
 
 

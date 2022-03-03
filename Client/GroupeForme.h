@@ -18,6 +18,11 @@ public:
     void rotation(double rot, const Vecteur2D& v) override;
     void homotetie(const double k, const Vecteur2D& v) override;
     Vecteur2D getCentre() override;
+    double getHighestX() const override;
+    double getHighestY() const override;
+    double getLowestX() const override;
+    double getLowestY() const override;
+
     Forme* transform(const TransformationAffine& tf) const override {
         return nullptr;
     }

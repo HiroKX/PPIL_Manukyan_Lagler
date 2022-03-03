@@ -33,3 +33,19 @@ Vecteur2D GroupeForme::getCentre() {
 }
 
 GroupeForme::GroupeForme(const char *couleur) : Forme(couleur) {}
+
+double GroupeForme::getHighestX() const {
+    return 0;
+}
+
+double GroupeForme::getHighestY() const {
+    return 0;
+}
+
+double GroupeForme::getLowestX() const {
+    return 0;
+}
+
+double GroupeForme::getLowestY() const {
+    return 0;
+}

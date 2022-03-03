@@ -25,10 +25,10 @@ private:
     SOCKET sock;
     int r;
     Fenetre f;
-    TransformationAffine tf;
     vector<Forme*> formes;
 
 public:
+
     void lancerClient() {
         try {
 //-------------- initialisation ressources librairie winsock -------------------------------
@@ -128,7 +128,6 @@ public:
     void sendServeur(string requete) {
         requete += "\r\n";
         int l = requete.length();
-        cout << requete.c_str();
         send(this->sock, requete.c_str(), l, 0);
 
         if (r == SOCKET_ERROR)
@@ -139,10 +138,26 @@ public:
         formes.push_back(f);
     }
 
-    void dessine(Triangle &f){
+    void dessine(){
+        double p1x =0, p1y =0, p2x =0, p2y=0;
+        for(Forme* forme : formes){
+            p1x = min(p1x,forme->getLowestX());
+            p2x = max(p2x,forme->getHighestX());
+            p1y = min(p1y,forme->getLowestY());
+            p2y = max(p1x,forme->getHighestY());
+        }
+        Vecteur2D P1(p1x,p1y) , P2(p2x,p2y), P1e(0,f.getHeight()), P2e(f.getWidth(),0);
 
-        string requete = f.toString();
-        sendServeur(requete);
+        TransformationAffine tf(P1,P2,P1e,P2e);
+        cout << tf.lambda1;
+        cout << tf.lambda2;
+        cout << tf.a;
+        cout << tf.b;
+        for(Forme* forme : formes){
+            cout << forme->toString();
+            sendServeur(forme->transform(tf)->toString());
+        }
+        sendServeur("dessine");
     }
 
     void ouvreFenetre(Fenetre &fen){

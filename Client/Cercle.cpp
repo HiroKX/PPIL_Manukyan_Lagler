@@ -51,3 +51,19 @@ Forme *Cercle::transform(const TransformationAffine &tf) const {
     return c;
 }
 
+double Cercle::getHighestX() const {
+    return vecteur.x+rayon;
+}
+
+double Cercle::getHighestY() const {
+    return vecteur.y+rayon;
+}
+
+double Cercle::getLowestX() const {
+    return vecteur.x-rayon;
+}
+
+double Cercle::getLowestY() const {
+    return vecteur.y-rayon;
+}
+

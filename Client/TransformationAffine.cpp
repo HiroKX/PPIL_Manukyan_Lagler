@@ -35,5 +35,7 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
 }
 
 Vecteur2D TransformationAffine::transAffine(Vecteur2D p) const {
+    cout << "\n";
+    cout << (a);
     return Vecteur2D(lambda1*p.x+a, lambda2*p.y+b);
 }

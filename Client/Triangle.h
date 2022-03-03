@@ -31,7 +31,10 @@ class Triangle : public Forme {
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
         Forme* transform(const TransformationAffine& tf) const override;
-
+        double getHighestX() const override;
+        double getHighestY() const override;
+        double getLowestX() const override;
+        double getLowestY() const override;
         void draw(VisiteurAbstrait *vis) const override;
         Vecteur2D getCentre() override;
 };

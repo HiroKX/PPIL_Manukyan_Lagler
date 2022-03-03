@@ -57,4 +57,20 @@ Segment::Segment(const Vecteur2D &v1, const Vecteur2D &v2, const char* couleur):
     vecteur2 = v2;
 }
 
+double Segment::getHighestX() const {
+    return max(vecteur.x,vecteur2.x);
+}
+
+double Segment::getHighestY() const {
+    return max(vecteur.y,vecteur2.y);
+}
+
+double Segment::getLowestX() const {
+    return min(vecteur.x,vecteur2.x);
+}
+
+double Segment::getLowestY() const {
+    return min(vecteur.y,vecteur2.y);
+}
+
 

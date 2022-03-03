@@ -15,10 +15,14 @@ public class ExpertPolygon extends ExpertFormes{
             String[] coord= s.split("-");
             if(coord.length < 2)
                 throw new Erreur("Pas assez d'argument passer");
+            System.out.println(Arrays.toString(coord));
             ArrayList<Integer> lX = new ArrayList<Integer>();
             ArrayList<Integer> lY = new ArrayList<Integer>();
             for (int i = 1 ; i < coord.length-1 ; i++) {
                 String[] point = coord[i].replace("(","").replace(")","").replace(" ","").split(",");
+                System.out.println(Arrays.toString(point));
+                System.out.println(point[0]);
+                System.out.println(point[1]);
                 lX.add((int)Double.parseDouble(point[0]));
                 lY.add((int) Double.parseDouble(point[1]));
             }

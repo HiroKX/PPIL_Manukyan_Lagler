@@ -33,6 +33,10 @@ public:
         virtual void homotetie(const double k, const Vecteur2D& v) = 0;
         virtual void draw(VisiteurAbstrait *vis) const = 0;
         virtual Forme* transform(const TransformationAffine& tf)const = 0;
+        virtual double getHighestX() const =0;
+        virtual double getHighestY() const =0;
+        virtual double getLowestX() const =0;
+        virtual double getLowestY() const =0;
         virtual string toString() const =0;
 
     virtual Vecteur2D getCentre() = 0;

@@ -18,6 +18,10 @@ class Cercle : public Forme{
         double getRayon() const;
         void setRayon(double rayon);
         string toString() const override;
+        double getHighestX() const override;
+        double getHighestY() const override;
+        double getLowestX() const override;
+        double getLowestY() const override;
 
         void translation(const Vecteur2D& v) override ;
         void rotation(const double rot, const Vecteur2D& v) override;

@@ -10,21 +10,20 @@
 
 class Forme;
 void VisiteurDessine::visit(const Cercle *ce) {
-    c.sendServeur(ce->toString());
+    c->enregistrerServeur((Forme *) ce);
 }
 
 void VisiteurDessine::visit(const Polygone *p) {
-    c.sendServeur(p->toString());
+    c->enregistrerServeur((Forme *) p);
 }
 
 void VisiteurDessine::visit(const Triangle *t){
-    c.sendServeur(t->toString());
+    c->enregistrerServeur((Forme *) t);
 }
 
 void VisiteurDessine::visit(const GroupeForme *g) {
     for(auto &Forme: g->getGroupe()){
         Forme->setCouleur(g->getCouleur());
-        cout << Forme->toString();
         Forme->draw(this);
     }
 }
@@ -34,10 +33,10 @@ void VisiteurDessine::sauvegarder(Forme *f) {
 }
 
 void VisiteurDessine::visit(const Segment *s) {
-    c.sendServeur(s->toString());
+    c->enregistrerServeur((Forme *) s);
 }
 
-VisiteurDessine::VisiteurDessine(const ClientWin &c) : c(c) {}
+VisiteurDessine::VisiteurDessine(ClientWin *c) : c(c) {}
 
 vector<Forme *> VisiteurDessine::charger(string fileName) {
     vector<Forme *> vf;

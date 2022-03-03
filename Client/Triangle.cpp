@@ -61,7 +61,24 @@ void Triangle::draw(VisiteurAbstrait *vis) const {
 }
 
 Forme *Triangle::transform(const TransformationAffine &tf) const {
+    cout << tf.transAffine(vecteur3).toString();
     return new Triangle(tf.transAffine(vecteur),tf.transAffine(vecteur2),tf.transAffine(vecteur3),couleur);
+}
+
+double Triangle::getHighestY() const {
+    return max(vecteur.y,max(vecteur3.y,vecteur2.y));
+}
+
+double Triangle::getLowestX() const {
+    return min(vecteur.x,min(vecteur3.x,vecteur2.x));
+}
+
+double Triangle::getLowestY() const {
+    return min(vecteur.y,min(vecteur3.y,vecteur2.y));
+}
+
+double Triangle::getHighestX() const {
+    return min(vecteur.y,min(vecteur3.y,vecteur2.y));
 }
 
 

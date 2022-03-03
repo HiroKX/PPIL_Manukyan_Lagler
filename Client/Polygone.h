@@ -16,8 +16,8 @@ class Polygone : public Forme{
     vector<Vecteur2D> vecteurs;
 
     public:
-        Polygone(const char *s, const vector<Vecteur2D> &vecteurs, const char *couleur);
-        Polygone(const Vecteur2D &v, const vector<Vecteur2D> &vecteurs, const char *couleur);
+        Polygone(const char *s,vector<Vecteur2D> &vecteurs, const char *couleur);
+        Polygone(const Vecteur2D &v,vector<Vecteur2D> &vecteurs, const char *couleur);
         void addVecteur(const Vecteur2D &vecteur);
 
         string toString() const override;
@@ -27,6 +27,10 @@ class Polygone : public Forme{
         void homotetie(const double k, const Vecteur2D& v) override;
         void draw(VisiteurAbstrait *vis) const override;
         Forme* transform(const TransformationAffine& tf) const override;
+        double getHighestX() const override;
+        double getHighestY() const override;
+        double getLowestX() const override;
+        double getLowestY() const override;
 
         Vecteur2D getCentre() override;
 };

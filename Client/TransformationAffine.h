@@ -9,13 +9,14 @@
 #include "Vecteur2D.h"
 
 class TransformationAffine {
+
+
+
+public:
     double lambda1;
     double lambda2;
     double a;
     double b;
-
-
-public:
     TransformationAffine(Vecteur2D& P1, Vecteur2D P2, Vecteur2D& P1e, Vecteur2D& P2e);
     Vecteur2D transAffine(Vecteur2D p) const;
 };

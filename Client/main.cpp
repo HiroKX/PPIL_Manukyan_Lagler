@@ -18,7 +18,7 @@ using namespace std;
 int main(){
     cin.clear();
     Vecteur2D A(200,300), B(250, 250), C(400,400),D(100,100),E(400,400);
-    vector<Vecteur2D> v = {A,B,E,D};
+    vector<Vecteur2D> v = {A,B};
     Polygone p("( 180, 100)",v,"red");
     Triangle t(A, B, C, "red");
     Fenetre f("awt",1500,2000);
@@ -31,19 +31,13 @@ int main(){
     ClientWin c;
     c.lancerClient();
     c.ouvreFenetre(f);
-    VisiteurDessine vis(c);
-    g.draw(&vis);
+    VisiteurDessine vis(&c);
+    t.draw(&vis);
+    c.dessine();
     //vis.sauvegarder( &t);
     // vis.sauvegarder(&t);
     //vis.enregistrer("monfichier.txt");
-    vector<Forme*> lformes = vis.charger("monfichier.txt");
-    cout << lformes.size();
-    for(Forme* a : lformes){
-        a->draw(&vis);
-    }
-    c.sendServeur("dessin");
 
-    cout << "oui";
     while(true){
 
     }

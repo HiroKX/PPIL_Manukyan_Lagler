@@ -13,7 +13,8 @@ class Cercle : public Forme{
         double rayon;
 
     public:
-        Cercle(const char *s, double rayon, const string &couleur);
+        Cercle(const char *s, double rayon, const char *couleur);
+        Cercle(const Vecteur2D &s, double rayon, const char *couleur);
         double getRayon() const;
         void setRayon(double rayon);
         string toString() const override;
@@ -22,6 +23,7 @@ class Cercle : public Forme{
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
         void draw(VisiteurAbstrait *vis) const override;
+        Forme* transform(const TransformationAffine& tf) const override;
 
         Vecteur2D getCentre() override;
 };

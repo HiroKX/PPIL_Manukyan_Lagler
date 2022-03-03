@@ -10,10 +10,12 @@
 
 class Segment : public Forme{
     private:
-        Vecteur2D vecteur2;
+    Segment(const Vecteur2D &v1, const Vecteur2D &v2, const char *couleur);
+
+    Vecteur2D vecteur2;
 
     public:
-        Segment(const char *v1, const char *v2, const string &couleur);
+        Segment(const char *v1, const char *v2, const char *couleur);
         const Vecteur2D &getVecteur2() const;
         void setVecteur2(const Vecteur2D &vecteur2);
         string toString() const;
@@ -21,6 +23,7 @@ class Segment : public Forme{
         void translation(const Vecteur2D& v) override;
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
+        Forme* transform(const TransformationAffine& tf) const override;
 
         void draw(VisiteurAbstrait *vis) const override;
         Vecteur2D getCentre() override;

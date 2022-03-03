@@ -15,8 +15,8 @@ class Triangle : public Forme {
 
     public:
     //TODO : rajouter un constructeur avec vecteur
-        Triangle(const char *v1, const char *v2, const char *v3, const string &couleur);
-        Triangle(const Vecteur2D &v1, const Vecteur2D &v2, const Vecteur2D &v3, const string &couleur):Forme(v1,couleur) {
+        Triangle(const char *v1, const char *v2, const char *v3, const char *couleur);
+        Triangle(const Vecteur2D &v1, const Vecteur2D &v2, const Vecteur2D &v3, const char *couleur): Forme(v1, couleur) {
             vecteur2 = v2;
             vecteur3 = v3;
         }
@@ -30,6 +30,7 @@ class Triangle : public Forme {
         void translation(const Vecteur2D& v) override;
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
+        Forme* transform(const TransformationAffine& tf) const override;
 
         void draw(VisiteurAbstrait *vis) const override;
         Vecteur2D getCentre() override;

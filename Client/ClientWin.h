@@ -25,6 +25,8 @@ private:
     SOCKET sock;
     int r;
     Fenetre f;
+    TransformationAffine tf;
+    vector<Forme*> formes;
 
 public:
     void lancerClient() {
@@ -84,7 +86,6 @@ public:
 
 
             cout << "connexion au serveur réussie" << endl;
-
         } catch (Erreur e) {
             cout << e << endl;
         }
@@ -134,7 +135,12 @@ public:
             throw Erreur("échec de l'envoi de la requête");
     }
 
+    void enregistrerServeur(Forme* f){
+        formes.push_back(f);
+    }
+
     void dessine(Triangle &f){
+
         string requete = f.toString();
         sendServeur(requete);
     }

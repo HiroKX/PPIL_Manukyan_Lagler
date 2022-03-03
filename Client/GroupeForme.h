@@ -18,6 +18,9 @@ public:
     void rotation(double rot, const Vecteur2D& v) override;
     void homotetie(const double k, const Vecteur2D& v) override;
     Vecteur2D getCentre() override;
+    Forme* transform(const TransformationAffine& tf) const override {
+        return nullptr;
+    }
 
     void addForme(Forme* f){
         groupe.push_back(f);
@@ -25,7 +28,7 @@ public:
 
 
     string toString() const override {
-        string s = "Groupe;"+getCouleur()+";";
+        string s = "Groupe;"+string(getCouleur())+";";
         s+= std::to_string(groupe.size());
         for(auto* a : groupe){
             s+=";"+a->toString();
@@ -36,7 +39,7 @@ public:
     void draw(VisiteurAbstrait *vis)const  override;
     void setGroupe(const vector<Forme*> &gro);
 
-    GroupeForme(const string &couleur);
+    GroupeForme(const char *couleur);
 };
 
 #endif //CLIENT_GROUPEFORME_H

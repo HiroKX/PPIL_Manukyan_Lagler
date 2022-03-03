@@ -5,7 +5,9 @@
 #include "Cercle.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
-Cercle::Cercle(const char *s, double rayon, const string &couleur) : Forme(s, couleur), rayon(rayon) {}
+Cercle::Cercle(const char *s, double rayon, const char *couleur) : Forme(s, couleur), rayon(rayon) {}
+
+Cercle::Cercle(const Vecteur2D &s, double rayon, const char *couleur) : Forme(s, couleur), rayon(rayon) {}
 
 double Cercle::getRayon() const {
     return rayon;
@@ -43,3 +45,9 @@ Vecteur2D Cercle::getCentre() {
 void Cercle::draw(VisiteurAbstrait *vis) const {
     vis->visit(this);
 }
+
+Forme *Cercle::transform(const TransformationAffine &tf) const {
+    Cercle* c = new Cercle(tf.transAffine(vecteur),rayon,couleur);
+    return c;
+}
+

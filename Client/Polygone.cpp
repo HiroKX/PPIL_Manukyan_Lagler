@@ -5,7 +5,11 @@
 #include "Polygone.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
-Polygone::Polygone(const char *s, const vector<Vecteur2D> &vecteurs, const string &couleur) : Forme(s, couleur), vecteurs(vecteurs) {
+Polygone::Polygone(const char *s, const vector<Vecteur2D> &vecteurs, const char *couleur) : Forme(s, couleur) {
+    this->vecteurs.push_back(getVecteur());
+}
+
+Polygone::Polygone(const Vecteur2D& v, const vector<Vecteur2D> &vecteurs, const char *couleur) : Forme(v, couleur) {
     this->vecteurs.push_back(getVecteur());
 }
 
@@ -18,7 +22,7 @@ string Polygone::toString() const {
     for(Vecteur2D v : this->vecteurs){
         s += "-" + v.toString();
     }
-    s += "-" + this->getCouleur();
+    s += "-" + string(getCouleur());
     return s;
 }
 
@@ -60,5 +64,14 @@ Vecteur2D Polygone::getCentre() {
 
 void Polygone::draw(VisiteurAbstrait *vis) const{
     vis->visit(this);
+}
+
+Forme *Polygone::transform(const TransformationAffine &tf) const {
+    vector<Vecteur2D> v;
+    for(Vecteur2D vec : vecteurs){
+        v.push_back(tf.transAffine(vec));
+    }
+    Polygone* p = new Polygone(tf.transAffine(vecteur),v,couleur);
+    return p;
 }
 

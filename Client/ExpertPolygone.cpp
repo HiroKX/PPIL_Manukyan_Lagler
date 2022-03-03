@@ -9,7 +9,7 @@ Forme *ExpertPolygone::retrouverForme(string s) {
     vector<string> c = split(s, '-');
     if(c.at(0) == "Polygone"){
         vector<Vecteur2D> v;
-        return new Polygone(c.at(1).c_str(), v, c.at(3));
+        return new Polygone(c.at(1).c_str(), v, c.at(3).c_str());
     }
     return nullptr;
 }

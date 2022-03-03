@@ -14,7 +14,7 @@ ExpertGroupe::ExpertGroupe(ExpertForme *suivant) : ExpertForme(suivant) {}
 Forme *ExpertGroupe::retrouverForme(string s) {
     vector<string> c = split(s, ';');
     if(c.at(0)=="Groupe"){
-        auto* g = new GroupeForme(c.at(1));
+        auto* g = new GroupeForme(c.at(1).c_str());
         ExpertForme* expCercle, * expPolygon, * expTriangle, * expSegment, * expGroupe;
         expCercle = new ExpertCercle(nullptr);
         expPolygon = new ExpertPolygone(expCercle);

@@ -32,4 +32,4 @@ Vecteur2D GroupeForme::getCentre() {
     return Vecteur2D();
 }
 
-GroupeForme::GroupeForme(const string &couleur) : Forme(couleur) {}
+GroupeForme::GroupeForme(const char *couleur) : Forme(couleur) {}

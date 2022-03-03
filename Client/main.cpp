@@ -32,7 +32,7 @@ int main(){
     c.lancerClient();
     c.ouvreFenetre(f);
     VisiteurDessine vis(c);
-    //g.draw(&vis);
+    g.draw(&vis);
     //vis.sauvegarder( &t);
     // vis.sauvegarder(&t);
     //vis.enregistrer("monfichier.txt");

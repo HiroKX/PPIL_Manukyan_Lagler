@@ -5,7 +5,7 @@
 #include "Triangle.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
-Triangle::Triangle(const char *v1, const char *v2, const char *v3, const string &couleur) : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
+Triangle::Triangle(const char *v1, const char *v2, const char *v3, const char *couleur) : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
 
 const Vecteur2D &Triangle::getVecteur2() const {
     return vecteur2;
@@ -58,6 +58,10 @@ Vecteur2D Triangle::getCentre() {
 
 void Triangle::draw(VisiteurAbstrait *vis) const {
     vis->visit(this);
+}
+
+Forme *Triangle::transform(const TransformationAffine &tf) const {
+    return new Triangle(tf.transAffine(vecteur),tf.transAffine(vecteur2),tf.transAffine(vecteur3),couleur);
 }
 
 

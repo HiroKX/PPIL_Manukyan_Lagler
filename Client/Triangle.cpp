@@ -2,9 +2,12 @@
 // Created by Samvel on 02/02/2022.
 //
 
+#include <algorithm>
+
 #include "Triangle.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
+
 Triangle::Triangle(const char *v1, const char *v2, const char *v3, const char *couleur) : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
 
 const Vecteur2D &Triangle::getVecteur2() const {
@@ -80,7 +83,3 @@ double Triangle::getLowestY() const {
 double Triangle::getHighestX() const {
     return min(vecteur.y,min(vecteur3.y,vecteur2.y));
 }
-
-
-
-

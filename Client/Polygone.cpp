@@ -1,10 +1,11 @@
 //
 // Created by Samvel on 02/02/2022.
 //
-
+#include <algorithm>
 #include "Polygone.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
+
 Polygone::Polygone(const char *s, vector<Vecteur2D> &vec, const char *couleur) : Forme(s, couleur) {
     vecteurs = vec;
 }

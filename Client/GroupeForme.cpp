@@ -4,12 +4,19 @@
 
 #include "GroupeForme.h"
 #include "VisiteurAbstrait.h"
+
+GroupeForme::GroupeForme(const char *couleur) : Forme(couleur) {}
+
 const vector<Forme*> &GroupeForme::getGroupe() const {
     return groupe;
 }
 
-void GroupeForme::setGroupe(const vector<Forme*> &gro) {
-    GroupeForme::groupe = gro;
+void GroupeForme::addForme(Forme* f){
+    groupe.push_back(f);
+}
+
+void GroupeForme::setGroupe(const vector<Forme*> &groupe) {
+    GroupeForme::groupe = groupe;
 }
 
 void GroupeForme::draw(VisiteurAbstrait *vis) const {
@@ -32,8 +39,6 @@ Vecteur2D GroupeForme::getCentre() {
     return Vecteur2D();
 }
 
-GroupeForme::GroupeForme(const char *couleur) : Forme(couleur) {}
-
 double GroupeForme::getHighestX() const {
     return 0;
 }
@@ -48,4 +53,18 @@ double GroupeForme::getLowestX() const {
 
 double GroupeForme::getLowestY() const {
     return 0;
+}
+
+Forme* GroupeForme::transform(const TransformationAffine& tf) const {
+    return nullptr;
+}
+
+string GroupeForme::toString() const {
+    string s = "Groupe-[-";
+    for(Forme* f : groupe){
+        s += f->toString() + "/";
+    }
+    s += getCouleur() + "-]";
+
+    return s;
 }

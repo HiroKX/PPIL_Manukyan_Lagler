@@ -2,9 +2,11 @@
 // Created by Samvel on 02/02/2022.
 //
 
+#include <algorithm>
 #include "Segment.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
+
 Segment::Segment(const char *v1, const char *v2, const char *couleur) : Forme(v1, couleur), vecteur2(v2) {}
 
 const Vecteur2D &Segment::getVecteur2() const {

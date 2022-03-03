@@ -20,6 +20,7 @@ public:
     virtual Forme * retrouverForme(string s) = 0;
 
     vector<string> split(string s, char delimiteur);
+    string join(vector<string> vs, char delimiteur);
 };
 
 

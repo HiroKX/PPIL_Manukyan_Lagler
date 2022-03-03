@@ -12,22 +12,32 @@
 ExpertGroupe::ExpertGroupe(ExpertForme *suivant) : ExpertForme(suivant) {}
 
 Forme *ExpertGroupe::retrouverForme(string s) {
-    vector<string> c = split(s, ';');
-    if(c.at(0)=="Groupe"){
-        auto* g = new GroupeForme(c.at(1).c_str());
+    vector<string> c = split(s, '-');
+    string ss = join(c, ' ');
+    cout << ss << endl;
+    cout << "----------------------------" << endl;
+    if(c.at(0) == "Groupe" && c.at(1) == "["){
+        c.erase( c.begin(), c.begin() + 2);
+        string s = join(c, '-');
+
+        //cout << "mdrrrr : " << s <<endl;
+
+        vector<string> c = split(s, '/');
         ExpertForme* expCercle, * expPolygon, * expTriangle, * expSegment, * expGroupe;
         expCercle = new ExpertCercle(nullptr);
         expPolygon = new ExpertPolygone(expCercle);
         expTriangle = new ExpertTriangle(expPolygon);
         expSegment = new ExpertSegment(expTriangle);
         expGroupe = new ExpertGroupe(expSegment);
-        int j = atoi(c.at(2).c_str());
-        for(int i = 2; i < j+2 ;i++){
-            Forme* f = expGroupe->resoudre(c.at(i));
-            f->setCouleur(g->getCouleur());
-            g->addForme(f);
+
+        GroupeForme* gf = new GroupeForme(c.at(c.size() - 1).c_str());
+        for(int i = 0; i <= c.size() - 2; i++){
+            cout << c.at(i) << endl;
+            Forme * f = expGroupe->resoudre(c.at(i));
+            f->setCouleur(gf->getCouleur());
+            gf->addForme(f);
         }
-        return g;
+        return gf;
     }
     return nullptr;
 }

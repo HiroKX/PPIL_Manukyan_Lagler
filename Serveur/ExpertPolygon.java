@@ -19,6 +19,9 @@ public class ExpertPolygon extends ExpertFormes{
             ArrayList<Integer> lY = new ArrayList<Integer>();
             for (int i = 1 ; i < coord.length-1 ; i++) {
                 String[] point = coord[i].replace("(","").replace(")","").replace(" ","").split(",");
+                if(point.length < 2){
+                    throw new Erreur("Nombre d'argument incorrect");
+                }
                 lX.add((int)Double.parseDouble(point[0]));
                 lY.add((int) Double.parseDouble(point[1]));
             }

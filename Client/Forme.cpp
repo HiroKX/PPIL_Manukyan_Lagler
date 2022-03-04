@@ -9,6 +9,8 @@ Forme::Forme(const char *couleur) : couleur(couleur) {}
 
 Forme::Forme(const char * s, const char *couleur) : vecteur(s), couleur(couleur) {}
 
+Forme::Forme(const Vecteur2D &v1, const char *couleur) : vecteur(v1), couleur(couleur) {}
+
 const Vecteur2D Forme::getVecteur() const {
     return vecteur;
 }
@@ -24,10 +26,3 @@ char * Forme::getCouleur() const {
 void Forme::setCouleur(char* couleur) {
     Forme::couleur = couleur;
 }
-
-Forme::Forme(const Vecteur2D &v1, const char *couleur) {
-    vecteur =v1;
-    this->couleur = couleur;
-}
-
-

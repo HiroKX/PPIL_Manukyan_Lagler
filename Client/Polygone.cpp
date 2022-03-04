@@ -21,10 +21,10 @@ void Polygone::addVecteur(const Vecteur2D &vecteur){
 string Polygone::toString() const {
     string s = "Polygone";
     for(Vecteur2D v : this->vecteurs){
-        s += "-" + v.toString();
+        s += "_" + v.toString();
     }
-    s+="-"+vecteur.toString();
-    s += "-" + string(getCouleur());
+    s += "_"+vecteur.toString();
+    s += "_" + string(getCouleur());
     return s;
 }
 

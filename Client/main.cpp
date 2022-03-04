@@ -22,7 +22,9 @@ int main(){
     Fenetre f("awt",1500,1000);
     GroupeForme g("red");
     GroupeForme g2("blue");
+    g.addForme(&t);
     g2.addForme(&p);
+    g2.addForme(&t);
     g.addForme(&g2);
     g.addForme(&t);
 
@@ -30,15 +32,15 @@ int main(){
     c.lancerClient();
     c.ouvreFenetre(f);
 
-    VisiteurDessine vis(c);
+    VisiteurDessine vis(&c);
     //g.draw(&vis);
+    /*vis.sauvegarder(&t);
     vis.sauvegarder(&t);
-    vis.sauvegarder(&t);
-    vis.sauvegarder(&p);
+    vis.sauvegarder(&p);*/
     vis.sauvegarder(&g);
     vis.enregistrer("monfichier.txt");
     vector<Forme*> lformes = vis.charger("monfichier.txt");
-    cout << lformes.size();
+    //cout << lformes.size();
     for(Forme* a : lformes){
         a->draw(&vis);
     }

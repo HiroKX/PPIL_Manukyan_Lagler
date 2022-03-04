@@ -1,7 +1,7 @@
 //
 // Created by rlagl on 03/03/2022.
 //
-
+#include <algorithm>
 #include "TransformationAffine.h"
 
 TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2D &P1e, Vecteur2D &P2e) {

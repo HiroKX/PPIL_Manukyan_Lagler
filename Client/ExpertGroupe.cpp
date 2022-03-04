@@ -12,17 +12,41 @@
 ExpertGroupe::ExpertGroupe(ExpertForme *suivant) : ExpertForme(suivant) {}
 
 Forme *ExpertGroupe::retrouverForme(string s) {
-    vector<string> c = split(s, '-');
-    string ss = join(c, ' ');
-    cout << ss << endl;
-    cout << "----------------------------" << endl;
-    if(c.at(0) == "Groupe" && c.at(1) == "["){
-        c.erase( c.begin(), c.begin() + 2);
-        string s = join(c, '-');
+    vector<string> c;
+    int a = 0, b = 0;
+    a = s.find_first_of('[');
+    b = s.find_last_of(']');
 
-        //cout << "mdrrrr : " << s <<endl;
+    if(s.substr (0,a) == "Groupe"){
+        string grp = s.substr (a + 1,b - a - 1);
+        vector<string> c = split(grp, '/');
+        bool nouvGrp = false;
+        string str;
+        vector<string> nc;
+        int nbCroch = 0;
+        for (int i = 0; i < c.size() - 2; i++) {
+            if(nouvGrp){
+                str += "/" + c.at(i);
+                if(c.at(i).find(']') != string::npos){
+                    nbCroch--;
+                    if(nbCroch == 0) {
+                        nouvGrp = false;
+                        nc.push_back(str);
+                    }
+                }
+            }
+            else{
+                if(c.at(i).find('[') != string::npos){
+                    nbCroch++;
+                    nouvGrp = true;
+                    str = c.at(i);
+                }
+                else{
+                    nc.push_back(c.at(i));
+                }
+            }
+        }
 
-        vector<string> c = split(s, '/');
         ExpertForme* expCercle, * expPolygon, * expTriangle, * expSegment, * expGroupe;
         expCercle = new ExpertCercle(nullptr);
         expPolygon = new ExpertPolygone(expCercle);
@@ -30,12 +54,24 @@ Forme *ExpertGroupe::retrouverForme(string s) {
         expSegment = new ExpertSegment(expTriangle);
         expGroupe = new ExpertGroupe(expSegment);
 
+        /*cout << "---------------------------------" << nc.size() << endl;
+        for(string h : nc){
+            cout << h << endl;
+        }
+        cout << c.at(c.size() - 1) << endl;
+        cout << "---------------------------------ok"<< endl;*/
+
         GroupeForme* gf = new GroupeForme(c.at(c.size() - 1).c_str());
-        for(int i = 0; i <= c.size() - 2; i++){
-            cout << c.at(i) << endl;
-            Forme * f = expGroupe->resoudre(c.at(i));
+        for(int i = 0; i <= nc.size() - 1; i++){
+            Forme * f = expGroupe->resoudre(nc.at(i));
+            cout << "for1 : " << nc.at(i) << endl;
+            cout << "for2 : " << f->toString() << endl;
             f->setCouleur(gf->getCouleur());
             gf->addForme(f);
+        }
+        cout << "----------------"<<endl;
+        for(Forme* f : gf->getGroupe()){
+            cout<< f->toString() << endl;
         }
         return gf;
     }

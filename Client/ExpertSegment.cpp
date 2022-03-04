@@ -6,7 +6,7 @@
 #include "Segment.h"
 
 Forme *ExpertSegment::retrouverForme(string s) {
-    vector<string> c = split(s, '-');
+    vector<string> c = split(s, '_');
     if(c.size() == 4 && c.at(0) == "Segment"){
         return new Segment(c.at(1).c_str(), c.at(2).c_str(), c.at(3).c_str());
     }

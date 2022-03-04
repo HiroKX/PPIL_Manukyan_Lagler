@@ -18,7 +18,7 @@ void Cercle::setRayon(double rayon) {
 }
 
 string Cercle::toString() const {
-    return "Cercle-" + getVecteur().toString() + "-" + to_string(getRayon()) + "-" + getCouleur();
+    return "Cercle_" + getVecteur().toString() + "_" + to_string(getRayon()) + "_" + getCouleur();
 }
 
 ostream &operator<<(ostream &os, const Cercle &cercle) {

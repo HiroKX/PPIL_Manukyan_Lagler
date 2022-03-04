@@ -18,7 +18,7 @@ void Segment::setVecteur2(const Vecteur2D &point2) {
 }
 
 string Segment::toString() const {
-    return "Segment-" + getVecteur().toString() + "-" + getVecteur2().toString() + "-" + getCouleur();
+    return "Segment_" + getVecteur().toString() + "_" + getVecteur2().toString() + "_" + getCouleur();
 }
 
 ostream &operator<<(ostream &os, const Segment &segment) {

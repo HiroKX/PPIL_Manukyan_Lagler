@@ -60,11 +60,10 @@ Forme* GroupeForme::transform(const TransformationAffine& tf) const {
 }
 
 string GroupeForme::toString() const {
-    string s = "Groupe-[-";
-    for(Forme* f : groupe){
-        s += f->toString() + "/";
+    string s = "Groupe[";
+    for(int i = 0; i <= groupe.size() - 1; i++){
+        s += groupe.at(i)->toString() + "/";
     }
-    s += getCouleur() + "-]";
-
+    s += string(getCouleur()) + "]";
     return s;
 }

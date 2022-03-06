@@ -9,6 +9,13 @@ public class ExpertPolygon extends ExpertFormes{
         super(suivant);
     }
 
+    /**
+     * Détermine la forme à dessiner pour un polygone
+     * @param s chaine de caractère qui contient le type de forme
+     * @param w fenetre sur laquelle dessiner
+     * @return true si réussi
+     * @throws Erreur
+     */
     @Override
     public boolean dessinerForme(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("Polygone") || s.startsWith("Segment") || s.startsWith("Triangle")){

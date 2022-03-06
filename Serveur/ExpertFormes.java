@@ -37,7 +37,6 @@ public abstract class ExpertFormes implements Expert{
     public abstract boolean dessinerForme(String s, WindowVisitor w) throws Erreur;
 
     /**
-     * Méthode non utilisé (hérité de Expert)
      * Qui sert dans ExpertDessin pour retourner une lib graphique
      * @param s
      * @return

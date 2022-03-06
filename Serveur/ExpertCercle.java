@@ -5,10 +5,10 @@ public class ExpertCercle extends ExpertFormes{
     }
 
     /**
-     * Dessine un Cercle
-     * @param s
-     * @param w
-     * @return
+     * Détermine la forme à dessiner pour un cercle
+     * @param s chaine de caractère qui contient le type de forme
+     * @param w fenetre sur laquelle dessiner
+     * @return true si réussi
      * @throws Erreur
      */
     @Override

@@ -1,8 +1,0 @@
-int main(){//c++
-    Vecteur2D A0(-1.5, 2.14);
-    Vecteur2D A1(-11.8, 0.2);
-    Vecteur2D A2(4.25, -7.8);
-    Triangle pt(A0, A1, A2, "Red");
-
-    pt.dessiner();
-}

@@ -14,6 +14,7 @@ public class Interlocuteur extends  Thread{
     int nbRequete;
     WindowVisitor w;
 
+
     public Interlocuteur(Socket socket, ThreadGroup groupe, ExpertFormes exp,ExpertLibGraphique expD)throws IOException {
         super(groupe,"ReceveurEnvoyeur");
         this.fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -24,6 +25,9 @@ public class Interlocuteur extends  Thread{
         this.nbRequete = 0;
     }
 
+    /**
+     * Méthode créant un thread pour chaque client
+     */
     @Override
     public void run() {
         try {

@@ -12,6 +12,11 @@ public class WindowAWT implements WindowVisitor {
 
     private int width, height;
 
+    /**
+     * Création d'une fenetre awt
+     * @param s
+     * @param s1
+     */
     public WindowAWT(int s, int s1) {
         width = s;
         height=s1;
@@ -39,6 +44,10 @@ public class WindowAWT implements WindowVisitor {
 
     }
 
+    /**
+     * Méthode pour déssiner un polygone
+     * @param polygon
+     */
     @Override
     public void visit(Polygone polygon) {
         try {
@@ -60,11 +69,18 @@ public class WindowAWT implements WindowVisitor {
         graphics.drawPolygon(tabX, tabY, polygon.getxCoord().length);
     }
 
+    /**
+     * Méthode pour déssiner un cercle
+     * @param circle
+     */
     @Override
     public void visit(Cercle circle) {
         graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2),(int) circle.getP().getY()-(circle.getRayon()/2)+this.frame.getInsets().top, circle.getRayon(), circle.getRayon());
     }
 
+    /**
+     * permet d'afficher les formes
+     */
     @Override
     public void visit() {
         strategy.show();

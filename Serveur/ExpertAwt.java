@@ -4,6 +4,12 @@ public class ExpertAwt extends ExpertLibGraphique {
         super(suivant);
     }
 
+    /**
+     * determine la fenetre à utilisé
+     * @param s
+     * @return la fenetre awt ou null si pas la bonne chaine
+     * @throws Erreur
+     */
     @Override
     public WindowVisitor comprendreDessins(String s) throws Erreur {
         if(s.startsWith("awt")){

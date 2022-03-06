@@ -57,7 +57,7 @@ Triangle *Triangle::clone() {
     return new Triangle(*this);
 }
 
-double Triangle::air() {
+double Triangle::aire() {
     double abc = (getVecteur().x * getVecteur2().y) - (getVecteur().x * getVecteur3().y);
     double bca = (getVecteur2().x * getVecteur3().y) - (getVecteur2().x * getVecteur().y);
     double cab = (getVecteur3().x * getVecteur().y) - (getVecteur3().x * getVecteur2().y);

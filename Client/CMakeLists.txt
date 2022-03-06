@@ -31,4 +31,4 @@ add_executable(Client
         cpp/Expert/ExpertGroupe.cpp h/Expert/ExpertGroupe.h
         cpp/Client/TransformationAffine.cpp h/Client/TransformationAffine.h
 
-        #[[TestTriangle.cpp TestSegment.cpp TestCercle.cpp TestPolygone.cpp TestGroupeForme.cpp]] )
+        #[[ TestSegment.cpp TestCercle.cpp TestPolygone.cpp TestGroupeForme.cpp]] )

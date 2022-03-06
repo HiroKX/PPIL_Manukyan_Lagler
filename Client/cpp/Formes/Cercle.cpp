@@ -48,7 +48,7 @@ Vecteur2D Cercle::getCentre() {
     return getVecteur();
 }
 
-double Cercle::air() {
+double Cercle::aire() {
     return M_PI * getRayon() * getRayon();
 }
 

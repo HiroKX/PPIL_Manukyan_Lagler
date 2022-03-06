@@ -34,7 +34,7 @@ class Segment : public Forme{
 
         Segment * clone() override;
 
-        double air() override {return 0;}
+        double aire() override {return 0;}
 
         operator string() const{
             return toString();

@@ -9,18 +9,17 @@
 #include "h/Expert/Expert.h"
 
 class ExpertForme : public Expert{
-private:
-    ExpertForme *suivant;
+    private:
+        ExpertForme *suivant;
 
-public:
-    ExpertForme(ExpertForme *suivant);
-    ExpertForme *getSuivant() const;
-    Forme *resoudre(string s) override;
+    public:
+        ExpertForme(ExpertForme *suivant);
+        ExpertForme *getSuivant() const;
+        Forme *resoudre(string s) override;
 
-    virtual Forme * retrouverForme(string s) = 0;
+        virtual Forme * retrouverForme(string s) = 0;
 
-    vector<string> split(string s, char delimiteur);
-    string join(vector<string> vs, char delimiteur);
+        vector<string> split(string s, char delimiteur);
 };
 
 

@@ -88,18 +88,53 @@ class Forme {
          * @param v
          */
         virtual void rotation(const double rot, const Vecteur2D& v) = 0;
+
+        /**
+         * Permet de faire une homotetie de la Forme suivant:
+         * @param k Le rapport de l'homotetie
+         * @param v
+         */
         virtual void homotetie(const double k, const Vecteur2D& v) = 0;
+
+        /**
+         *
+         * @return Renvoie le centre de la Forme
+         */
         virtual Vecteur2D getCentre() = 0;
 
-        virtual double air() = 0;
+        /**
+         *
+         * @return Retourne l'aire de la Forme
+         */
+        virtual double aire() = 0;
 
         virtual void draw(VisiteurAbstrait *vis) const = 0;
         virtual Forme* transform(const TransformationAffine& tf)const = 0;
+        /**
+         *
+         * @return Retroune le plus grand X
+         */
         virtual double getHighestX() const = 0;
+        /**
+         *
+         * @return Retourne le plus grand Y
+         */
         virtual double getHighestY() const = 0;
+        /**
+         *
+         * @return Retourne le plus petit X
+         */
         virtual double getLowestX() const = 0;
+        /**
+         *
+         * @return Retourne le plus petit Y
+         */
         virtual double getLowestY() const = 0;
 
+        /**
+         *
+         * @return Retourne la Forme au fromat String
+         */
         virtual string toString() const = 0;
 };
 

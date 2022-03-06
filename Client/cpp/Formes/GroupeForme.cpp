@@ -47,12 +47,12 @@ GroupeForme *GroupeForme::clone() {
     return new GroupeForme(*this);
 }
 
-double GroupeForme::air() {
-    double air = 0;
+double GroupeForme::aire() {
+    double aire = 0;
     for (Forme * f : groupe) {
-        air += f->air();
+        aire += f->aire();
     }
-    return air;
+    return aire;
 }
 
 double GroupeForme::getHighestX() const {

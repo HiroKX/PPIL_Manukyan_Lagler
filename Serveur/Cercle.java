@@ -18,7 +18,6 @@ public class Cercle extends Formes{
         this.rayon = rayon;
     }
 
-
     @Override
     public String toString() {
         return "Cercle{" +

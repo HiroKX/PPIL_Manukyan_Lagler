@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="7.5" y="0.0">WindowVisitor</node>
+    <node x="328.42857142857144" y="470.0">Expert</node>
+    <node x="0.0" y="1274.0">Erreur</node>
+    <node x="606.0" y="596.0">ExpertFormes</node>
+    <node x="1116.0" y="912.0">Point</node>
+    <node x="0.0" y="148.0">WindowAWT</node>
+    <node x="0.0" y="596.0">ExpertLibGraphique</node>
+    <node x="911.0" y="912.0">Serveur</node>
+    <node x="440.0" y="912.0">Interlocuteur</node>
+    <node x="217.0" y="1106.0">Cercle</node>
+    <node x="135.75" y="912.0">Formes</node>
+    <node x="920.0" y="790.0">ExpertPolygon</node>
+    <node x="0.0" y="790.0">ExpertAwt</node>
+    <node x="0.0" y="1106.5">Polygone</node>
+    <node x="292.0" y="790.0">ExpertDessine</node>
+    <node x="606.0" y="790.0">ExpertCercle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ExpertPolygon" target="ExpertFormes">
+      <point x="0.0" y="-38.5" />
+      <point x="1067.0" y="765.0" />
+      <point x="851.0" y="765.0" />
+      <point x="98.0" y="72.0" />
+    </edge>
+    <edge source="ExpertDessine" target="ExpertFormes">
+      <point x="0.0" y="-38.5" />
+      <point x="439.0" y="765.0" />
+      <point x="655.0" y="765.0" />
+      <point x="-98.0" y="72.0" />
+    </edge>
+    <edge source="ExpertCercle" target="ExpertFormes">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="Polygone" target="Formes">
+      <point x="0.0" y="-61.0" />
+      <point x="98.5" y="1081.0" />
+      <point x="169.0" y="1081.0" />
+      <point x="-33.25" y="72.0" />
+    </edge>
+    <edge source="ExpertLibGraphique" target="Expert">
+      <point x="0.0" y="-72.0" />
+      <point x="136.0" y="571.0" />
+      <point x="394.17857142857144" y="571.0" />
+      <point x="-65.75" y="38.0" />
+    </edge>
+    <edge source="ExpertFormes" target="Expert">
+      <point x="0.0" y="-72.0" />
+      <point x="753.0" y="571.0" />
+      <point x="525.6785714285714" y="571.0" />
+      <point x="65.75" y="38.0" />
+    </edge>
+    <edge source="Cercle" target="Formes">
+      <point x="0.0" y="-61.5" />
+      <point x="306.0" y="1081.0" />
+      <point x="235.5" y="1081.0" />
+      <point x="33.25" y="72.0" />
+    </edge>
+    <edge source="WindowAWT" target="WindowVisitor">
+      <point x="0.0" y="-138.5" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="ExpertAwt" target="ExpertLibGraphique">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="72.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7030696576151122" x="1203.2073887489505" y="1122.9798488664987" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

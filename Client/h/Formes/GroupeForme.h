@@ -13,7 +13,16 @@ class GroupeForme: public Forme {
         vector<Forme*> groupe;
 
     public:
+        /**
+         * Constructor
+         * @param couleur Char*: Couleur
+         */
         GroupeForme(const char *couleur) : Forme(couleur) {}
+
+        /**
+         * Constructor par copy
+         * @param g GroupeForme
+         */
         GroupeForme(GroupeForme &g) : Forme(g.getCouleur()), groupe(g.groupe) {}
         virtual ~GroupeForme(){
             for(Forme * f: groupe){

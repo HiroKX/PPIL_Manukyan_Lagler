@@ -13,8 +13,26 @@ class Segment : public Forme{
         Vecteur2D vecteur2;
 
     public:
+        /**
+         * Constructor
+         * @param v1 Vecteur2D: 1er Vecteur2D du Segment
+         * @param v2 Vecteur2D: 2eme Vecteur2D du Segment
+         * @param couleur String: Couleur du Segment
+         */
         Segment(const Vecteur2D &v1, const Vecteur2D &v2, const string &couleur): Forme(v1, couleur), vecteur2(v2) {}
+
+        /**
+         *
+         * @param v1 Char*: 1er Vecteur2D du Segment
+         * @param v2 Char*: 2eme Vecteur2D du Segment
+         * @param couleur String: Couleur du Segment
+         */
         Segment(const char *v1, const char *v2, const string &couleur) : Forme(v1, couleur), vecteur2(v2) {}
+
+        /**
+         * Constructor par copy
+         * @param s Segement
+         */
         Segment(Segment &s) : Forme(s.getVecteur(), s.getCouleur()), vecteur2(s.getVecteur2()) {}
 
         const Vecteur2D &getVecteur2() const;

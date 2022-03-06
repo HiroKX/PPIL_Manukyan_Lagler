@@ -57,13 +57,13 @@ Polygone *Polygone::clone() {
     return new Polygone(*this);
 }
 
-double Polygone::air() {
-    double somme = 0;
+double Polygone::aire() {
+    double aire = 0;
     for (int i = 0; i < this->vecteurs.size() - 2; i++) {
         Triangle t(vecteurs.at(0), vecteurs.at(i+1), vecteurs.at(i+2));
-        somme += t.air();
+        aire += t.aire();
     }
-    return somme;
+    return aire;
 }
 
 void Polygone::draw(VisiteurAbstrait *vis) const{

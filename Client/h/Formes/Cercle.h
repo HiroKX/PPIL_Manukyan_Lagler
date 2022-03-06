@@ -31,7 +31,7 @@ class Cercle : public Forme{
 
         Cercle * clone() override;
 
-        double air() override;
+        double aire() override;
 
         void draw(VisiteurAbstrait *vis) const override;
         Forme* transform(const TransformationAffine& tf) const override;

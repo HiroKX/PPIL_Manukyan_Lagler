@@ -35,6 +35,7 @@ public class Interlocuteur extends  Thread{
                 /*Lit le flux et le nettoye*/
                 requete = fluxEntrant.readLine();
                 requete = requete.trim();
+                System.out.println(requete);
                 exp.resoudre(requete, w);
                 nbRequete++;
             }

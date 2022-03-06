@@ -48,7 +48,6 @@ public class WindowAWT implements WindowVisitor {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        //System.out.println(polygon.getColor().toString());
         int[] tabY = polygon.getyCoord();
         for(int i = 0 ; i< tabY.length;i++ ){
             tabY[i] = tabY[i]+getInsetHeight();
@@ -63,9 +62,6 @@ public class WindowAWT implements WindowVisitor {
 
     @Override
     public void visit(Cercle circle) {
-        System.out.println(circle.getP().getX());
-        System.out.println((int) circle.getP().getY());
-        System.out.println(circle.getRayon());
         graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2),(int) circle.getP().getY()-(circle.getRayon()/2)+this.frame.getInsets().top, circle.getRayon(), circle.getRayon());
     }
 

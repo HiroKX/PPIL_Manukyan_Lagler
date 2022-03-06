@@ -6,7 +6,8 @@ import java.net.Socket;
 public class Serveur {
     private ServerSocket server;
     private ThreadGroup groupe;
-    public Serveur() throws IOException {
+    private static Serveur instance;
+    private Serveur() throws IOException {
         int portServeur = 9112;
         server = new ServerSocket(portServeur);
 
@@ -19,6 +20,17 @@ public class Serveur {
 
         System.out.println("IP du serveur : "+cetteMachine.getHostAddress());
         System.out.println("Port du serveur : "+portLocal);
+    }
+
+    public static Serveur getInstance(){
+        if(instance == null){
+            try {
+                return new Serveur();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return instance;
     }
 
     public ServerSocket getServer() {

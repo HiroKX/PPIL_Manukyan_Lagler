@@ -13,7 +13,7 @@ public class main {
         ExpertLibGraphique expD = null;
         expD = new ExpertAwt(expD);
 
-        Serveur server = new Serveur();
+        Serveur server = Serveur.getInstance();
         ThreadGroup groupe = server.getGroupe();
         ServerSocket serveurSocket= server.getServer();
         int noClient = 0;

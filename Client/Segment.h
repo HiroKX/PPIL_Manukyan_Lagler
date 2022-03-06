@@ -10,12 +10,12 @@
 
 class Segment : public Forme{
     private:
-    Segment(const Vecteur2D &v1, const Vecteur2D &v2, const char *couleur);
-
-    Vecteur2D vecteur2;
+        Vecteur2D vecteur2;
 
     public:
-        Segment(const char *v1, const char *v2, const char *couleur);
+        Segment(const Vecteur2D &v1, const Vecteur2D &v2, const string &couleur): Forme(v1, couleur), vecteur2(v2) {}
+        Segment(const char *v1, const char *v2, const string &couleur) : Forme(v1, couleur), vecteur2(v2) {}
+
         const Vecteur2D &getVecteur2() const;
         void setVecteur2(const Vecteur2D &vecteur2);
         string toString() const;
@@ -30,7 +30,16 @@ class Segment : public Forme{
         double getLowestY() const override;
         void draw(VisiteurAbstrait *vis) const override;
         Vecteur2D getCentre() override;
+
+        double air() override {return 0;}
+
+        operator string() const{
+            return toString();
+        }
 };
-        ostream &operator<<(ostream &os, const Segment &segment);
+
+    inline ostream &operator<<(ostream &os, const Segment &segment) {
+        return os << (string)segment;
+    }
 
 #endif //PPIL_MANUKYAN_LAGLER_SEGMENT_H

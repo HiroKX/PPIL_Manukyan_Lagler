@@ -34,13 +34,3 @@ vector<string> ExpertForme::split(string s, char delimiteur) {
     vs.push_back(s.substr(pos, s.length() - pos));
     return vs;
 }
-
-string ExpertForme::join(vector<string> vs, char delimiteur) {
-    string chaine = "";
-    for(string s : vs){
-        chaine += s + delimiteur;
-    }
-    return chaine.substr(0, chaine.size() - 1);
-}
-
-

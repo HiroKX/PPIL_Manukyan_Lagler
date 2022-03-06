@@ -14,8 +14,13 @@ public class ExpertCercle extends ExpertFormes{
     @Override
     public boolean dessinerForme(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("Cercle")){
-            String[] coord = s.split("-");
-            if(coord.length != 5)
+            String[] coord = s.split("_");
+            System.out.println("1------------------------");
+            for (String c : coord){
+                System.out.println(c);
+            }
+            System.out.println("2------------------------");
+            if(coord.length != 4)
                 throw new Erreur("Pas assez ou trop d'argument passer");
             w.visit(new Cercle(
                     new Point(Double.parseDouble(coord[1]),

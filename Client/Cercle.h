@@ -13,25 +13,36 @@ class Cercle : public Forme{
         double rayon;
 
     public:
-        Cercle(const char *s, double rayon, const char *couleur);
-        Cercle(const Vecteur2D &s, double rayon, const char *couleur);
+        Cercle(const char *s, double rayon, const string &couleur) : Forme(s, couleur), rayon(rayon) {}
+        Cercle(const Vecteur2D &s, double rayon, const string &couleur) : Forme(s, couleur), rayon(rayon) {}
+
         double getRayon() const;
         void setRayon(double rayon);
-        string toString() const override;
+
+
+        void translation(const Vecteur2D& v) override ;
+        void rotation(const double rot, const Vecteur2D& v) override;
+        void homotetie(const double k, const Vecteur2D& v) override;
+        Vecteur2D getCentre() override;
+
+        double air() override;
+
+        void draw(VisiteurAbstrait *vis) const override;
+        Forme* transform(const TransformationAffine& tf) const override;
         double getHighestX() const override;
         double getHighestY() const override;
         double getLowestX() const override;
         double getLowestY() const override;
 
-        void translation(const Vecteur2D& v) override ;
-        void rotation(const double rot, const Vecteur2D& v) override;
-        void homotetie(const double k, const Vecteur2D& v) override;
-        void draw(VisiteurAbstrait *vis) const override;
-        Forme* transform(const TransformationAffine& tf) const override;
+        string toString() const override;
 
-        Vecteur2D getCentre() override;
+        operator string() const{
+            return toString();
+        }
 };
 
-    ostream &operator<<(ostream &os, const Cercle &cercle);
+    inline ostream &operator<<(ostream &os, const Cercle &cercle) {
+        return os << (string)cercle;
+    }
 
 #endif //PPIL_MANUKYAN_LAGLER_CERCLE_H

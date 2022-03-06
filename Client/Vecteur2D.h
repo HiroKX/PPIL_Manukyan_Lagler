@@ -35,6 +35,7 @@ public:
     inline double operator * (const Vecteur2D &v) const { return this->x * v.x + this->y * v.y; }
     inline double longueur2() const { return (*this) * (*this); }
     inline double longueur() const { return sqrt(longueur2()); }
+    inline static double det(const Vecteur2D &v1, const Vecteur2D &v2) { return v1.x * v2.y - v1.y * v2.x; }
     inline double det(const Vecteur2D &v) const { return this->x * v.y - this->y * v.x; } // aire signée du parallélogramme engendré par (*this) et v
 
 /**

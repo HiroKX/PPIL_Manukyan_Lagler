@@ -13,12 +13,12 @@
 #include "Segment.h"
 
 class VisiteurAbstrait {
-public:
-    virtual void visit(const Cercle *c) =0;
-    virtual void visit(const Polygone *p) =0;
-    virtual void visit(const Triangle *t) =0;
-    virtual void visit(const GroupeForme *g) =0;
-    virtual void visit(const Segment *s) =0;
+    public:
+        virtual void visit(const Cercle *c) =0;
+        virtual void visit(const Polygone *p) =0;
+        virtual void visit(const Triangle *t) =0;
+        virtual void visit(const GroupeForme *g) =0;
+        virtual void visit(const Segment *s) =0;
 };
 
 

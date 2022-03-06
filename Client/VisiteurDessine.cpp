@@ -40,16 +40,17 @@ VisiteurDessine::VisiteurDessine(ClientWin *c) : c(c) {}
 
 vector<Forme *> VisiteurDessine::charger(string fileName) {
     vector<Forme *> vf;
-    cout << fileName << endl;
+    cout << "Chargement de : " << fileName << endl;
     ifstream fichier(fileName.c_str(), ios::in);
-    ExpertForme* expCercle, * expPolygon, * expTriangle, * expSegment, * expGroupe;
-    expCercle = new ExpertCercle(nullptr);
-    expPolygon = new ExpertPolygone(expCercle);
-    expTriangle = new ExpertTriangle(expPolygon);
-    expSegment = new ExpertSegment(expTriangle);
-    expGroupe = new ExpertGroupe(expSegment);
     if(fichier){
+        ExpertForme* expCercle, * expPolygon, * expTriangle, * expSegment, * expGroupe;
+        expCercle = new ExpertCercle(nullptr);
+        expPolygon = new ExpertPolygone(expCercle);
+        expTriangle = new ExpertTriangle(expPolygon);
+        expSegment = new ExpertSegment(expTriangle);
+        expGroupe = new ExpertGroupe(expSegment);
         string ligne;
+        lFormes.clear();
         while(getline(fichier, ligne))
         {
             Forme* f = expGroupe->resoudre(ligne);
@@ -64,7 +65,7 @@ vector<Forme *> VisiteurDessine::charger(string fileName) {
 
 void VisiteurDessine::enregistrer(const string& fileName) const {
     ofstream file(fileName);
-    for(auto *forme : lFormes){
+    for(Forme *forme : lFormes){
         file << forme->toString() << endl;
     }
     file.close();

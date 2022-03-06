@@ -24,7 +24,8 @@ Forme *ExpertGroupe::retrouverForme(string s) {
         string str;
         vector<string> nc;
         int nbCroch = 0;
-        for (int i = 0; i < c.size() - 2; i++) {
+
+        for (int i = 0; i < c.size() - 1; i++) {
             if(nouvGrp){
                 str += "/" + c.at(i);
                 if(c.at(i).find(']') != string::npos){
@@ -54,24 +55,11 @@ Forme *ExpertGroupe::retrouverForme(string s) {
         expSegment = new ExpertSegment(expTriangle);
         expGroupe = new ExpertGroupe(expSegment);
 
-        /*cout << "---------------------------------" << nc.size() << endl;
-        for(string h : nc){
-            cout << h << endl;
-        }
-        cout << c.at(c.size() - 1) << endl;
-        cout << "---------------------------------ok"<< endl;*/
-
         GroupeForme* gf = new GroupeForme(c.at(c.size() - 1).c_str());
         for(int i = 0; i <= nc.size() - 1; i++){
             Forme * f = expGroupe->resoudre(nc.at(i));
-            cout << "for1 : " << nc.at(i) << endl;
-            cout << "for2 : " << f->toString() << endl;
             f->setCouleur(gf->getCouleur());
             gf->addForme(f);
-        }
-        cout << "----------------"<<endl;
-        for(Forme* f : gf->getGroupe()){
-            cout<< f->toString() << endl;
         }
         return gf;
     }

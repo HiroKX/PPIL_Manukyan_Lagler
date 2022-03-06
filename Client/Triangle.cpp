@@ -8,8 +8,6 @@
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
 
-Triangle::Triangle(const char *v1, const char *v2, const char *v3, const char *couleur) : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
-
 const Vecteur2D &Triangle::getVecteur2() const {
     return vecteur2;
 }
@@ -28,10 +26,6 @@ void Triangle::setVecteur3(const Vecteur2D &vecteur3) {
 
 string Triangle::toString() const {
     return "Triangle_" + getVecteur().toString() + "_" + getVecteur2().toString() +"_" + getVecteur3().toString() + "_" + getCouleur();
-}
-
-ostream &operator<<(ostream &os, const Triangle &triangle) {
-    return os << triangle.toString();
 }
 
 void Triangle::translation(const Vecteur2D& v) {
@@ -56,7 +50,14 @@ void Triangle::homotetie(const double k, const Vecteur2D &v) {
 Vecteur2D Triangle::getCentre() {
     double c_x = (getVecteur().x + getVecteur2().x + getVecteur3().x) / 3;
     double c_y = (getVecteur().y + getVecteur2().y + getVecteur3().y) / 3;
-    return Vecteur2D(c_x , c_y);
+    return Vecteur2D(c_x, c_y);
+}
+
+double Triangle::air() {
+    double abc = (getVecteur().x * getVecteur2().y) - (getVecteur().x * getVecteur3().y);
+    double bca = (getVecteur2().x * getVecteur3().y) - (getVecteur2().x * getVecteur().y);
+    double cab = (getVecteur3().x * getVecteur().y) - (getVecteur3().x * getVecteur2().y);
+    return abs(abc + bca + cab) / 2;
 }
 
 void Triangle::draw(VisiteurAbstrait *vis) const {
@@ -65,21 +66,21 @@ void Triangle::draw(VisiteurAbstrait *vis) const {
 
 Forme *Triangle::transform(const TransformationAffine &tf) const {
     cout << tf.transAffine(vecteur3).toString();
-    return new Triangle(tf.transAffine(vecteur),tf.transAffine(vecteur2),tf.transAffine(vecteur3),couleur);
+    return new Triangle(tf.transAffine(vecteur), tf.transAffine(vecteur2), tf.transAffine(vecteur3), couleur);
 }
 
 double Triangle::getHighestY() const {
-    return max(vecteur.y,max(vecteur3.y,vecteur2.y));
+    return max(vecteur.y, max(vecteur3.y, vecteur2.y));
 }
 
 double Triangle::getLowestX() const {
-    return min(vecteur.x,min(vecteur3.x,vecteur2.x));
+    return min(vecteur.x, min(vecteur3.x, vecteur2.x));
 }
 
 double Triangle::getLowestY() const {
-    return min(vecteur.y,min(vecteur3.y,vecteur2.y));
+    return min(vecteur.y, min(vecteur3.y, vecteur2.y));
 }
 
 double Triangle::getHighestX() const {
-    return min(vecteur.y,min(vecteur3.y,vecteur2.y));
+    return min(vecteur.y, min(vecteur3.y, vecteur2.y));
 }

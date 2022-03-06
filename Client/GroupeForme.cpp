@@ -23,20 +23,34 @@ void GroupeForme::draw(VisiteurAbstrait *vis) const {
     vis->visit(this);
 }
 
-void GroupeForme::homotetie(const double k, const Vecteur2D &v) {
-
+void GroupeForme::translation(const Vecteur2D &v) {
+    for(Forme * f : groupe){
+        f->translation(v);
+    }
 }
 
-void GroupeForme::translation(const Vecteur2D &v) {
-
+void GroupeForme::homotetie(const double k, const Vecteur2D &v) {
+    for(Forme * f : groupe){
+        f->homotetie(k, v);
+    }
 }
 
 void GroupeForme::rotation(double rot, const Vecteur2D &v) {
-
+    for(Forme * f : groupe){
+        f->rotation(rot, v);
+    }
 }
 
 Vecteur2D GroupeForme::getCentre() {
     return Vecteur2D();
+}
+
+double GroupeForme::air() {
+    double air = 0;
+    for (Forme * f : groupe) {
+        air += f->air();
+    }
+    return air;
 }
 
 double GroupeForme::getHighestX() const {

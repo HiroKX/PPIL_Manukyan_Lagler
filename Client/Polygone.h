@@ -9,22 +9,25 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
-
 class Polygone : public Forme{
     private:
-
-    vector<Vecteur2D> vecteurs;
+        vector<Vecteur2D> vecteurs;
 
     public:
-        Polygone(const char *s,vector<Vecteur2D> &vecteurs, const char *couleur);
-        Polygone(const Vecteur2D &v,vector<Vecteur2D> &vecteurs, const char *couleur);
-        void addVecteur(const Vecteur2D &vecteur);
+        Polygone(vector<Vecteur2D> &vec, const string &couleur) : Forme(couleur) {
+            setVecteur(vec.at(0));
+            vecteurs = vec;
+        }
 
-        string toString() const override;
+        void addVecteur(const Vecteur2D &vecteur);
 
         void translation(const Vecteur2D& v) override;
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
+        Vecteur2D getCentre() override;
+
+        double air() override;
+
         void draw(VisiteurAbstrait *vis) const override;
         Forme* transform(const TransformationAffine& tf) const override;
         double getHighestX() const override;
@@ -32,9 +35,15 @@ class Polygone : public Forme{
         double getLowestX() const override;
         double getLowestY() const override;
 
-        Vecteur2D getCentre() override;
+        string toString() const override;
+
+        operator string() const{
+            return toString();
+        }
 };
 
-    ostream &operator<<(ostream &os, const Polygone &rectangle);
+    inline ostream &operator<<(ostream &os, const Polygone &polygone) {
+        return os << (string)polygone;
+    }
 
 #endif //PPIL_MANUKYAN_LAGLER_RECTANGLE_H

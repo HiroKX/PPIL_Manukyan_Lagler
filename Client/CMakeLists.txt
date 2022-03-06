@@ -24,4 +24,11 @@ add_executable(Client
         ExpertPolygone.cpp ExpertPolygone.cpp
         ExpertTriangle.cpp ExpertTriangle.h
         ExpertSegment.cpp ExpertSegment.h
-        GroupeForme.cpp GroupeForme.h Fenetre.h VisiteurAbstrait.h VisiteurDessine.cpp VisiteurDessine.h ExpertGroupe.cpp ExpertGroupe.h TransformationAffine.cpp TransformationAffine.h)
+        GroupeForme.cpp GroupeForme.h
+        Fenetre.h
+        VisiteurAbstrait.h
+        VisiteurDessine.cpp VisiteurDessine.h
+        ExpertGroupe.cpp ExpertGroupe.h
+        TransformationAffine.cpp TransformationAffine.h
+
+        #[[TestTriangle.cpp TestSegment.cpp TestCercle.cpp TestPolygone.cpp TestGroupeForme.cpp]] )

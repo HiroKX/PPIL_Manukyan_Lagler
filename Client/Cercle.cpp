@@ -5,9 +5,11 @@
 #include "Cercle.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
-Cercle::Cercle(const char *s, double rayon, const char *couleur) : Forme(s, couleur), rayon(rayon) {}
 
-Cercle::Cercle(const Vecteur2D &s, double rayon, const char *couleur) : Forme(s, couleur), rayon(rayon) {}
+#include <corecrt_math_defines.h>
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
 
 double Cercle::getRayon() const {
     return rayon;
@@ -19,10 +21,6 @@ void Cercle::setRayon(double rayon) {
 
 string Cercle::toString() const {
     return "Cercle_" + getVecteur().toString() + "_" + to_string(getRayon()) + "_" + getCouleur();
-}
-
-ostream &operator<<(ostream &os, const Cercle &cercle) {
-    return os << cercle.toString();
 }
 
 void Cercle::translation(const Vecteur2D& v) {
@@ -42,28 +40,31 @@ Vecteur2D Cercle::getCentre() {
     return getVecteur();
 }
 
+double Cercle::air() {
+    return M_PI * getRayon() * getRayon();
+}
+
 void Cercle::draw(VisiteurAbstrait *vis) const {
     vis->visit(this);
 }
 
 Forme *Cercle::transform(const TransformationAffine &tf) const {
-    Cercle* c = new Cercle(tf.transAffine(vecteur),rayon,couleur);
+    Cercle* c = new Cercle(tf.transAffine(vecteur), rayon, couleur);
     return c;
 }
 
 double Cercle::getHighestX() const {
-    return vecteur.x+rayon;
+    return vecteur.x + rayon;
 }
 
 double Cercle::getHighestY() const {
-    return vecteur.y+rayon;
+    return vecteur.y + rayon;
 }
 
 double Cercle::getLowestX() const {
-    return vecteur.x-rayon;
+    return vecteur.x - rayon;
 }
 
 double Cercle::getLowestY() const {
-    return vecteur.y-rayon;
+    return vecteur.y - rayon;
 }
-

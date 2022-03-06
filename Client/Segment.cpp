@@ -7,8 +7,6 @@
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
 
-Segment::Segment(const char *v1, const char *v2, const char *couleur) : Forme(v1, couleur), vecteur2(v2) {}
-
 const Vecteur2D &Segment::getVecteur2() const {
     return vecteur2;
 }
@@ -19,10 +17,6 @@ void Segment::setVecteur2(const Vecteur2D &point2) {
 
 string Segment::toString() const {
     return "Segment_" + getVecteur().toString() + "_" + getVecteur2().toString() + "_" + getCouleur();
-}
-
-ostream &operator<<(ostream &os, const Segment &segment) {
-    return os << segment.toString();
 }
 
 void Segment::translation(const Vecteur2D& v) {
@@ -52,27 +46,21 @@ void Segment::draw(VisiteurAbstrait *vis) const {
 }
 
 Forme *Segment::transform(const TransformationAffine &tf) const {
-    return new Segment(tf.transAffine(vecteur),tf.transAffine(vecteur2),couleur);
-}
-
-Segment::Segment(const Vecteur2D &v1, const Vecteur2D &v2, const char* couleur): Forme(v1,couleur) {
-    vecteur2 = v2;
+    return new Segment(tf.transAffine(vecteur), tf.transAffine(vecteur2), couleur);
 }
 
 double Segment::getHighestX() const {
-    return max(vecteur.x,vecteur2.x);
+    return max(vecteur.x, vecteur2.x);
 }
 
 double Segment::getHighestY() const {
-    return max(vecteur.y,vecteur2.y);
+    return max(vecteur.y, vecteur2.y);
 }
 
 double Segment::getLowestX() const {
-    return min(vecteur.x,vecteur2.x);
+    return min(vecteur.x, vecteur2.x);
 }
 
 double Segment::getLowestY() const {
-    return min(vecteur.y,vecteur2.y);
+    return min(vecteur.y, vecteur2.y);
 }
-
-

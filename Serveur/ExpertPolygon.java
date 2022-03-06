@@ -12,12 +12,12 @@ public class ExpertPolygon extends ExpertFormes{
     @Override
     public boolean dessinerForme(String s, WindowVisitor w) throws Erreur{
         if(s.startsWith("Polygone") || s.startsWith("Segment") || s.startsWith("Triangle")){
-            String[] coord= s.split("-");
+            String[] coord= s.split("_");
             if(coord.length < 2)
                 throw new Erreur("Pas assez d'argument passer");
             ArrayList<Integer> lX = new ArrayList<Integer>();
             ArrayList<Integer> lY = new ArrayList<Integer>();
-            for (int i = 1 ; i < coord.length-1 ; i++) {
+            for (int i = 1; i < coord.length - 1; i++) {
                 String[] point = coord[i].replace("(","").replace(")","").replace(" ","").split(",");
                 if(point.length < 2){
                     throw new Erreur("Nombre d'argument incorrect");
@@ -27,7 +27,7 @@ public class ExpertPolygon extends ExpertFormes{
             }
             int[] tabX = lX.stream().mapToInt(i -> i).toArray();
             int[] tabY = lY.stream().mapToInt(i -> i).toArray();
-            w.visit(new Polygone(tabX,tabY,coord[coord.length-1]));
+            w.visit(new Polygone(tabX, tabY, coord[coord.length - 1]));
             return true;
         } 
         else{

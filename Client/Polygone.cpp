@@ -3,16 +3,9 @@
 //
 #include <algorithm>
 #include "Polygone.h"
+#include "Triangle.h"
 #include "Matrice2x2.h"
 #include "VisiteurAbstrait.h"
-
-Polygone::Polygone(const char *s, vector<Vecteur2D> &vec, const char *couleur) : Forme(s, couleur) {
-    vecteurs = vec;
-}
-
-Polygone::Polygone(const Vecteur2D& v, vector<Vecteur2D> &vec, const char *couleur) : Forme(v, couleur) {
-    vecteurs = vec;
-}
 
 void Polygone::addVecteur(const Vecteur2D &vecteur){
     this->vecteurs.push_back(vecteur);
@@ -23,13 +16,9 @@ string Polygone::toString() const {
     for(Vecteur2D v : this->vecteurs){
         s += "_" + v.toString();
     }
-    s += "_"+vecteur.toString();
+    //s += "_" + vecteur.toString();
     s += "_" + string(getCouleur());
     return s;
-}
-
-ostream &operator<<(ostream &os, const Polygone &rectangle) {
-    return os << rectangle.toString();
 }
 
 void Polygone::translation(const Vecteur2D& v) {
@@ -64,6 +53,15 @@ Vecteur2D Polygone::getCentre() {
     return Vecteur2D(c_x, c_y);
 }
 
+double Polygone::air() {
+    double somme = 0;
+    for (int i = 0; i < this->vecteurs.size() - 2; i++) {
+        Triangle t(vecteurs.at(0), vecteurs.at(i+1), vecteurs.at(i+2));
+        somme += t.air();
+    }
+    return somme;
+}
+
 void Polygone::draw(VisiteurAbstrait *vis) const{
     vis->visit(this);
 }
@@ -78,7 +76,7 @@ Forme *Polygone::transform(const TransformationAffine &tf) const {
         cout<< "\n";
     }
     cout << tf.transAffine(vecteur).toString();
-    Polygone* p = new Polygone(tf.transAffine(vecteur),v,couleur);
+    Polygone* p = new Polygone(v, couleur);
     return p;
 }
 
@@ -113,4 +111,3 @@ double Polygone::getLowestY() const {
     }
     return m;
 }
-

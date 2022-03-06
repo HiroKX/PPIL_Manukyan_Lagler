@@ -14,10 +14,20 @@ class Polygone : public Forme{
         vector<Vecteur2D> vecteurs;
 
     public:
+        /**
+         * Constructor
+         * @param vec vector<Vecteur2D> : Liste des Vecteur2D du Polygone
+         * @param couleur String: Couleur du Polygone
+         */
         Polygone(vector<Vecteur2D> &vec, const string &couleur) : Forme(couleur) {
             setVecteur(vec.at(0));
             vecteurs = vec;
         }
+
+        /**
+         * Constructor par copy
+         * @param p Polygone
+         */
         Polygone(Polygone &p) : Forme(p.getCouleur()), vecteurs(p.vecteurs){
             setVecteur(p.getVecteur());
         }

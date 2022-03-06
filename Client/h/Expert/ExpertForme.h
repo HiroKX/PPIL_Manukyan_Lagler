@@ -28,7 +28,7 @@ class ExpertForme : public Expert{
         Forme *resoudre(string s) override;
 
         /**
-         * Retrouve la Forme à partire d'un String et la retourne
+         * Retrouve la Forme à partir d'un String et la retourne
          * @param s String
          * @return Retourne une Forme
          */

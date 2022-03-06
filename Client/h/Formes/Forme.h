@@ -110,24 +110,25 @@ class Forme {
 
         virtual void draw(VisiteurAbstrait *vis) const = 0;
         virtual Forme* transform(const TransformationAffine& tf)const = 0;
+
         /**
          *
-         * @return Retroune le plus grand X
+         * @return Retroune le plus grand X de la Forme
          */
         virtual double getHighestX() const = 0;
         /**
          *
-         * @return Retourne le plus grand Y
+         * @return Retourne le plus grand Y de la Forme
          */
         virtual double getHighestY() const = 0;
         /**
          *
-         * @return Retourne le plus petit X
+         * @return Retourne le plus petit X de la Forme
          */
         virtual double getLowestX() const = 0;
         /**
          *
-         * @return Retourne le plus petit Y
+         * @return Retourne le plus petit Y de la Forme
          */
         virtual double getLowestY() const = 0;
 

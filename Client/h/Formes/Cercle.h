@@ -13,12 +13,30 @@ class Cercle : public Forme{
         double rayon;
 
     public:
+    /**
+     * Constructor
+     * @param s String: Centre du Cercle
+     * @param rayon double: Rayon du Cercle
+     * @param couleur String: Couleur du Cercle
+     */
         Cercle(const char *s, double rayon, const string &couleur) : Forme(s, couleur) {
             setRayon(rayon);
         }
+
+        /**
+         * Constructor
+         * @param s Vecteur2D: Centre du Cercle
+         * @param rayon double: Rayon du Cercle
+         * @param couleur String: Couleur du Cercle
+         */
         Cercle(const Vecteur2D &s, double rayon, const string &couleur) : Forme(s, couleur) {
             setRayon(rayon);
         }
+
+        /**
+         * Constructor par Copy
+         * @param c Cercle
+         */
         Cercle(Cercle &c) : Forme(c.getVecteur(), c.getCouleur()), rayon(c.rayon){}
 
         double getRayon() const;

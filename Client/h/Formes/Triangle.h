@@ -14,8 +14,28 @@ class Triangle : public Forme {
         Vecteur2D vecteur3;
 
     public:
+        /**
+         * Constructor
+         * @param v1 Char*: 1er Vecteur2D de Triangle
+         * @param v2 Char*: 2eme Vecteur2D de Triangle
+         * @param v3 Char*: 3eme Vecteur2D de Triangle
+         * @param couleur String: Couleur de Triangle
+        */
         Triangle(const char *v1, const char *v2, const char *v3, const string &couleur = "") : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
+
+        /**
+         * Constructor
+         * @param v1 Vecteur2D: 1er Vecteur2D de Triangle
+         * @param v2 Vecteur2D: 2eme Vecteur2D de Triangle
+         * @param v3 Vecteur2D: 3eme Vecteur2D de Triangle
+         * @param couleur String: Couleur de Triangle
+         */
         Triangle(const Vecteur2D &v1, const Vecteur2D &v2, const Vecteur2D &v3, const string &couleur = ""): Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
+
+        /**
+         * Constructor par copy
+         * @param t Triangle
+         */
         Triangle(Triangle &t) : Forme(t.getVecteur(), t.getCouleur()), vecteur2(t.getVecteur2()), vecteur3(t.getVecteur3()) {}
 
         const Vecteur2D &getVecteur2() const;//Pourquoi le & sur le resultat?

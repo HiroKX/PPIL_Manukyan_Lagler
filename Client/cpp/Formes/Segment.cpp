@@ -19,6 +19,10 @@ string Segment::toString() const {
     return "Segment_" + getVecteur().toString() + "_" + getVecteur2().toString() + "_" + getCouleur();
 }
 
+Segment *Segment::clone() {
+    return new Segment(*this);
+}
+
 void Segment::translation(const Vecteur2D& v) {
     setVecteur(getVecteur() + v);
     setVecteur2(getVecteur2() + v);
@@ -64,3 +68,4 @@ double Segment::getLowestX() const {
 double Segment::getLowestY() const {
     return min(vecteur.y, vecteur2.y);
 }
+

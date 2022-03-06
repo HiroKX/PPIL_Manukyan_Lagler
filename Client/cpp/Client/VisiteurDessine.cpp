@@ -70,6 +70,3 @@ void VisiteurDessine::enregistrer(const string& fileName) const {
     }
     file.close();
 }
-
-
-

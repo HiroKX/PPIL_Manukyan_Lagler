@@ -15,6 +15,7 @@ class Segment : public Forme{
     public:
         Segment(const Vecteur2D &v1, const Vecteur2D &v2, const string &couleur): Forme(v1, couleur), vecteur2(v2) {}
         Segment(const char *v1, const char *v2, const string &couleur) : Forme(v1, couleur), vecteur2(v2) {}
+        Segment(Segment &s) : Forme(s.getVecteur(), s.getCouleur()), vecteur2(s.getVecteur2()) {}
 
         const Vecteur2D &getVecteur2() const;
         void setVecteur2(const Vecteur2D &vecteur2);
@@ -30,6 +31,8 @@ class Segment : public Forme{
         double getLowestY() const override;
         void draw(VisiteurAbstrait *vis) const override;
         Vecteur2D getCentre() override;
+
+        Segment * clone() override;
 
         double air() override {return 0;}
 

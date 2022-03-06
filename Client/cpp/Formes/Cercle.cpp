@@ -5,6 +5,7 @@
 #include "h/Formes/Cercle.h"
 #include "h/Autres/Matrice2x2.h"
 #include "h/Client/VisiteurAbstrait.h"
+#include "h/Autres/Erreur.h"
 
 #include <corecrt_math_defines.h>
 #ifndef M_PI
@@ -16,7 +17,14 @@ double Cercle::getRayon() const {
 }
 
 void Cercle::setRayon(double rayon) {
+    if(rayon < 0)
+        Erreur("Le rayon est inferieur a 0");
+
     Cercle::rayon = rayon;
+}
+
+Cercle *Cercle::clone() {
+    return new Cercle(*this);
 }
 
 string Cercle::toString() const {
@@ -68,3 +76,5 @@ double Cercle::getLowestX() const {
 double Cercle::getLowestY() const {
     return vecteur.y - rayon;
 }
+
+

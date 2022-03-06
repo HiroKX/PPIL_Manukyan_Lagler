@@ -28,6 +28,7 @@ public class Interlocuteur extends  Thread{
     public void run() {
         try {
             String requete = fluxEntrant.readLine();
+            System.out.println(requete);
             requete = requete.trim();
             w = expD.resoudre(requete);
             while(!isInterrupted()){

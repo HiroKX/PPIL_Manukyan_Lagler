@@ -13,7 +13,13 @@ class GroupeForme: public Forme {
         vector<Forme*> groupe;
 
     public:
-        GroupeForme(const char* couleur);
+        GroupeForme(const char *couleur) : Forme(couleur) {}
+        GroupeForme(GroupeForme &g) : Forme(g.getCouleur()), groupe(g.groupe) {}
+        virtual ~GroupeForme(){
+            for(Forme * f: groupe){
+                delete f;
+            }
+        }
 
         const vector<struct Forme *> & getGroupe() const;
         void setGroupe(const vector<Forme*> &groupe);
@@ -24,6 +30,8 @@ class GroupeForme: public Forme {
         void rotation(double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
         Vecteur2D getCentre() override;
+
+        GroupeForme * clone() override;
 
         double air() override;
 

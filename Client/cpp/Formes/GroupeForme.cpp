@@ -5,14 +5,12 @@
 #include "h/Formes/GroupeForme.h"
 #include "h/Client/VisiteurAbstrait.h"
 
-GroupeForme::GroupeForme(const char *couleur) : Forme(couleur) {}
-
 const vector<Forme*> &GroupeForme::getGroupe() const {
     return groupe;
 }
 
 void GroupeForme::addForme(Forme* f){
-    groupe.push_back(f);
+    groupe.push_back(f->clone());
 }
 
 void GroupeForme::setGroupe(const vector<Forme*> &groupe) {
@@ -43,6 +41,10 @@ void GroupeForme::rotation(double rot, const Vecteur2D &v) {
 
 Vecteur2D GroupeForme::getCentre() {
     return Vecteur2D();
+}
+
+GroupeForme *GroupeForme::clone() {
+    return new GroupeForme(*this);
 }
 
 double GroupeForme::air() {

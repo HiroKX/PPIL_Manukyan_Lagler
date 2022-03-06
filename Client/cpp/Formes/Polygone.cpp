@@ -53,6 +53,10 @@ Vecteur2D Polygone::getCentre() {
     return Vecteur2D(c_x, c_y);
 }
 
+Polygone *Polygone::clone() {
+    return new Polygone(*this);
+}
+
 double Polygone::air() {
     double somme = 0;
     for (int i = 0; i < this->vecteurs.size() - 2; i++) {
@@ -67,15 +71,15 @@ void Polygone::draw(VisiteurAbstrait *vis) const{
 }
 
 Forme *Polygone::transform(const TransformationAffine &tf) const {
-    cout << this->toString();
+    /*cout << this->toString();*/
     vector<Vecteur2D> v;
-    cout<< "\n";
+    /*cout<< "\n";*/
     for(Vecteur2D vec : vecteurs){
         v.push_back(tf.transAffine(vec));
-        cout << tf.transAffine(vec).toString();
-        cout<< "\n";
+        /*cout << tf.transAffine(vec).toString();
+        cout<< "\n";*/
     }
-    cout << tf.transAffine(vecteur).toString();
+    /*cout << tf.transAffine(vecteur).toString();*/
     Polygone* p = new Polygone(v, couleur);
     return p;
 }
@@ -111,3 +115,4 @@ double Polygone::getLowestY() const {
     }
     return m;
 }
+

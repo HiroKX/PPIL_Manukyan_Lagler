@@ -53,6 +53,10 @@ Vecteur2D Triangle::getCentre() {
     return Vecteur2D(c_x, c_y);
 }
 
+Triangle *Triangle::clone() {
+    return new Triangle(*this);
+}
+
 double Triangle::air() {
     double abc = (getVecteur().x * getVecteur2().y) - (getVecteur().x * getVecteur3().y);
     double bca = (getVecteur2().x * getVecteur3().y) - (getVecteur2().x * getVecteur().y);
@@ -65,7 +69,7 @@ void Triangle::draw(VisiteurAbstrait *vis) const {
 }
 
 Forme *Triangle::transform(const TransformationAffine &tf) const {
-    cout << tf.transAffine(vecteur3).toString();
+    //cout << tf.transAffine(vecteur3).toString();
     return new Triangle(tf.transAffine(vecteur), tf.transAffine(vecteur2), tf.transAffine(vecteur3), couleur);
 }
 
@@ -84,3 +88,5 @@ double Triangle::getLowestY() const {
 double Triangle::getHighestX() const {
     return min(vecteur.y, min(vecteur3.y, vecteur2.y));
 }
+
+

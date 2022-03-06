@@ -13,17 +13,23 @@ class Cercle : public Forme{
         double rayon;
 
     public:
-        Cercle(const char *s, double rayon, const string &couleur) : Forme(s, couleur), rayon(rayon) {}
-        Cercle(const Vecteur2D &s, double rayon, const string &couleur) : Forme(s, couleur), rayon(rayon) {}
+        Cercle(const char *s, double rayon, const string &couleur) : Forme(s, couleur) {
+            setRayon(rayon);
+        }
+        Cercle(const Vecteur2D &s, double rayon, const string &couleur) : Forme(s, couleur) {
+            setRayon(rayon);
+        }
+        Cercle(Cercle &c) : Forme(c.getVecteur(), c.getCouleur()), rayon(c.rayon){}
 
         double getRayon() const;
         void setRayon(double rayon);
-
 
         void translation(const Vecteur2D& v) override ;
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
         Vecteur2D getCentre() override;
+
+        Cercle * clone() override;
 
         double air() override;
 

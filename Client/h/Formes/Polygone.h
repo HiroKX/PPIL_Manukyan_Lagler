@@ -18,6 +18,9 @@ class Polygone : public Forme{
             setVecteur(vec.at(0));
             vecteurs = vec;
         }
+        Polygone(Polygone &p) : Forme(p.getCouleur()), vecteurs(p.vecteurs){
+            setVecteur(p.getVecteur());
+        }
 
         void addVecteur(const Vecteur2D &vecteur);
 
@@ -25,6 +28,8 @@ class Polygone : public Forme{
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
         Vecteur2D getCentre() override;
+
+        Polygone * clone() override;
 
         double air() override;
 

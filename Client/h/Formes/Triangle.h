@@ -16,6 +16,7 @@ class Triangle : public Forme {
     public:
         Triangle(const char *v1, const char *v2, const char *v3, const string &couleur = "") : Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
         Triangle(const Vecteur2D &v1, const Vecteur2D &v2, const Vecteur2D &v3, const string &couleur = ""): Forme(v1, couleur), vecteur2(v2), vecteur3(v3) {}
+        Triangle(Triangle &t) : Forme(t.getVecteur(), t.getCouleur()), vecteur2(t.getVecteur2()), vecteur3(t.getVecteur3()) {}
 
         const Vecteur2D &getVecteur2() const;//Pourquoi le & sur le resultat?
         void setVecteur2(const Vecteur2D &vecteur2);
@@ -26,6 +27,8 @@ class Triangle : public Forme {
         void rotation(const double rot, const Vecteur2D& v) override;
         void homotetie(const double k, const Vecteur2D& v) override;
         Vecteur2D getCentre() override;
+
+        Triangle * clone() override;
 
         double air() override;
 

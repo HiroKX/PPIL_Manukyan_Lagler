@@ -3,14 +3,12 @@ import java.awt.Color ;
 public abstract class Formes {
     String nom;
     Point p;
-
-
     String color;
 
     public Formes(String s) {
         this.nom = "forme";
         this.color = s;
-        this.p=new Point(0,0);
+        this.p = new Point(0,0);
     }
 
     public String getColor() {

@@ -48,7 +48,7 @@ public class WindowAWT implements WindowVisitor {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        System.out.println(polygon.getColor().toString());
+        //System.out.println(polygon.getColor().toString());
         int[] tabY = polygon.getyCoord();
         for(int i = 0 ; i< tabY.length;i++ ){
             tabY[i] = tabY[i]+getInsetHeight();

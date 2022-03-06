@@ -32,9 +32,7 @@ public class Interlocuteur extends  Thread{
             w = expD.resoudre(requete);
             while(!isInterrupted()){
                 /*Lit le flux et le nettoye*/
-                System.out.println(requete);
                 requete = fluxEntrant.readLine();
-                System.out.println(requete);
                 requete = requete.trim();
                 exp.resoudre(requete, w);
                 nbRequete++;

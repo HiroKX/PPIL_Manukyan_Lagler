@@ -63,7 +63,9 @@ public class WindowAWT implements WindowVisitor {
 
     @Override
     public void visit(Cercle circle) {
-        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2)+ this.frame.getInsets().top,(int) circle.getP().getY()+(circle.getRayon()/2), circle.getRayon(), circle.getRayon());
+        System.out.println(circle.getP().getX());
+        System.out.println((int) circle.getP().getY());
+        graphics.drawOval((int) circle.getP().getX()-(circle.getRayon()/2),(int) circle.getP().getY()-(circle.getRayon()/2)+this.frame.getInsets().top, circle.getRayon(), circle.getRayon());
     }
 
     @Override

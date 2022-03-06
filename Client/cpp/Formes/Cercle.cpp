@@ -57,7 +57,7 @@ void Cercle::draw(VisiteurAbstrait *vis) const {
 }
 
 Forme *Cercle::transform(const TransformationAffine &tf) const {
-    Cercle* c = new Cercle(tf.transAffine(vecteur), rayon, couleur);
+    Cercle* c = new Cercle(tf.transAffine(vecteur), tf.transAffine(Vecteur2D(rayon,rayon)).x, couleur);
     return c;
 }
 

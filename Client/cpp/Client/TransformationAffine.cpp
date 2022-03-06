@@ -34,6 +34,7 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     double Cy = (P2.y+P1.y)/2;
     a = Cxe - lambda1*Cx;
     b = Cye - lambda2*Cy;
+
 }
 
 Vecteur2D TransformationAffine::transAffine(Vecteur2D p) const {

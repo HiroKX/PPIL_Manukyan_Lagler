@@ -15,8 +15,8 @@ using namespace std;
 #define L 200
 int main(){
     cin.clear();
-    Vecteur2D A(-10,5), B(-3.2, 400), C(5,-6),D(100,100),E(400,400), vc1(2, 5);
-    vector<Vecteur2D> v = {A,B};
+    Vecteur2D A(-3,5), B(-3.2, 100), C(5,-6),D(100,100),E(400,400), vc1(2, 5), vec(2,5);
+    vector<Vecteur2D> v = {A,vec};
     Polygone p(v,"red");
     Triangle t(A, B, C, "red");
     Fenetre f("awt", 500, 500);
@@ -43,7 +43,6 @@ int main(){
     VisiteurDessine vis(&c);
     //g.draw(&vis);
     vis.sauvegarder(&t);
-    vis.sauvegarder(&t);
     vis.sauvegarder(&p);
     vis.sauvegarder(&g);
     vis.enregistrer("monfichier.txt");
@@ -52,10 +51,10 @@ int main(){
    /* for(Forme* a : lformes){
         a->draw(&vis);
     }*/
-    t.draw(&vis);
-    p.draw(&vis);
+    //t.draw(&vis);
+    p.translation(C);
+    //p.draw(&vis);
     cer.draw(&vis);
-    g.draw(&vis);
     //c.sendServeur("dessin");
     c.dessine();
 

@@ -139,13 +139,45 @@ public:
     }
 
     void dessine(){
-        double p1x = 0, p1y = 0, p2x = 0, p2y = 0;
-        for(Forme* forme : formes){
-            p1x = min(p1x, forme->getLowestX());
-            p2x = max(p2x, forme->getHighestX());
-            p1y = min(p1y, forme->getLowestY());
-            p2y = max(p1x, forme->getHighestY());
+        double p1x= NULL, p1y=NULL, p2x = NULL, p2y = NULL;
+        if(formes.size()>1) {
+            for (Forme *forme : formes) {
+                if (p1x == NULL) {
+                    p1x = forme->getLowestX();
+                } else {
+                    p1x = min(p1x, forme->getLowestX());
+                }
+
+                if (p2x == NULL) {
+                    p2x = forme->getHighestX();
+                } else {
+                    p2x = max(p2x, forme->getHighestX());
+                }
+
+                if (p1y == NULL) {
+                    p1y = forme->getLowestY();
+                } else {
+                    p1y = min(p1y, forme->getLowestY());
+                }
+
+                if (p2y == NULL) {
+                    p2y = forme->getHighestY();
+                } else {
+                    p2y = max(p2y, forme->getHighestY());
+                }
+            }
         }
+        else{
+           p1x = 0, p1y = 0, p2x = 0, p2y = 0;
+            for(Forme* forme : formes) {
+                p1x = min(p1x, forme->getLowestX());
+                p2x = max(p2x, forme->getHighestX());
+                p1y = min(p1y, forme->getLowestY());
+                p2y = max(p2y, forme->getHighestY());
+            }
+        }
+
+
         Vecteur2D P1(p1x, p1y) , P2(p2x, p2y), P1e(0, f.getHeight()), P2e(f.getWidth(), 0);
 
         TransformationAffine tf(P1, P2, P1e, P2e);

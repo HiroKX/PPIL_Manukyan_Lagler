@@ -182,6 +182,7 @@ public:
 
         TransformationAffine tf(P1, P2, P1e, P2e);
         for(Forme* forme : formes){
+            cout << forme->transform(tf)->toString();
             sendServeur(forme->transform(tf)->toString());
         }
         sendServeur("dessine");

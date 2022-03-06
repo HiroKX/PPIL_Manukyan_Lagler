@@ -23,10 +23,7 @@ public class ExpertPolygon extends ExpertFormes{
                     throw new Erreur("Nombre d'argument incorrect");
                 }
                 lX.add((int) Double.parseDouble(point[0]));
-                System.out.println((int) Double.parseDouble(point[0]));
-                lY.add((int) Double.parseDouble(point[1]));
-                System.out.println((int) Double.parseDouble(point[1]));
-            }
+                lY.add((int) Double.parseDouble(point[1])); }
             int[] tabX = lX.stream().mapToInt(i -> i).toArray();
             int[] tabY = lY.stream().mapToInt(i -> i).toArray() ;
             w.visit(new Polygone(tabX, tabY, coord[coord.length - 1]));

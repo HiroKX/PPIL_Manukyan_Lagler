@@ -16,7 +16,7 @@ using namespace std;
 int main(){
     cin.clear();
     Vecteur2D A(-3,5), B(-3.2, 100), C(5,-6),D(100,100),E(400,400), vc1(2, 5), vec(2,5);
-    vector<Vecteur2D> v = {A,vec};
+    vector<Vecteur2D> v = {A,vec,B,C};
     Polygone p(v,"red");
     Triangle t(A, B, C, "red");
     Fenetre f("awt", 500, 500);
@@ -28,6 +28,7 @@ int main(){
     Vecteur2D P1(175,135), P2(270, 200), P3(200,220), P4(130,180);
     vector<Vecteur2D> v5 = {P1, P2, P3, P4};
     Polygone p5(v5, "red");
+    Segment s(A,B,"blue");
 
     g.addForme(&t);
     g2.addForme(&p);
@@ -48,18 +49,9 @@ int main(){
     vis.enregistrer("monfichier.txt");
 
     vector<Forme*> lformes = vis.charger("monfichier.txt");
-   /* for(Forme* a : lformes){
-        a->draw(&vis);
-    }*/
-    //t.draw(&vis);
-    p.translation(C);
-    //p.draw(&vis);
-    cer.draw(&vis);
-    //c.sendServeur("dessin");
-    c.dessine();
 
-    /*int entier;
-    cin >> entier;*/
+    t.draw(&vis);
+    c.dessine();
     c.shutClient();
     return 0;
 }

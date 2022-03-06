@@ -22,23 +22,28 @@ string Polygone::toString() const {
 }
 
 void Polygone::translation(const Vecteur2D& v) {
+    vector<Vecteur2D> vec;
     for(Vecteur2D u : this->vecteurs){
-        u = u + v;
+        vec.push_back(u+v);
     }
+    vecteurs = vec;
 }
 
 void Polygone::rotation(const double rot, const Vecteur2D& v) {
     Matrice2x2 m(rot);
-
+    vector<Vecteur2D> vec;
     for(Vecteur2D u : this->vecteurs){
-        u = m * (u - v) + v;
+        vec.push_back(m * (u - v) + v);
     }
+    vecteurs = vec;
 }
 
 void Polygone::homotetie(const double k, const Vecteur2D &v) {
+    vector<Vecteur2D> vec;
     for(Vecteur2D u : this->vecteurs){
-        u = k * (u - v) + v;
+        vec.push_back(k * (u - v) + v);
     }
+    vecteurs = vec;
 }
 
 Vecteur2D Polygone::getCentre() {

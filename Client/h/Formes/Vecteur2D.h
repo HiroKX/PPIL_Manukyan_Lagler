@@ -45,6 +45,8 @@ public:
 
     operator string() const;
     inline string toString() const;
+
+    void setVecteur(const Vecteur2D vecteur2D);
 };
 
 inline const Vecteur2D operator *(const double & a, const Vecteur2D & u) {
@@ -87,6 +89,11 @@ inline Vecteur2D::operator string() const//
 
 inline string Vecteur2D::toString() const{
     return "( " + to_string(x) + ", " + to_string(y) + ")";
+}
+
+inline void Vecteur2D::setVecteur(const Vecteur2D vecteur2D) {
+    this->x = vecteur2D.x;
+    this->y = vecteur2D.y;
 }
 
 inline ostream &operator<<(ostream & os, const Vecteur2D & u)//

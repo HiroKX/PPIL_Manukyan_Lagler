@@ -13,10 +13,23 @@ class Matrice2x2 {
         double val[2][2];
 
     public:
+        /**
+         * Constuctor
+         * @param val un Tableau de double
+         */
         Matrice2x2(double (*val)[2]);
 
+        /**
+         * Constructor
+         * @param ang double
+         */
         Matrice2x2(double ang);
 
+        /**
+         * Multiplication d'une Matrice2x2 par un Vecteur2D
+         * @param v Vecteur2D
+         * @return Vecteur2D
+         */
         inline const Vecteur2D operator*(const Vecteur2D& v) const;
 
         friend ostream &operator<<(ostream &os, const Matrice2x2 &x2);

@@ -10,9 +10,13 @@
 
 class ExpertSegment : public ExpertForme{
     public:
-    ExpertSegment(ExpertForme *suivant);
+        /**
+         * Constructor
+         * @param suivant ExpertForme
+        */
+        ExpertSegment(ExpertForme *suivant);
 
-    Forme * retrouverForme(string s) override;
+        Forme * retrouverForme(string s) override;
 };
 
 

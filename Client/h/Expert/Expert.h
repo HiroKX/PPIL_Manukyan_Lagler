@@ -10,6 +10,11 @@
 
 class Expert {
     public:
+        /**
+         * Résout un String passé en paramètre et retourne sa Forme
+         * @param s String
+         * @return Retourne une Forme
+         */
         virtual Forme *resoudre(string s) = 0;
 };
 

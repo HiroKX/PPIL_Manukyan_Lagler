@@ -30,12 +30,52 @@ public:
  *
  * */
     inline Vecteur2D(const char * s);
+    /**
+     * Addition d'un Vecteur2D par un autre Vecteur2D
+     * @param u Vecteur2D
+     * @return Retourne un Vecteur2D
+     */
     inline const Vecteur2D operator + (const Vecteur2D & u) const;
+
+    /**
+     * Multiplication d'un Vecteur2D par un double
+     * @param a double
+     * @return Retourne un Vecteur2D
+     */
     inline const Vecteur2D operator * (const double & a) const;
+
+    /**
+     * Multiplication d'un Vecteur2D par un autre Vecteur2D
+     * @param v Vecteur2D
+     * @return Retroune un Vecteur2D
+     */
     inline double operator * (const Vecteur2D &v) const { return this->x * v.x + this->y * v.y; }
+
+    /**
+     * Calcule le Vecteur2D au carré
+     * @return Retourne un double
+     */
     inline double longueur2() const { return (*this) * (*this); }
+
+    /**
+     * Calcule la racine Carré d'un Vecteur2D²
+     * @return Retourne un double
+     */
     inline double longueur() const { return sqrt(longueur2()); }
+
+    /**
+     * Caclule le Determinant de deux Vecteur2D
+     * @param v1 Vecteur2D
+     * @param v2 Vecteur2D
+     * @return
+     */
     inline static double det(const Vecteur2D &v1, const Vecteur2D &v2) { return v1.x * v2.y - v1.y * v2.x; }
+
+    /**
+     * Calcule le Determinant de deux Vecteur2d
+     * @param v Vecteur2D
+     * @return
+     */
     inline double det(const Vecteur2D &v) const { return this->x * v.y - this->y * v.x; } // aire signée du parallélogramme engendré par (*this) et v
 
 /**
@@ -43,7 +83,16 @@ public:
  * */
     inline const Vecteur2D operator - () const;
 
+    /**
+     * Operator string
+     * @return
+     */
     operator string() const;
+
+    /**
+     * Renvoie le Vecteur2D sous la forme d'un string
+     * @return Retourne un string
+     */
     inline string toString() const;
 
     void setVecteur(const Vecteur2D vecteur2D);

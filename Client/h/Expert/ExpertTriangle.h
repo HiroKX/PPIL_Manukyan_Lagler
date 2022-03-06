@@ -9,9 +9,13 @@
 
 class ExpertTriangle : public ExpertForme{
     public:
-    ExpertTriangle(ExpertForme *suivant);
+        /**
+         * Constuctor
+         * @param suivant ExpertForme
+         */
+        ExpertTriangle(ExpertForme *suivant);
 
-    Forme * retrouverForme(string s) override;
+        Forme * retrouverForme(string s) override;
 };
 
 #endif //CLIENT_EXPERTTRIANGLE_H

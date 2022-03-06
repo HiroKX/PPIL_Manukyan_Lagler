@@ -10,9 +10,13 @@
 
 class ExpertPolygone : public ExpertForme{
     public:
-    ExpertPolygone(ExpertForme *suivant);
+        /**
+         * Constuctor
+         * @param suivant ExpertForme
+         */
+        ExpertPolygone(ExpertForme *suivant);
 
-    Forme * retrouverForme(string s) override;
+        Forme * retrouverForme(string s) override;
 };
 
 

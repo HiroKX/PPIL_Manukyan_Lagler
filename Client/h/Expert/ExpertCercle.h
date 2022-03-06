@@ -10,9 +10,9 @@
 class ExpertCercle : public ExpertForme{
     public:
 
-    ExpertCercle(ExpertForme *ex);
+        ExpertCercle(ExpertForme *ex);
 
-    Forme * retrouverForme(string s) override;
+        Forme * retrouverForme(string s) override;
 };
 
 #endif //CLIENT_EXPERTCERCLE_H

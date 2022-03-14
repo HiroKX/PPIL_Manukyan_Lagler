@@ -11,6 +11,7 @@ public class main {
         exp = new ExpertDessine(exp);
 
         ExpertLibGraphique expD = null;
+
         expD = new ExpertAwt(expD);
 
         Serveur server = Serveur.getInstance();

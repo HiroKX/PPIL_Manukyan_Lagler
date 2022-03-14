@@ -5,6 +5,10 @@
 #include "h/Client/VisiteurDessine.h"
 
 using namespace std;
+#include <corecrt_math_defines.h>
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 #define L 200 // longueur max d'une chaîne de caractères
 
@@ -15,8 +19,44 @@ using namespace std;
 #define L 200
 int main(){
     cin.clear();
-    Vecteur2D A(-3,5), B(-3.2, 100), C(5,-6),D(10,10),E(15,15),F(20,15),G(18,18),H(2,-12);
-    vector<Vecteur2D> v = {A,B,E,C};
+    ClientWin c;
+    Fenetre f("awt", 800, 800);
+    c.lancerClient();
+    c.ouvreFenetre(f);
+    VisiteurDessine vis(&c);
+    Vecteur2D A(1,0), B(4, -2), C(4,2),D(7,0),E(11,-1),F(15,-1),G(15,1),H(11,1),I(17,0);
+    vector<Vecteur2D> v = {E,F,G,H};
+    Triangle t1(A,B,C,"green");
+    Cercle c1(D,2,"yellow");
+    Polygone r1(v,"blue");
+    Cercle c2(I,1,"yellow");
+    GroupeForme G1("red");
+    G1.addForme(&t1);
+    G1.addForme(&c1);
+    G1.addForme(&r1);
+    G1.addForme(&c2);
+    G1.translation(Vecteur2D(-4,0));
+    G1.rotation(M_PI/4,G1.getCentre());
+    cout <<"Calcul de l'aire : "<<  G1.aire() << endl;
+    G1.draw(&vis);
+    c.dessine();
+    vis.sauvegarder(&G1);
+    vis.enregistrer("majoliefigure2.txt");
+    vector<Forme*> lformes = vis.charger("majoliefigure2.txt");
+    Forme *G2 = lformes.at(0);
+    G2->setCouleur("green");
+    G2->draw(&vis);
+    c.dessine();
+
+
+
+
+
+
+
+
+
+    /**
     Polygone p(v,"red");
     Triangle t(D, E, F, "red");
     Fenetre f("awt", 500, 500);
@@ -29,11 +69,6 @@ int main(){
     g.addForme(&g2);
     g.addForme(&t);
 
-    ClientWin c;
-    c.lancerClient();
-    c.ouvreFenetre(f);
-
-    VisiteurDessine vis(&c);
     //g.draw(&vis);
     /**
     vis.sauvegarder(&t);
@@ -42,12 +77,13 @@ int main(){
     vis.enregistrer("monfichier.txt");
 
     vector<Forme*> lformes = vis.charger("monfichier.txt");
-    */
+
     //p.draw(&vis);
     s.draw(&vis);
     cer.draw(&vis);
     g.draw(&vis);
     g2.draw(&vis);
+     */
     c.dessine();
     c.shutClient();
     return 0;

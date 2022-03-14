@@ -25,6 +25,7 @@ TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2
     }
 
 
+
     lambda1 = epsilon1*lambda;
     lambda2 = epsilon2*lambda;
     double Cxe = (P2e.x+P1e.x)/2;

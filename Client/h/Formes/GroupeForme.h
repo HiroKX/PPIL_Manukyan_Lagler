@@ -17,7 +17,7 @@ class GroupeForme: public Forme {
          * Constructor
          * @param couleur Char*: Couleur
          */
-        GroupeForme(const char *couleur) : Forme(couleur) {}
+        GroupeForme(const string &couleur) : Forme(couleur) {}
 
         /**
          * Constructor par copy

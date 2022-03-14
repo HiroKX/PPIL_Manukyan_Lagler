@@ -86,7 +86,7 @@ double Triangle::getLowestY() const {
 }
 
 double Triangle::getHighestX() const {
-    return min(vecteur.y, min(vecteur3.y, vecteur2.y));
+    return max(vecteur.x, max(vecteur3.x, vecteur2.x));
 }
 
 

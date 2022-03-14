@@ -1,8 +1,8 @@
 # Application de dessin Client/Serveur en C++ et JAVA
 
-Il s'agit d'une application permettant la création de dessin de formes et groupe de forme dans un client C++ qui est par la suite envoyé au Serveur JAVA.
+Il s'agit d'une application permettant la création de dessin de formes et groupe de forme dans un client C++ qui est par la suite envoyé à un Serveur JAVA.
 
-Réaiser dans le cadre du cours PPIL (Premier Pas vers l'ingénierie du logiciel).
+Réalisé dans le cadre du cours PPIL (Premier Pas vers l'ingénierie du logiciel).
 
 ## Documentation
 
@@ -19,7 +19,7 @@ Puis de lancer le ou les main C++.
 
 Il est possible d'améliorer se projet facilement grâce à l'utilisation des Design Pattern COR et Visitor.
 
-Il n'existe pour le moment qu'une librairie graphique d'implémenter mais d'autres sont ajoutables. 
+Il n'existe pour le moment qu'une librairie graphique d'implémentée mais d'autres sont ajoutables. 
 Il faut également créer des variables constantes pour faciliter l'utilisation.
 
 

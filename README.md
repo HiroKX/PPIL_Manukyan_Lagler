@@ -6,7 +6,7 @@ Réalisé dans le cadre du cours PPIL (Premier Pas vers l'ingénierie du logicie
 
 ## Documentation
 
-La document C++ est disponible [ici](https://hirokx.github.io/PPIL_Manukyan_Lagler/documentation/cpp/html/).
+La documentation C++ est disponible [ici](https://hirokx.github.io/PPIL_Manukyan_Lagler/documentation/cpp/html/).
 
 ## Pré-Requis et Installation
 

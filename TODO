@@ -1,8 +1,0 @@
-Serveur :
-    - Modifié la structure pour ne pas avoir à créer de classe (Cercle,Rect...) et demandé directement à la fenetre la string.
-    Objet fenetre, qui permet d'ouvrir une fenetre en fonction de la lib passer (et de la fermer aussi)
-
-    qui permet de Methode dessinerLigne, desinnerCercle ( ce qu'on a dejà)
-    à partir d'un string
-
-Client :

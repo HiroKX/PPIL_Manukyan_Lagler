@@ -1,0 +1,113 @@
+\hypertarget{_client_8h_source}{}\doxysection{Client.\+h}
+\label{_client_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/Client.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/Client.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// Created by Robin Lagler on 25/01/2022.}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{}}
+\DoxyCodeLine{6 \textcolor{comment}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{comment}{\#include <sstream>}}
+\DoxyCodeLine{8 \textcolor{comment}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{comment}{\#include <pcap/socket.h>}}
+\DoxyCodeLine{10 \textcolor{comment}{\#include <netinet/in.h>}}
+\DoxyCodeLine{11 \textcolor{comment}{\#import <sys/socket.h>}}
+\DoxyCodeLine{12 \textcolor{comment}{\#include <unistd.h>}}
+\DoxyCodeLine{13 \textcolor{comment}{\#include "{}Erreur.h"{}}}
+\DoxyCodeLine{14 \textcolor{comment}{}}
+\DoxyCodeLine{15 \textcolor{comment}{\#define L 200}}
+\DoxyCodeLine{16 \textcolor{comment}{}}
+\DoxyCodeLine{17 \textcolor{comment}{}}
+\DoxyCodeLine{18 \textcolor{comment}{\#ifndef PPIL\_MANUKYAN\_LAGLER\_CLIENT\_H}}
+\DoxyCodeLine{19 \textcolor{comment}{\#define PPIL\_MANUKYAN\_LAGLER\_CLIENT\_H}}
+\DoxyCodeLine{20 \textcolor{comment}{}}
+\DoxyCodeLine{21 \textcolor{comment}{struct SOCKADDR\_IN \{}}
+\DoxyCodeLine{22 \textcolor{comment}{    short sin\_family;   // e.g. AF\_INET}}
+\DoxyCodeLine{23 \textcolor{comment}{    unsigned short sin\_port;     // e.g. htons(3490)}}
+\DoxyCodeLine{24 \textcolor{comment}{    struct in\_addr sin\_addr;     // see struct in\_addr, below}}
+\DoxyCodeLine{25 \textcolor{comment}{    char sin\_zero[8];  // zero this if you want to}}
+\DoxyCodeLine{26 \textcolor{comment}{\};}}
+\DoxyCodeLine{27 \textcolor{comment}{}}
+\DoxyCodeLine{28 \textcolor{comment}{class Client \{}}
+\DoxyCodeLine{29 \textcolor{comment}{}}
+\DoxyCodeLine{30 \textcolor{comment}{    SOCKET sock;}}
+\DoxyCodeLine{31 \textcolor{comment}{}}
+\DoxyCodeLine{32 \textcolor{comment}{public:}}
+\DoxyCodeLine{33 \textcolor{comment}{    void lancerClient()\{}}
+\DoxyCodeLine{34 \textcolor{comment}{        int r;}}
+\DoxyCodeLine{35 \textcolor{comment}{}}
+\DoxyCodeLine{36 \textcolor{comment}{        sock = socket(AF\_INET, SOCK\_STREAM, IPPROTO\_TCP);}}
+\DoxyCodeLine{37 \textcolor{comment}{}}
+\DoxyCodeLine{38 \textcolor{comment}{        if (sock == INVALID\_SOCKET) \{}}
+\DoxyCodeLine{39 \textcolor{comment}{            ostringstream oss;}}
+\DoxyCodeLine{40 \textcolor{comment}{            oss << "{}la création du socket a échoué : code"{};}}
+\DoxyCodeLine{41 \textcolor{comment}{        \}}}
+\DoxyCodeLine{42 \textcolor{comment}{        cout << "{}socket créé"{} << endl;}}
+\DoxyCodeLine{43 \textcolor{comment}{        char adresseServeur[L];}}
+\DoxyCodeLine{44 \textcolor{comment}{        short portServeur;}}
+\DoxyCodeLine{45 \textcolor{comment}{}}
+\DoxyCodeLine{46 \textcolor{comment}{        cout << "{}tapez l'adresse IP du serveur de majuscule : "{} << endl;}}
+\DoxyCodeLine{47 \textcolor{comment}{        cin >> adresseServeur;}}
+\DoxyCodeLine{48 \textcolor{comment}{        cin.clear();}}
+\DoxyCodeLine{49 \textcolor{comment}{        cout << "{}tapez le port du serveur du serveur de majuscule : "{} << endl;}}
+\DoxyCodeLine{50 \textcolor{comment}{        cin >> portServeur;}}
+\DoxyCodeLine{51 \textcolor{comment}{        cin.clear();}}
+\DoxyCodeLine{52 \textcolor{comment}{}}
+\DoxyCodeLine{53 \textcolor{comment}{        SOCKADDR\_IN sockaddr\{\}; // informations concernant le serveur avec lequel on va communiquer}}
+\DoxyCodeLine{54 \textcolor{comment}{}}
+\DoxyCodeLine{55 \textcolor{comment}{        sockaddr.sin\_family = AF\_INET;}}
+\DoxyCodeLine{56 \textcolor{comment}{        sockaddr.sin\_addr.s\_addr = inet\_addr(adresseServeur);   // inet\_addr() convertit de l'ASCII en entier}}
+\DoxyCodeLine{57 \textcolor{comment}{        sockaddr.sin\_port = htons(portServeur);                 //htons() assure que le port est bien inscrit dans le format du réseau (little-\/endian ou big-\/endian)}}
+\DoxyCodeLine{58 \textcolor{comment}{}}
+\DoxyCodeLine{59 \textcolor{comment}{        r = connect(sock, reinterpret\_cast<const struct sockaddr *>(\&sockaddr),}}
+\DoxyCodeLine{60 \textcolor{comment}{                    sizeof(sockaddr));}}
+\DoxyCodeLine{61 \textcolor{comment}{}}
+\DoxyCodeLine{62 \textcolor{comment}{        // TODO : Rajouter erreur quand connect pas ok}}
+\DoxyCodeLine{63 \textcolor{comment}{}}
+\DoxyCodeLine{64 \textcolor{comment}{        cout << "{}connexion au serveur réussie "{} << r << endl;}}
+\DoxyCodeLine{65 \textcolor{comment}{}}
+\DoxyCodeLine{66 \textcolor{comment}{    \}}}
+\DoxyCodeLine{67 \textcolor{comment}{}}
+\DoxyCodeLine{68 \textcolor{comment}{}}
+\DoxyCodeLine{69 \textcolor{comment}{   void shutClient() const \{}}
+\DoxyCodeLine{70 \textcolor{comment}{        int r;}}
+\DoxyCodeLine{71 \textcolor{comment}{        r = shutdown(sock, SHUT\_RDWR);                            // on coupe la connexion pour l'envoi et la réception}}
+\DoxyCodeLine{72 \textcolor{comment}{        // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()}}
+\DoxyCodeLine{73 \textcolor{comment}{}}
+\DoxyCodeLine{74 \textcolor{comment}{}}
+\DoxyCodeLine{75 \textcolor{comment}{       // TODO : Rajouter erreur quand deconnect pas ok}}
+\DoxyCodeLine{76 \textcolor{comment}{}}
+\DoxyCodeLine{77 \textcolor{comment}{}}
+\DoxyCodeLine{78 \textcolor{comment}{       cout << "{}Déconnexion au serveur réussie"{} << endl;}}
+\DoxyCodeLine{79 \textcolor{comment}{}}
+\DoxyCodeLine{80 \textcolor{comment}{    \}}}
+\DoxyCodeLine{81 \textcolor{comment}{}}
+\DoxyCodeLine{82 \textcolor{comment}{    void receiveServeur()\{}}
+\DoxyCodeLine{83 \textcolor{comment}{        char reponse[L];}}
+\DoxyCodeLine{84 \textcolor{comment}{        int r;}}
+\DoxyCodeLine{85 \textcolor{comment}{        r = recv(sock, reponse, 200,}}
+\DoxyCodeLine{86 \textcolor{comment}{                 0);}}
+\DoxyCodeLine{87 \textcolor{comment}{}}
+\DoxyCodeLine{88 \textcolor{comment}{        // reçoit au plus l octets}}
+\DoxyCodeLine{89 \textcolor{comment}{        // en cas de succès, r contient le nombre d'octets reçus}}
+\DoxyCodeLine{90 \textcolor{comment}{        cout << reponse << endl;}}
+\DoxyCodeLine{91 \textcolor{comment}{        sendServeur();}}
+\DoxyCodeLine{92 \textcolor{comment}{}}
+\DoxyCodeLine{93 \textcolor{comment}{    \}}}
+\DoxyCodeLine{94 \textcolor{comment}{}}
+\DoxyCodeLine{95 \textcolor{comment}{    void sendServeur()\{}}
+\DoxyCodeLine{96 \textcolor{comment}{        string requete;}}
+\DoxyCodeLine{97 \textcolor{comment}{        cout << "{}Texte à envoyer : "{};}}
+\DoxyCodeLine{98 \textcolor{comment}{        cin >> requete;}}
+\DoxyCodeLine{99 \textcolor{comment}{        requete += "{}\(\backslash\)r\(\backslash\)n"{};}}
+\DoxyCodeLine{100 \textcolor{comment}{        int l = requete.length();}}
+\DoxyCodeLine{101 \textcolor{comment}{        send(sock, requete.c\_str(), l, 0);}}
+\DoxyCodeLine{102 \textcolor{comment}{        receiveServeur();}}
+\DoxyCodeLine{103 \textcolor{comment}{    \}}}
+\DoxyCodeLine{104 \textcolor{comment}{\};}}
+\DoxyCodeLine{105 \textcolor{comment}{}}
+\DoxyCodeLine{106 \textcolor{comment}{}}
+\DoxyCodeLine{107 \textcolor{comment}{\#endif //PPIL\_MANUKYAN\_LAGLER\_CLIENT\_H*/}}
+
+\end{DoxyCode}

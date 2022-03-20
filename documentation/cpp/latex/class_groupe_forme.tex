@@ -1,0 +1,261 @@
+\hypertarget{class_groupe_forme}{}\doxysection{Groupe\+Forme Class Reference}
+\label{class_groupe_forme}\index{GroupeForme@{GroupeForme}}
+Inheritance diagram for Groupe\+Forme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_groupe_forme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_groupe_forme_ab3b8f1cee118e1c937efd38a95af7dea}{Groupe\+Forme}} (const string \&couleur)
+\item 
+\mbox{\hyperlink{class_groupe_forme_ab9c5a43827a27c6f9f7118394c7e5f82}{Groupe\+Forme}} (\mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} \&g)
+\item 
+\mbox{\Hypertarget{class_groupe_forme_a9a4e17fef03c769ac13543e22abca9fb}\label{class_groupe_forme_a9a4e17fef03c769ac13543e22abca9fb}} 
+const vector$<$ struct \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ \& {\bfseries get\+Groupe} () const
+\item 
+\mbox{\Hypertarget{class_groupe_forme_a847f044c7552969ad096f89c5db75647}\label{class_groupe_forme_a847f044c7552969ad096f89c5db75647}} 
+void {\bfseries set\+Groupe} (const vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ \&groupe)
+\item 
+\mbox{\Hypertarget{class_groupe_forme_a3c404e6301febdea819c7275642b87ff}\label{class_groupe_forme_a3c404e6301febdea819c7275642b87ff}} 
+void {\bfseries add\+Forme} (\mbox{\hyperlink{class_forme}{Forme}} $\ast$f)
+\item 
+void \mbox{\hyperlink{class_groupe_forme_a8401e6e225a04f3a8e12c7c80693d647}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_groupe_forme_a597c2e85c83befa6b4c62d6b835218af}{rotation}} (double rot, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_groupe_forme_a969bb4448cf942a832a0b955625a515a}{homotetie}} (const double k, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_groupe_forme_a7fcffced1f7759ddf717cc5bbd7129b3}{get\+Centre}} () override
+\item 
+\mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} $\ast$ \mbox{\hyperlink{class_groupe_forme_aec3d6a266026ab48a16bfa935ee423c9}{clone}} () override
+\item 
+double \mbox{\hyperlink{class_groupe_forme_a00c3159883cb42904517cf08d992b177}{aire}} () override
+\item 
+void \mbox{\hyperlink{class_groupe_forme_a9ad2c2b25d2344076318f892ef190e67}{draw}} (\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$vis) const override
+\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_groupe_forme_aba08bf64d467cc4f4836f8547de819eb}{transform}} (const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&tf) const override
+\item 
+double \mbox{\hyperlink{class_groupe_forme_a27c7ca6dbbd83e0029440d4ed8ea6fd1}{get\+HighestX}} () const override
+\item 
+double \mbox{\hyperlink{class_groupe_forme_a6a848fcbcdfc2f02f38ab5110340b4f8}{get\+HighestY}} () const override
+\item 
+double \mbox{\hyperlink{class_groupe_forme_a3dfcb61d60f2427df269465cb8ee8e9c}{get\+LowestX}} () const override
+\item 
+double \mbox{\hyperlink{class_groupe_forme_aede4a3b7c008447c4590a478316325eb}{get\+LowestY}} () const override
+\item 
+string \mbox{\hyperlink{class_groupe_forme_aaae1810418bba28327a5c89e133ae31e}{to\+String}} () const override
+\item 
+\mbox{\Hypertarget{class_groupe_forme_a0089949f7ed37e1c4f5fe77ecb133527}\label{class_groupe_forme_a0089949f7ed37e1c4f5fe77ecb133527}} 
+{\bfseries operator string} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_groupe_forme_ab3b8f1cee118e1c937efd38a95af7dea}\label{class_groupe_forme_ab3b8f1cee118e1c937efd38a95af7dea}} 
+\index{GroupeForme@{GroupeForme}!GroupeForme@{GroupeForme}}
+\index{GroupeForme@{GroupeForme}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{GroupeForme()}{GroupeForme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Groupe\+Forme\+::\+Groupe\+Forme (\begin{DoxyParamCaption}\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em couleur} & Char$\ast$\+: Couleur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_groupe_forme_ab9c5a43827a27c6f9f7118394c7e5f82}\label{class_groupe_forme_ab9c5a43827a27c6f9f7118394c7e5f82}} 
+\index{GroupeForme@{GroupeForme}!GroupeForme@{GroupeForme}}
+\index{GroupeForme@{GroupeForme}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{GroupeForme()}{GroupeForme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Groupe\+Forme\+::\+Groupe\+Forme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor par copy 
+\begin{DoxyParams}{Parameters}
+{\em g} & \mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_groupe_forme_a00c3159883cb42904517cf08d992b177}\label{class_groupe_forme_a00c3159883cb42904517cf08d992b177}} 
+\index{GroupeForme@{GroupeForme}!aire@{aire}}
+\index{aire@{aire}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{aire()}{aire()}}
+{\footnotesize\ttfamily double Groupe\+Forme\+::aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}aire de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_aec3d6a266026ab48a16bfa935ee423c9}\label{class_groupe_forme_aec3d6a266026ab48a16bfa935ee423c9}} 
+\index{GroupeForme@{GroupeForme}!clone@{clone}}
+\index{clone@{clone}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} $\ast$ Groupe\+Forme\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie un clone de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab93c9c26bc327f91db3cd90b940b432e}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a9ad2c2b25d2344076318f892ef190e67}\label{class_groupe_forme_a9ad2c2b25d2344076318f892ef190e67}} 
+\index{GroupeForme@{GroupeForme}!draw@{draw}}
+\index{draw@{draw}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Groupe\+Forme\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$}]{vis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a7fcffced1f7759ddf717cc5bbd7129b3}\label{class_groupe_forme_a7fcffced1f7759ddf717cc5bbd7129b3}} 
+\index{GroupeForme@{GroupeForme}!getCentre@{getCentre}}
+\index{getCentre@{getCentre}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{getCentre()}{getCentre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Groupe\+Forme\+::get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie le centre de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a27c7ca6dbbd83e0029440d4ed8ea6fd1}\label{class_groupe_forme_a27c7ca6dbbd83e0029440d4ed8ea6fd1}} 
+\index{GroupeForme@{GroupeForme}!getHighestX@{getHighestX}}
+\index{getHighestX@{getHighestX}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{getHighestX()}{getHighestX()}}
+{\footnotesize\ttfamily double Groupe\+Forme\+::get\+HighestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retroune le plus grand X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a281ca5025c989c3d32e41a38f4943221}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a6a848fcbcdfc2f02f38ab5110340b4f8}\label{class_groupe_forme_a6a848fcbcdfc2f02f38ab5110340b4f8}} 
+\index{GroupeForme@{GroupeForme}!getHighestY@{getHighestY}}
+\index{getHighestY@{getHighestY}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{getHighestY()}{getHighestY()}}
+{\footnotesize\ttfamily double Groupe\+Forme\+::get\+HighestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus grand Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab2dc188653d201c5751f784634f1845c}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a3dfcb61d60f2427df269465cb8ee8e9c}\label{class_groupe_forme_a3dfcb61d60f2427df269465cb8ee8e9c}} 
+\index{GroupeForme@{GroupeForme}!getLowestX@{getLowestX}}
+\index{getLowestX@{getLowestX}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{getLowestX()}{getLowestX()}}
+{\footnotesize\ttfamily double Groupe\+Forme\+::get\+LowestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a7867be3da34068ad4d1d465a9c23300a}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_aede4a3b7c008447c4590a478316325eb}\label{class_groupe_forme_aede4a3b7c008447c4590a478316325eb}} 
+\index{GroupeForme@{GroupeForme}!getLowestY@{getLowestY}}
+\index{getLowestY@{getLowestY}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{getLowestY()}{getLowestY()}}
+{\footnotesize\ttfamily double Groupe\+Forme\+::get\+LowestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a6ac695ee15f115757647998c783aae35}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a969bb4448cf942a832a0b955625a515a}\label{class_groupe_forme_a969bb4448cf942a832a0b955625a515a}} 
+\index{GroupeForme@{GroupeForme}!homotetie@{homotetie}}
+\index{homotetie@{homotetie}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{homotetie()}{homotetie()}}
+{\footnotesize\ttfamily void Groupe\+Forme\+::homotetie (\begin{DoxyParamCaption}\item[{const double}]{k,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une homotetie de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em k} & Le rapport de l\textquotesingle{}homotetie \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a6cb51e359bf37be04df83c20cc59fd71}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a597c2e85c83befa6b4c62d6b835218af}\label{class_groupe_forme_a597c2e85c83befa6b4c62d6b835218af}} 
+\index{GroupeForme@{GroupeForme}!rotation@{rotation}}
+\index{rotation@{rotation}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily void Groupe\+Forme\+::rotation (\begin{DoxyParamCaption}\item[{double}]{rot,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une rotation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em rot} & Le degré de la rotation \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a58f745a9af387147da860f4979b01709}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_aaae1810418bba28327a5c89e133ae31e}\label{class_groupe_forme_aaae1810418bba28327a5c89e133ae31e}} 
+\index{GroupeForme@{GroupeForme}!toString@{toString}}
+\index{toString@{toString}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Groupe\+Forme\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne la \mbox{\hyperlink{class_forme}{Forme}} au fromat String 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a444ab74b7263e62031d6f7d06185ca5e}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_aba08bf64d467cc4f4836f8547de819eb}\label{class_groupe_forme_aba08bf64d467cc4f4836f8547de819eb}} 
+\index{GroupeForme@{GroupeForme}!transform@{transform}}
+\index{transform@{transform}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Groupe\+Forme\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&}]{tf }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_forme_a8401e6e225a04f3a8e12c7c80693d647}\label{class_groupe_forme_a8401e6e225a04f3a8e12c7c80693d647}} 
+\index{GroupeForme@{GroupeForme}!translation@{translation}}
+\index{translation@{translation}!GroupeForme@{GroupeForme}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily void Groupe\+Forme\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une translation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} qui permet de faire la translation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Formes/Groupe\+Forme.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Formes/Groupe\+Forme.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{_triangle_8h_source}{}\doxysection{Triangle.\+h}
+\label{_triangle_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Triangle.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Triangle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 02/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PPIL\_MANUKYAN\_LAGLER\_TRIANGLE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PPIL\_MANUKYAN\_LAGLER\_TRIANGLE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Vecteur2D.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Forme.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_triangle}{Triangle}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}} \{}
+\DoxyCodeLine{12     \textcolor{keyword}{private}:}
+\DoxyCodeLine{13         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur2;}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur3;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \mbox{\hyperlink{class_triangle_acbffdd01fc3ac2446f35813eeeaaa245}{Triangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *v1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *v2, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *v3, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur = \textcolor{stringliteral}{"{}"{}}) : \mbox{\hyperlink{class_forme}{Forme}}(v1, couleur), vecteur2(v2), vecteur3(v3) \{\}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{33         \mbox{\hyperlink{class_triangle_ace1cd9007dbf1fdd855149db66be911e}{Triangle}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v2, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v3, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur = \textcolor{stringliteral}{"{}"{}}): \mbox{\hyperlink{class_forme}{Forme}}(v1, couleur), vecteur2(v2), vecteur3(v3) \{\}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39         \mbox{\hyperlink{class_triangle_aa86889fa14f62e177762ddf79b900e06}{Triangle}}(\mbox{\hyperlink{class_triangle}{Triangle}} \&t) : \mbox{\hyperlink{class_forme}{Forme}}(t.\mbox{\hyperlink{class_forme_abbb007018ed86af4349b732d335e1a95}{getVecteur}}(), t.\mbox{\hyperlink{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}{getCouleur}}()), vecteur2(t.getVecteur2()), vecteur3(t.getVecteur3()) \{\}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&getVecteur2() \textcolor{keyword}{const};\textcolor{comment}{//Pourquoi le \& sur le resultat?}}
+\DoxyCodeLine{42         \textcolor{keywordtype}{void} setVecteur2(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur2);}
+\DoxyCodeLine{43         \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&getVecteur3() \textcolor{keyword}{const};}
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} setVecteur3(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur3);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_triangle_aa9a4f3ae8c9df847c306a643b29ddff0}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{47         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_triangle_a6ef789e74b405cafeb43d57daf6ed242}{rotation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} rot, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_triangle_a5351a5c0ff7bb356daced72167353e5c}{homotetie}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} k, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{49         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_triangle_a19bd41509064edc3884ec9100a52668e}{getCentre}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \mbox{\hyperlink{class_triangle}{Triangle}} * \mbox{\hyperlink{class_triangle_ac80a3929d01bc5bf8312fade392a6f1d}{clone}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_triangle_a9aafc122d0a3c27349d745e801d7f4f0}{aire}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{void} draw(\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} *vis) \textcolor{keyword}{const override};}
+\DoxyCodeLine{56         \mbox{\hyperlink{class_forme}{Forme}}* transform(\textcolor{keyword}{const} \mbox{\hyperlink{class_transformation_affine}{TransformationAffine}}\& tf) \textcolor{keyword}{const override};}
+\DoxyCodeLine{57         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_triangle_acb628e4b7f49300d0a3aa1a381e69b64}{getHighestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{58         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_triangle_a001514859928bd3ee00a68e80a521f5b}{getHighestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{59         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_triangle_add09e5056ddd067bd218f30a95cd225b}{getLowestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{60         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_triangle_a7458dc40af5b2526009e21413efbde94}{getLowestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_triangle_a5fbe9e1bea3ab8aae5fdd1f044814843}{toString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{keyword}{operator} string()\textcolor{keyword}{ const}\{\textcolor{comment}{//Munir toute classe de cet operateur}}
+\DoxyCodeLine{65             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_triangle_a5fbe9e1bea3ab8aae5fdd1f044814843}{toString}}();}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keyword}{inline} ostream \&operator<<(ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_triangle}{Triangle}} \&triangle) \{\textcolor{comment}{//Munir toute classe de cet operateur}}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} os << (string)triangle;}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PPIL\_MANUKYAN\_LAGLER\_TRIANGLE\_H}}
+
+\end{DoxyCode}

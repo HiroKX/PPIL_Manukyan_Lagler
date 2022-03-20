@@ -1,0 +1,51 @@
+\hypertarget{_fenetre_8h_source}{}\doxysection{Fenetre.\+h}
+\label{_fenetre_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/Fenetre.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/Fenetre.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by rlagl on 28/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CLIENT\_FENETRE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CLIENT\_FENETRE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_fenetre}{Fenetre}} \{}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} width, height;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{string} type;}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \textcolor{keyword}{inline} \mbox{\hyperlink{class_fenetre}{Fenetre}}(\textcolor{keywordtype}{string} t=\textcolor{stringliteral}{"{}awt"{}}, \textcolor{keywordtype}{int} w=600,\textcolor{keywordtype}{int} h=600) \{}
+\DoxyCodeLine{17         width = w;}
+\DoxyCodeLine{18         type=t;}
+\DoxyCodeLine{19         height=h;}
+\DoxyCodeLine{20     \}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} toString()\{}
+\DoxyCodeLine{24         \textcolor{keywordflow}{return} type+\textcolor{stringliteral}{"{}-\/"{}}+to\_string(width)+\textcolor{stringliteral}{"{}-\/"{}}+to\_string(height);}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} getWidth()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} width;}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} setWidth(\textcolor{keywordtype}{int} w)\{}
+\DoxyCodeLine{32         width = w;}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} getHeight()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} height;}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} setHeight(\textcolor{keywordtype}{int} h)\{}
+\DoxyCodeLine{40         height = h;}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_FENETRE\_H}}
+
+\end{DoxyCode}

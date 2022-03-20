@@ -1,0 +1,110 @@
+\hypertarget{_vecteur2_d_8h_source}{}\doxysection{Vecteur2\+D.\+h}
+\label{_vecteur2_d_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Vecteur2D.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Vecteur2D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 05/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PPIL\_MANUKYAN\_LAGLER\_VECTEUR2D\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PPIL\_MANUKYAN\_LAGLER\_VECTEUR2D\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{15 \textcolor{keyword}{inline} \textcolor{keyword}{const} T operator -\/ (\textcolor{keyword}{const} T \& u, \textcolor{keyword}{const} T \& v)}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} u + -\/v;}
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{double} x, y;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keyword}{inline} \textcolor{keyword}{explicit} Vecteur2D::Vecteur2D(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \& x=0, \textcolor{keyword}{const} \textcolor{keywordtype}{double} \& y=0): x(x),y(y)\{\}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32     \textcolor{keyword}{inline} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * s);}
+\DoxyCodeLine{38     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}{operator + }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& u) \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{45     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_a6bd05da962f203d67a04042c0780023e}{operator * }}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \& a) \textcolor{keyword}{const};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52     \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vecteur2_d_a6bd05da962f203d67a04042c0780023e}{operator * }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>x * v.x + this-\/>y * v.y; \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58     \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vecteur2_d_a1bbacc32d863fec29d13e5406f60c88d}{longueur2}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} (*\textcolor{keyword}{this}) * (*this); \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64     \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vecteur2_d_aa6a7d501f0421b2c8cab58222fe4bee1}{longueur}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} sqrt(\mbox{\hyperlink{class_vecteur2_d_a1bbacc32d863fec29d13e5406f60c88d}{longueur2}}()); \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{72     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vecteur2_d_abb7186df2bee549fd3965f673b4f7bfa}{det}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v2) \{ \textcolor{keywordflow}{return} v1.x * v2.y -\/ v1.y * v2.x; \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{79     \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vecteur2_d_a2f70cb8875b437d5bf19254c031bc218}{det}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>x * v.y -\/ this-\/>y * v.x; \} \textcolor{comment}{// aire signée du parallélogramme engendré par (*this) et v}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{84     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}{operator -\/ }}() \textcolor{keyword}{const};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     \textcolor{keyword}{operator} string() \textcolor{keyword}{const};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{96     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_vecteur2_d_a9ee4609e0dd349d5e1f644d5357513af}{toString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} setVecteur(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur2D);}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator *(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& u) \{}
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} u*a;}
+\DoxyCodeLine{103 \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ implémentation des fonctions inline -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{inline} Vecteur2D::Vecteur2D(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * s)\{}
+\DoxyCodeLine{108     \textcolor{keywordtype}{string} str = string(s);}
+\DoxyCodeLine{109     \textcolor{keywordtype}{string} x = str.substr(2, str.find(\textcolor{charliteral}{','}) -\/ 2);}
+\DoxyCodeLine{110     \textcolor{keywordtype}{string} y = str.substr(str.find(\textcolor{charliteral}{','}) + 2, str.find(\textcolor{charliteral}{')'}) -\/ str.find(\textcolor{charliteral}{','}) -\/ 2);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     this-\/>x = stod(x);}
+\DoxyCodeLine{113     this-\/>y = stod(y);}
+\DoxyCodeLine{114 \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}{Vecteur2D::operator + }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& u)\textcolor{keyword}{ const}}
+\DoxyCodeLine{117 \textcolor{keyword}{}\{}
+\DoxyCodeLine{118     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}( x+u.x, y+u.y);}
+\DoxyCodeLine{119 \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_a6bd05da962f203d67a04042c0780023e}{Vecteur2D::operator * }}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \& a)\textcolor{keyword}{ const}}
+\DoxyCodeLine{122 \textcolor{keyword}{}\{}
+\DoxyCodeLine{123     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}( x*a, y*a);}
+\DoxyCodeLine{124 \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}{Vecteur2D::operator -\/ }}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{127 \textcolor{keyword}{}\{}
+\DoxyCodeLine{128     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(-\/x,-\/y);}
+\DoxyCodeLine{129 \}}
+\DoxyCodeLine{130 \textcolor{comment}{//TODO : produit scalaire et determinant et longueur}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{keyword}{inline} Vecteur2D::operator string() const\textcolor{comment}{//}}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134     ostringstream os;}
+\DoxyCodeLine{135     os << this-\/>toString();}
+\DoxyCodeLine{136     \textcolor{keywordflow}{return} os.str();}
+\DoxyCodeLine{137 \}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_vecteur2_d_a9ee4609e0dd349d5e1f644d5357513af}{Vecteur2D::toString}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{140     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}( "{}} + to\_string(x) + \textcolor{stringliteral}{"{}, "{}} + to\_string(y) + \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{141 \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} Vecteur2D::setVecteur(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur2D) \{}
+\DoxyCodeLine{144     this-\/>x = vecteur2D.x;}
+\DoxyCodeLine{145     this-\/>y = vecteur2D.y;}
+\DoxyCodeLine{146 \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{keyword}{inline} ostream \&operator<<(ostream \& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& u)\textcolor{comment}{//}}
+\DoxyCodeLine{149 \{}
+\DoxyCodeLine{150     \textcolor{keywordflow}{return} os << u.\mbox{\hyperlink{class_vecteur2_d_a9ee4609e0dd349d5e1f644d5357513af}{toString}}();}
+\DoxyCodeLine{151 \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PPIL\_MANUKYAN\_LAGLER\_VECTEUR2D\_H}}
+
+\end{DoxyCode}

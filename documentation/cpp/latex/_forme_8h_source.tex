@@ -1,0 +1,69 @@
+\hypertarget{_forme_8h_source}{}\doxysection{Forme.\+h}
+\label{_forme_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Forme.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Forme.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 01/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PPIL\_MANUKYAN\_LAGLER\_FORME\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PPIL\_MANUKYAN\_LAGLER\_FORME\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}h/Formes/Vecteur2D.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}h/Client/TransformationAffine.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}};}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_forme}{Forme}} \{}
+\DoxyCodeLine{19     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur;}
+\DoxyCodeLine{21         \textcolor{keywordtype}{string} couleur;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_forme_adf47dcd2111b4e29d1b260eae2491e83}{Forme}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur) : couleur(couleur) \{\}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35         \mbox{\hyperlink{class_forme_a1ffd3f06594671f63f14240542a01bec}{Forme}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * s, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur) : vecteur(s), couleur(couleur) \{\}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_forme_ab8ff0046faaee1e4ab5f5b1b6db44766}{Forme}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur) : vecteur(v1), couleur(couleur) \{\}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme_ab7895f8b5859fb9b0166a475520b59c9}{\string~Forme}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53         \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_abbb007018ed86af4349b732d335e1a95}{getVecteur}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a76bddb1f13564ad3caaecbb86ca94db8}{setVecteur}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65         \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&\mbox{\hyperlink{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}{getCouleur}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_af0b5c9ab7d799511311f897bf77f3f21}{setCouleur}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{77         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme}{Forme}} * \mbox{\hyperlink{class_forme_ab93c9c26bc327f91db3cd90b940b432e}{clone}}() = 0;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) = 0;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{90         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a58f745a9af387147da860f4979b01709}{rotation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} rot, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) = 0;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{97         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a6cb51e359bf37be04df83c20cc59fd71}{homotetie}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} k, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) = 0;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}{getCentre}}() = 0;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}{aire}}() = 0;}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} draw(\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} *vis) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{112         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme}{Forme}}* transform(\textcolor{keyword}{const} \mbox{\hyperlink{class_transformation_affine}{TransformationAffine}}\& tf)\textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{118         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_a281ca5025c989c3d32e41a38f4943221}{getHighestX}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{123         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_ab2dc188653d201c5751f784634f1845c}{getHighestY}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{128         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_a7867be3da34068ad4d1d465a9c23300a}{getLowestX}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{133         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_a6ac695ee15f115757647998c783aae35}{getLowestY}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{139         \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_forme_a444ab74b7263e62031d6f7d06185ca5e}{toString}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{140 \};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PPIL\_MANUKYAN\_LAGLER\_FORME\_H}}
+
+\end{DoxyCode}

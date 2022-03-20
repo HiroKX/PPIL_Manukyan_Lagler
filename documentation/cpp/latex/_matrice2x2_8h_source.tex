@@ -1,0 +1,37 @@
+\hypertarget{_matrice2x2_8h_source}{}\doxysection{Matrice2x2.\+h}
+\label{_matrice2x2_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Autres/Matrice2x2.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Autres/Matrice2x2.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 19/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CLIENT\_MATRICE2X2\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CLIENT\_MATRICE2X2\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}h/Formes/Vecteur2D.h"{}}}
+\DoxyCodeLine{10 \textcolor{comment}{// a voir, modifier en tableau de Vecteur2D}}
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_matrice2x2}{Matrice2x2}} \{}
+\DoxyCodeLine{12     \textcolor{keyword}{private}:}
+\DoxyCodeLine{13         \textcolor{keywordtype}{double} val[2][2];}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_matrice2x2_a5bf99b64a614c7565dae6ecfb8ee2f59}{Matrice2x2}}(\textcolor{keywordtype}{double} (*val)[2]);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{26         \mbox{\hyperlink{class_matrice2x2_a5bf99b64a614c7565dae6ecfb8ee2f59}{Matrice2x2}}(\textcolor{keywordtype}{double} ang);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33         \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_matrice2x2_a6cf09b6b17b4f2dd5f2c24e0d8f0f23f}{operator*}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{const};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{keyword}{friend} ostream \&operator<<(ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_matrice2x2}{Matrice2x2}} \&x2);}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_matrice2x2_a6cf09b6b17b4f2dd5f2c24e0d8f0f23f}{Matrice2x2::operator*}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v)\textcolor{keyword}{ const }\{ \textcolor{comment}{// à réecrire en utilisant le produit scalaire}}
+\DoxyCodeLine{39     \textcolor{keywordtype}{double} u\_x = this-\/>val[0][0] * v.x + this-\/>val[0][1] * v.y;}
+\DoxyCodeLine{40     \textcolor{keywordtype}{double} u\_y = this-\/>val[1][0] * v.x + this-\/>val[1][1] * v.y;}
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(u\_x, u\_y);}
+\DoxyCodeLine{42 \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_MATRICE2X2\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,98 @@
+\hypertarget{class_visiteur_dessine}{}\doxysection{Visiteur\+Dessine Class Reference}
+\label{class_visiteur_dessine}\index{VisiteurDessine@{VisiteurDessine}}
+Inheritance diagram for Visiteur\+Dessine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_visiteur_dessine}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visiteur_dessine_a1011eee806a9bd6847859c832a8edb4b}\label{class_visiteur_dessine_a1011eee806a9bd6847859c832a8edb4b}} 
+{\bfseries Visiteur\+Dessine} (\mbox{\hyperlink{class_client_win}{Client\+Win}} $\ast$c)
+\item 
+void \mbox{\hyperlink{class_visiteur_dessine_ab5e4f4e42b06ebc0f686d1fceb5b17a5}{visit}} (const \mbox{\hyperlink{class_cercle}{Cercle}} $\ast$c) override
+\item 
+void \mbox{\hyperlink{class_visiteur_dessine_a9918fa0b71be93bc675af79fc8d390b9}{visit}} (const \mbox{\hyperlink{class_polygone}{Polygone}} $\ast$p) override
+\item 
+void \mbox{\hyperlink{class_visiteur_dessine_a9c02396658750b3b800f22f02ff303b2}{visit}} (const \mbox{\hyperlink{class_triangle}{Triangle}} $\ast$t) override
+\item 
+void \mbox{\hyperlink{class_visiteur_dessine_aa3d3d48309eb5d110d74aed5be974f21}{visit}} (const \mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} $\ast$g) override
+\item 
+void \mbox{\hyperlink{class_visiteur_dessine_a4cbe3065d3333cb6d1ddc98f2eb2eb04}{visit}} (const \mbox{\hyperlink{class_segment}{Segment}} $\ast$s) override
+\item 
+\mbox{\Hypertarget{class_visiteur_dessine_a8b1b40f51c53ba2a506d1d22c998cd2c}\label{class_visiteur_dessine_a8b1b40f51c53ba2a506d1d22c998cd2c}} 
+void {\bfseries sauvegarder} (\mbox{\hyperlink{class_forme}{Forme}} $\ast$f)
+\item 
+\mbox{\Hypertarget{class_visiteur_dessine_a79d8c1125a2b27d1ce197ad2a83d08ed}\label{class_visiteur_dessine_a79d8c1125a2b27d1ce197ad2a83d08ed}} 
+void {\bfseries enregistrer} (const string \&file\+Name) const
+\item 
+\mbox{\Hypertarget{class_visiteur_dessine_ac58d142c798edbccea4d96df0bf6bcfe}\label{class_visiteur_dessine_ac58d142c798edbccea4d96df0bf6bcfe}} 
+vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ {\bfseries charger} (string file\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visiteur_dessine_a821bc529667ad8454eabeac46f8801fd}\label{class_visiteur_dessine_a821bc529667ad8454eabeac46f8801fd}} 
+vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ {\bfseries l\+Formes}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_visiteur_dessine_ab5e4f4e42b06ebc0f686d1fceb5b17a5}\label{class_visiteur_dessine_ab5e4f4e42b06ebc0f686d1fceb5b17a5}} 
+\index{VisiteurDessine@{VisiteurDessine}!visit@{visit}}
+\index{visit@{visit}!VisiteurDessine@{VisiteurDessine}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessine\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cercle}{Cercle}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}}.
+
+\mbox{\Hypertarget{class_visiteur_dessine_aa3d3d48309eb5d110d74aed5be974f21}\label{class_visiteur_dessine_aa3d3d48309eb5d110d74aed5be974f21}} 
+\index{VisiteurDessine@{VisiteurDessine}!visit@{visit}}
+\index{visit@{visit}!VisiteurDessine@{VisiteurDessine}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessine\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe_forme}{Groupe\+Forme}} $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}}.
+
+\mbox{\Hypertarget{class_visiteur_dessine_a9918fa0b71be93bc675af79fc8d390b9}\label{class_visiteur_dessine_a9918fa0b71be93bc675af79fc8d390b9}} 
+\index{VisiteurDessine@{VisiteurDessine}!visit@{visit}}
+\index{visit@{visit}!VisiteurDessine@{VisiteurDessine}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessine\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_polygone}{Polygone}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}}.
+
+\mbox{\Hypertarget{class_visiteur_dessine_a4cbe3065d3333cb6d1ddc98f2eb2eb04}\label{class_visiteur_dessine_a4cbe3065d3333cb6d1ddc98f2eb2eb04}} 
+\index{VisiteurDessine@{VisiteurDessine}!visit@{visit}}
+\index{visit@{visit}!VisiteurDessine@{VisiteurDessine}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessine\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_segment}{Segment}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}}.
+
+\mbox{\Hypertarget{class_visiteur_dessine_a9c02396658750b3b800f22f02ff303b2}\label{class_visiteur_dessine_a9c02396658750b3b800f22f02ff303b2}} 
+\index{VisiteurDessine@{VisiteurDessine}!visit@{visit}}
+\index{visit@{visit}!VisiteurDessine@{VisiteurDessine}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessine\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_triangle}{Triangle}} $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Client/Visiteur\+Dessine.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Client/Visiteur\+Dessine.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,312 @@
+\hypertarget{class_forme}{}\doxysection{Forme Class Reference}
+\label{class_forme}\index{Forme@{Forme}}
+Inheritance diagram for Forme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_forme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_forme_adf47dcd2111b4e29d1b260eae2491e83}{Forme}} (const string \&couleur)
+\item 
+\mbox{\hyperlink{class_forme_a1ffd3f06594671f63f14240542a01bec}{Forme}} (const char $\ast$s, const string \&couleur)
+\item 
+\mbox{\hyperlink{class_forme_ab8ff0046faaee1e4ab5f5b1b6db44766}{Forme}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, const string \&couleur)
+\item 
+virtual \mbox{\hyperlink{class_forme_ab7895f8b5859fb9b0166a475520b59c9}{$\sim$\+Forme}} ()=default
+\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_abbb007018ed86af4349b732d335e1a95}{get\+Vecteur}} () const
+\item 
+void \mbox{\hyperlink{class_forme_a76bddb1f13564ad3caaecbb86ca94db8}{set\+Vecteur}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur)
+\item 
+const string \& \mbox{\hyperlink{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}{get\+Couleur}} () const
+\item 
+void \mbox{\hyperlink{class_forme_af0b5c9ab7d799511311f897bf77f3f21}{set\+Couleur}} (const string \&couleur)
+\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_forme_ab93c9c26bc327f91db3cd90b940b432e}{clone}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)=0
+\item 
+virtual void \mbox{\hyperlink{class_forme_a58f745a9af387147da860f4979b01709}{rotation}} (const double rot, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)=0
+\item 
+virtual void \mbox{\hyperlink{class_forme_a6cb51e359bf37be04df83c20cc59fd71}{homotetie}} (const double k, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)=0
+\item 
+virtual \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}{get\+Centre}} ()=0
+\item 
+virtual double \mbox{\hyperlink{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}{aire}} ()=0
+\item 
+\mbox{\Hypertarget{class_forme_acad3b49a49210857dba66602c4244503}\label{class_forme_acad3b49a49210857dba66602c4244503}} 
+virtual void {\bfseries draw} (\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$vis) const =0
+\item 
+\mbox{\Hypertarget{class_forme_af4565e0c43dd5609232d6c3dda63ac33}\label{class_forme_af4565e0c43dd5609232d6c3dda63ac33}} 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ {\bfseries transform} (const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&tf) const =0
+\item 
+virtual double \mbox{\hyperlink{class_forme_a281ca5025c989c3d32e41a38f4943221}{get\+HighestX}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_forme_ab2dc188653d201c5751f784634f1845c}{get\+HighestY}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_forme_a7867be3da34068ad4d1d465a9c23300a}{get\+LowestX}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_forme_a6ac695ee15f115757647998c783aae35}{get\+LowestY}} () const =0
+\item 
+virtual string \mbox{\hyperlink{class_forme_a444ab74b7263e62031d6f7d06185ca5e}{to\+String}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_aa3affd8040c92e6d5a2e56f53b1b909a}\label{class_forme_aa3affd8040c92e6d5a2e56f53b1b909a}} 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} {\bfseries vecteur}
+\item 
+\mbox{\Hypertarget{class_forme_aff9d3738eaeead202a3d48be5ad6db56}\label{class_forme_aff9d3738eaeead202a3d48be5ad6db56}} 
+string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_forme_adf47dcd2111b4e29d1b260eae2491e83}\label{class_forme_adf47dcd2111b4e29d1b260eae2491e83}} 
+\index{Forme@{Forme}!Forme@{Forme}}
+\index{Forme@{Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{Forme()}{Forme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Forme\+::\+Forme (\begin{DoxyParamCaption}\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de \mbox{\hyperlink{class_forme}{Forme}} 
+\begin{DoxyParams}{Parameters}
+{\em couleur} & Couleur de la \mbox{\hyperlink{class_forme}{Forme}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_forme_a1ffd3f06594671f63f14240542a01bec}\label{class_forme_a1ffd3f06594671f63f14240542a01bec}} 
+\index{Forme@{Forme}!Forme@{Forme}}
+\index{Forme@{Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{Forme()}{Forme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Forme\+::\+Forme (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de \mbox{\hyperlink{class_forme}{Forme}} 
+\begin{DoxyParams}{Parameters}
+{\em s} & Le 1er \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} de la \mbox{\hyperlink{class_forme}{Forme}} en format char$\ast$ \\
+\hline
+{\em couleur} & Couleur de la \mbox{\hyperlink{class_forme}{Forme}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_forme_ab8ff0046faaee1e4ab5f5b1b6db44766}\label{class_forme_ab8ff0046faaee1e4ab5f5b1b6db44766}} 
+\index{Forme@{Forme}!Forme@{Forme}}
+\index{Forme@{Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{Forme()}{Forme()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Forme\+::\+Forme (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v1,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de \mbox{\hyperlink{class_forme}{Forme}} 
+\begin{DoxyParams}{Parameters}
+{\em v1} & Le 1er \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} de la \mbox{\hyperlink{class_forme}{Forme}} en format \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em couleur} & Couleur de la \mbox{\hyperlink{class_forme}{Forme}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_forme_ab7895f8b5859fb9b0166a475520b59c9}\label{class_forme_ab7895f8b5859fb9b0166a475520b59c9}} 
+\index{Forme@{Forme}!````~Forme@{$\sim$Forme}}
+\index{````~Forme@{$\sim$Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{$\sim$Forme()}{~Forme()}}
+{\footnotesize\ttfamily virtual Forme\+::$\sim$\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destructeur par defaut 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}\label{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}} 
+\index{Forme@{Forme}!aire@{aire}}
+\index{aire@{aire}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{aire()}{aire()}}
+{\footnotesize\ttfamily virtual double Forme\+::aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}aire de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a75474403aa640786f8e0565c170699ce}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a00c3159883cb42904517cf08d992b177}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_ac5a00db359162aa1a7277fe758bf5628}{Polygone}}, \mbox{\hyperlink{class_segment_aaa7ed517be88f5eea70c2a4e521c2524}{Segment}}, and \mbox{\hyperlink{class_triangle_a9aafc122d0a3c27349d745e801d7f4f0}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_ab93c9c26bc327f91db3cd90b940b432e}\label{class_forme_ab93c9c26bc327f91db3cd90b940b432e}} 
+\index{Forme@{Forme}!clone@{clone}}
+\index{clone@{clone}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Forme\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie un clone de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a3a515122bc11e0efbfbbf98d71a1cd2d}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_aec3d6a266026ab48a16bfa935ee423c9}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_acb88fcc5ec339c248ac94a3f67f30d47}{Polygone}}, \mbox{\hyperlink{class_segment_a2536780a4f2fcc5a8dbc1563930f36e8}{Segment}}, and \mbox{\hyperlink{class_triangle_ac80a3929d01bc5bf8312fade392a6f1d}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}\label{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}} 
+\index{Forme@{Forme}!getCentre@{getCentre}}
+\index{getCentre@{getCentre}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getCentre()}{getCentre()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Forme\+::get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie le centre de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a9db4d8f45eb48b45de897f36f2bdf9dd}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a7fcffced1f7759ddf717cc5bbd7129b3}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_aa53106f20c853ce35dbd5395c0bd5130}{Polygone}}, \mbox{\hyperlink{class_segment_af8cc1b1a9eb64c29d2fde61f462fc6d8}{Segment}}, and \mbox{\hyperlink{class_triangle_a19bd41509064edc3884ec9100a52668e}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}\label{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}} 
+\index{Forme@{Forme}!getCouleur@{getCouleur}}
+\index{getCouleur@{getCouleur}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getCouleur()}{getCouleur()}}
+{\footnotesize\ttfamily const string \& Forme\+::get\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Retrourn la Couleur de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_forme_a281ca5025c989c3d32e41a38f4943221}\label{class_forme_a281ca5025c989c3d32e41a38f4943221}} 
+\index{Forme@{Forme}!getHighestX@{getHighestX}}
+\index{getHighestX@{getHighestX}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getHighestX()}{getHighestX()}}
+{\footnotesize\ttfamily virtual double Forme\+::get\+HighestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retroune le plus grand X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_ae38212e882378703afb791e5b837a456}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a27c7ca6dbbd83e0029440d4ed8ea6fd1}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_aa92d1984410d8a88ccc6245e9063139d}{Polygone}}, \mbox{\hyperlink{class_segment_aee72e7c158fb61d5a71af8a7ab04b580}{Segment}}, and \mbox{\hyperlink{class_triangle_acb628e4b7f49300d0a3aa1a381e69b64}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_ab2dc188653d201c5751f784634f1845c}\label{class_forme_ab2dc188653d201c5751f784634f1845c}} 
+\index{Forme@{Forme}!getHighestY@{getHighestY}}
+\index{getHighestY@{getHighestY}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getHighestY()}{getHighestY()}}
+{\footnotesize\ttfamily virtual double Forme\+::get\+HighestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus grand Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a81f1b38d6ae1a1de75901d59a7b8cee5}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a6a848fcbcdfc2f02f38ab5110340b4f8}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_ab157b7efe1d827ae12ae972160ba5868}{Polygone}}, \mbox{\hyperlink{class_segment_a8d231f21b23ac1b3d191d02a987feff8}{Segment}}, and \mbox{\hyperlink{class_triangle_a001514859928bd3ee00a68e80a521f5b}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_a7867be3da34068ad4d1d465a9c23300a}\label{class_forme_a7867be3da34068ad4d1d465a9c23300a}} 
+\index{Forme@{Forme}!getLowestX@{getLowestX}}
+\index{getLowestX@{getLowestX}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getLowestX()}{getLowestX()}}
+{\footnotesize\ttfamily virtual double Forme\+::get\+LowestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_af89879fdaa9578a7e9969eada5b94459}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a3dfcb61d60f2427df269465cb8ee8e9c}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_ad78ea18111349797c4b9fc301644930c}{Polygone}}, \mbox{\hyperlink{class_segment_a39d20303055a8a750e8770aea5808dc3}{Segment}}, and \mbox{\hyperlink{class_triangle_add09e5056ddd067bd218f30a95cd225b}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_a6ac695ee15f115757647998c783aae35}\label{class_forme_a6ac695ee15f115757647998c783aae35}} 
+\index{Forme@{Forme}!getLowestY@{getLowestY}}
+\index{getLowestY@{getLowestY}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getLowestY()}{getLowestY()}}
+{\footnotesize\ttfamily virtual double Forme\+::get\+LowestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a57fbc6344ff90bb446d4233a04ca8e63}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_aede4a3b7c008447c4590a478316325eb}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_a11b43b2f880f16137085fadbfd101d19}{Polygone}}, \mbox{\hyperlink{class_segment_ac590393ce7e5666793f59ea581cb685f}{Segment}}, and \mbox{\hyperlink{class_triangle_a7458dc40af5b2526009e21413efbde94}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_abbb007018ed86af4349b732d335e1a95}\label{class_forme_abbb007018ed86af4349b732d335e1a95}} 
+\index{Forme@{Forme}!getVecteur@{getVecteur}}
+\index{getVecteur@{getVecteur}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{getVecteur()}{getVecteur()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Forme\+::get\+Vecteur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Renvoie le 1er \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_forme_a6cb51e359bf37be04df83c20cc59fd71}\label{class_forme_a6cb51e359bf37be04df83c20cc59fd71}} 
+\index{Forme@{Forme}!homotetie@{homotetie}}
+\index{homotetie@{homotetie}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{homotetie()}{homotetie()}}
+{\footnotesize\ttfamily virtual void Forme\+::homotetie (\begin{DoxyParamCaption}\item[{const double}]{k,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Permet de faire une homotetie de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em k} & Le rapport de l\textquotesingle{}homotetie \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a5f54972b0ec21a5cba47336386cb806d}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a969bb4448cf942a832a0b955625a515a}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_a5a0bcd17688c1d94a7a6af0080b10a32}{Polygone}}, \mbox{\hyperlink{class_segment_ad08799eb355465fb42551a41837b61d3}{Segment}}, and \mbox{\hyperlink{class_triangle_a5351a5c0ff7bb356daced72167353e5c}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_a58f745a9af387147da860f4979b01709}\label{class_forme_a58f745a9af387147da860f4979b01709}} 
+\index{Forme@{Forme}!rotation@{rotation}}
+\index{rotation@{rotation}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily virtual void Forme\+::rotation (\begin{DoxyParamCaption}\item[{const double}]{rot,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Permet de faire une rotation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em rot} & Le degré de la rotation \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_ab721297e76059a44f61042d2cb8bc11c}{Cercle}}, \mbox{\hyperlink{class_polygone_a59a088b05c5b0766b6587bbf4afd21b2}{Polygone}}, \mbox{\hyperlink{class_segment_a8e040eea51817c954f3fae7a208bac2c}{Segment}}, \mbox{\hyperlink{class_triangle_a6ef789e74b405cafeb43d57daf6ed242}{Triangle}}, and \mbox{\hyperlink{class_groupe_forme_a597c2e85c83befa6b4c62d6b835218af}{Groupe\+Forme}}.
+
+\mbox{\Hypertarget{class_forme_af0b5c9ab7d799511311f897bf77f3f21}\label{class_forme_af0b5c9ab7d799511311f897bf77f3f21}} 
+\index{Forme@{Forme}!setCouleur@{setCouleur}}
+\index{setCouleur@{setCouleur}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{setCouleur()}{setCouleur()}}
+{\footnotesize\ttfamily void Forme\+::set\+Couleur (\begin{DoxyParamCaption}\item[{const string \&}]{couleur }\end{DoxyParamCaption})}
+
+Modife la valeur de la couleur 
+\begin{DoxyParams}{Parameters}
+{\em couleur} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_forme_a76bddb1f13564ad3caaecbb86ca94db8}\label{class_forme_a76bddb1f13564ad3caaecbb86ca94db8}} 
+\index{Forme@{Forme}!setVecteur@{setVecteur}}
+\index{setVecteur@{setVecteur}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{setVecteur()}{setVecteur()}}
+{\footnotesize\ttfamily void Forme\+::set\+Vecteur (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vecteur }\end{DoxyParamCaption})}
+
+Modifie la valeur du 1er \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} de la \mbox{\hyperlink{class_forme}{Forme}} 
+\begin{DoxyParams}{Parameters}
+{\em vecteur} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_forme_a444ab74b7263e62031d6f7d06185ca5e}\label{class_forme_a444ab74b7263e62031d6f7d06185ca5e}} 
+\index{Forme@{Forme}!toString@{toString}}
+\index{toString@{toString}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual string Forme\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne la \mbox{\hyperlink{class_forme}{Forme}} au fromat String 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_segment_a4ad27dbc1243539bfd2306ebb244ee54}{Segment}}, \mbox{\hyperlink{class_triangle_a5fbe9e1bea3ab8aae5fdd1f044814843}{Triangle}}, \mbox{\hyperlink{class_cercle_a780b080182a2456a61c44d90fe95bbe3}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_aaae1810418bba28327a5c89e133ae31e}{Groupe\+Forme}}, and \mbox{\hyperlink{class_polygone_a9103227ee9cdb3d2711b96ba0b5ed913}{Polygone}}.
+
+\mbox{\Hypertarget{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}\label{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}} 
+\index{Forme@{Forme}!translation@{translation}}
+\index{translation@{translation}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily virtual void Forme\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Permet de faire une translation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} qui permet de faire la translation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_aee967fd4111e4acb07c5dd05e79d73c1}{Cercle}}, \mbox{\hyperlink{class_groupe_forme_a8401e6e225a04f3a8e12c7c80693d647}{Groupe\+Forme}}, \mbox{\hyperlink{class_polygone_ae0056b53431b66592aa5afd8a94fda32}{Polygone}}, \mbox{\hyperlink{class_segment_a1a3d525a4e72ebb0ec080d967fd4774a}{Segment}}, and \mbox{\hyperlink{class_triangle_aa9a4f3ae8c9df847c306a643b29ddff0}{Triangle}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Formes/Forme.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Formes/Forme.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{_segment_8h_source}{}\doxysection{Segment.\+h}
+\label{_segment_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Segment.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Segment.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 02/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PPIL\_MANUKYAN\_LAGLER\_SEGMENT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PPIL\_MANUKYAN\_LAGLER\_SEGMENT\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Vecteur2D.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Forme.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_segment}{Segment}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}}\{}
+\DoxyCodeLine{12     \textcolor{keyword}{private}:}
+\DoxyCodeLine{13         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur2;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_segment_af219a3403c0630143eb55ae89322168c}{Segment}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v2, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur): \mbox{\hyperlink{class_forme}{Forme}}(v1, couleur), vecteur2(v2) \{\}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{30         \mbox{\hyperlink{class_segment_a27d80800781bb90a1a006327c8957a34}{Segment}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *v1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *v2, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur) : \mbox{\hyperlink{class_forme}{Forme}}(v1, couleur), vecteur2(v2) \{\}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{36         \mbox{\hyperlink{class_segment_a838a5b3ea86d07abcbb87b75a2a783c3}{Segment}}(\mbox{\hyperlink{class_segment}{Segment}} \&s) : \mbox{\hyperlink{class_forme}{Forme}}(s.\mbox{\hyperlink{class_forme_abbb007018ed86af4349b732d335e1a95}{getVecteur}}(), s.\mbox{\hyperlink{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}{getCouleur}}()), vecteur2(s.getVecteur2()) \{\}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&getVecteur2() \textcolor{keyword}{const};}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} setVecteur2(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur2);}
+\DoxyCodeLine{40         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_segment_a4ad27dbc1243539bfd2306ebb244ee54}{toString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_segment_a1a3d525a4e72ebb0ec080d967fd4774a}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_segment_a8e040eea51817c954f3fae7a208bac2c}{rotation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} rot, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_segment_ad08799eb355465fb42551a41837b61d3}{homotetie}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} k, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_forme}{Forme}}* transform(\textcolor{keyword}{const} \mbox{\hyperlink{class_transformation_affine}{TransformationAffine}}\& tf) \textcolor{keyword}{const override};}
+\DoxyCodeLine{46         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_segment_aee72e7c158fb61d5a71af8a7ab04b580}{getHighestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{47         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_segment_a8d231f21b23ac1b3d191d02a987feff8}{getHighestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{48         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_segment_a39d20303055a8a750e8770aea5808dc3}{getLowestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{49         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_segment_ac590393ce7e5666793f59ea581cb685f}{getLowestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{50         \textcolor{keywordtype}{void} draw(\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} *vis) \textcolor{keyword}{const override};}
+\DoxyCodeLine{51         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_af8cc1b1a9eb64c29d2fde61f462fc6d8}{getCentre}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \mbox{\hyperlink{class_segment}{Segment}} * \mbox{\hyperlink{class_segment_a2536780a4f2fcc5a8dbc1563930f36e8}{clone}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_segment_aaa7ed517be88f5eea70c2a4e521c2524}{aire}}()\textcolor{keyword}{ override }\{\textcolor{keywordflow}{return} 0;\}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \textcolor{keyword}{operator} string()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{58             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_segment_a4ad27dbc1243539bfd2306ebb244ee54}{toString}}();}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keyword}{inline} ostream \&operator<<(ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}} \&segment) \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{return} os << (string)segment;}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PPIL\_MANUKYAN\_LAGLER\_SEGMENT\_H}}
+
+\end{DoxyCode}

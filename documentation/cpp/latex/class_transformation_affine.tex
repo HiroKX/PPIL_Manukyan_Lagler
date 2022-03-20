@@ -1,0 +1,75 @@
+\hypertarget{class_transformation_affine}{}\doxysection{Transformation\+Affine Class Reference}
+\label{class_transformation_affine}\index{TransformationAffine@{TransformationAffine}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transformation_affine_a51aea9a329caf13a1f0584b89d16458a}{Transformation\+Affine}} (\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&P1, \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} P2, \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&P1e, \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&P2e)
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_transformation_affine_aafd59d4ba26a5ea678bf6fc641c5e202}{trans\+Affine}} (\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} p) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_transformation_affine_a576dec2bd8ec787672ea883ab35042b9}{lambda1}}
+\item 
+\mbox{\Hypertarget{class_transformation_affine_ae5a76a5d2dfa7bbb845a0a00ed24fd33}\label{class_transformation_affine_ae5a76a5d2dfa7bbb845a0a00ed24fd33}} 
+double {\bfseries lambda2}
+\item 
+\mbox{\Hypertarget{class_transformation_affine_ad70d48906c243cfe8b529473d8a67aee}\label{class_transformation_affine_ad70d48906c243cfe8b529473d8a67aee}} 
+double {\bfseries a}
+\item 
+\mbox{\Hypertarget{class_transformation_affine_a42b8c1863b0f05712d042e49da5e78ef}\label{class_transformation_affine_a42b8c1863b0f05712d042e49da5e78ef}} 
+double {\bfseries b}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transformation_affine_a51aea9a329caf13a1f0584b89d16458a}\label{class_transformation_affine_a51aea9a329caf13a1f0584b89d16458a}} 
+\index{TransformationAffine@{TransformationAffine}!TransformationAffine@{TransformationAffine}}
+\index{TransformationAffine@{TransformationAffine}!TransformationAffine@{TransformationAffine}}
+\doxysubsubsection{\texorpdfstring{TransformationAffine()}{TransformationAffine()}}
+{\footnotesize\ttfamily Transformation\+Affine\+::\+Transformation\+Affine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{P1,  }\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}}]{P2,  }\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{P1e,  }\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{P2e }\end{DoxyParamCaption})}
+
+constructeur 
+\begin{DoxyParams}{Parameters}
+{\em P1} & Coordonnées P1 du monde \\
+\hline
+{\em P2} & Coordonnées P2 du monde \\
+\hline
+{\em P1e} & Coordonées P1e de l\textquotesingle{}écran \\
+\hline
+{\em P2e} & Coordonnées P2e de l\textquotesingle{}écran \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transformation_affine_aafd59d4ba26a5ea678bf6fc641c5e202}\label{class_transformation_affine_aafd59d4ba26a5ea678bf6fc641c5e202}} 
+\index{TransformationAffine@{TransformationAffine}!transAffine@{transAffine}}
+\index{transAffine@{transAffine}!TransformationAffine@{TransformationAffine}}
+\doxysubsubsection{\texorpdfstring{transAffine()}{transAffine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Transformation\+Affine\+::trans\+Affine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}}]{p }\end{DoxyParamCaption}) const}
+
+Effectue unetransformation affine sur un vecteur pour qu\textquotesingle{}il soit adapté à la taille de l\textquotesingle{}écran 
+\begin{DoxyParams}{Parameters}
+{\em p} & Vecteur avec coord monde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vecteur avec coord écran 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_transformation_affine_a576dec2bd8ec787672ea883ab35042b9}\label{class_transformation_affine_a576dec2bd8ec787672ea883ab35042b9}} 
+\index{TransformationAffine@{TransformationAffine}!lambda1@{lambda1}}
+\index{lambda1@{lambda1}!TransformationAffine@{TransformationAffine}}
+\doxysubsubsection{\texorpdfstring{lambda1}{lambda1}}
+{\footnotesize\ttfamily double Transformation\+Affine\+::lambda1}
+
+Données nécessaire lors d\textquotesingle{}une transformation affine. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Client/Transformation\+Affine.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Client/Transformation\+Affine.\+cpp\end{DoxyCompactItemize}

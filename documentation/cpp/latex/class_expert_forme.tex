@@ -1,0 +1,105 @@
+\hypertarget{class_expert_forme}{}\doxysection{Expert\+Forme Class Reference}
+\label{class_expert_forme}\index{ExpertForme@{ExpertForme}}
+Inheritance diagram for Expert\+Forme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_expert_forme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_expert_forme_a14214920f2958b16a738e2f744934653}{Expert\+Forme}} (\mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} $\ast$suivant)
+\item 
+\mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} $\ast$ \mbox{\hyperlink{class_expert_forme_a134e5f6020de1098223363f54f832cb3}{get\+Suivant}} () const
+\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_forme_a7f4686249f56f912fce2b6024d79dced}{resoudre}} (string s) override
+\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_forme_af5f9a212bd6f9b9a4cb51dbba8a86b72}{retrouver\+Forme}} (string s)=0
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_expert_forme_a5949e3a4e3e71fec5ef450e4e7e617fc}{split}} (string s, char delimiteur)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_expert_forme_a14214920f2958b16a738e2f744934653}\label{class_expert_forme_a14214920f2958b16a738e2f744934653}} 
+\index{ExpertForme@{ExpertForme}!ExpertForme@{ExpertForme}}
+\index{ExpertForme@{ExpertForme}!ExpertForme@{ExpertForme}}
+\doxysubsubsection{\texorpdfstring{ExpertForme()}{ExpertForme()}}
+{\footnotesize\ttfamily Expert\+Forme\+::\+Expert\+Forme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} $\ast$}]{suivant }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em suivant} & \mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_expert_forme_a134e5f6020de1098223363f54f832cb3}\label{class_expert_forme_a134e5f6020de1098223363f54f832cb3}} 
+\index{ExpertForme@{ExpertForme}!getSuivant@{getSuivant}}
+\index{getSuivant@{getSuivant}!ExpertForme@{ExpertForme}}
+\doxysubsubsection{\texorpdfstring{getSuivant()}{getSuivant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} $\ast$ Expert\+Forme\+::get\+Suivant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Renvoie l\textquotesingle{}\mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} suivant \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_expert_forme}{Expert\+Forme}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_expert_forme_a7f4686249f56f912fce2b6024d79dced}\label{class_expert_forme_a7f4686249f56f912fce2b6024d79dced}} 
+\index{ExpertForme@{ExpertForme}!resoudre@{resoudre}}
+\index{resoudre@{resoudre}!ExpertForme@{ExpertForme}}
+\doxysubsubsection{\texorpdfstring{resoudre()}{resoudre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Expert\+Forme\+::resoudre (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Résout un String passé en paramètre et retourne sa \mbox{\hyperlink{class_forme}{Forme}} 
+\begin{DoxyParams}{Parameters}
+{\em s} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne une \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_expert_af4ebecfae928607bb6ae0b4a61b3eacf}{Expert}}.
+
+\mbox{\Hypertarget{class_expert_forme_af5f9a212bd6f9b9a4cb51dbba8a86b72}\label{class_expert_forme_af5f9a212bd6f9b9a4cb51dbba8a86b72}} 
+\index{ExpertForme@{ExpertForme}!retrouverForme@{retrouverForme}}
+\index{retrouverForme@{retrouverForme}!ExpertForme@{ExpertForme}}
+\doxysubsubsection{\texorpdfstring{retrouverForme()}{retrouverForme()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Expert\+Forme\+::retrouver\+Forme (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Retrouve la \mbox{\hyperlink{class_forme}{Forme}} à partir d\textquotesingle{}un String et la retourne 
+\begin{DoxyParams}{Parameters}
+{\em s} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne une \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_expert_cercle_a3d55b149d64c4cbd04d4e789c16a1023}{Expert\+Cercle}}, \mbox{\hyperlink{class_expert_groupe_aaf9bdc00db5cd59559e456be6d4c8c05}{Expert\+Groupe}}, \mbox{\hyperlink{class_expert_polygone_ac620f796958060e923da55458332bc4a}{Expert\+Polygone}}, \mbox{\hyperlink{class_expert_segment_a8308649846eb379fa1b47d47097c4bd6}{Expert\+Segment}}, and \mbox{\hyperlink{class_expert_triangle_a5b1924e29d77b762af401a046d99a9b1}{Expert\+Triangle}}.
+
+\mbox{\Hypertarget{class_expert_forme_a5949e3a4e3e71fec5ef450e4e7e617fc}\label{class_expert_forme_a5949e3a4e3e71fec5ef450e4e7e617fc}} 
+\index{ExpertForme@{ExpertForme}!split@{split}}
+\index{split@{split}!ExpertForme@{ExpertForme}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Expert\+Forme\+::split (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{char}]{delimiteur }\end{DoxyParamCaption})}
+
+Permet de découper un string suivant un délimiteur 
+\begin{DoxyParams}{Parameters}
+{\em s} & String \\
+\hline
+{\em delimiteur} & Char \+: le délimiteur qui sert à découper la chaîne de caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Renvoie un vector de String 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Expert/Expert\+Forme.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Expert/Expert\+Forme.\+cpp\end{DoxyCompactItemize}

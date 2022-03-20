@@ -1,0 +1,301 @@
+\hypertarget{class_cercle}{}\doxysection{Cercle Class Reference}
+\label{class_cercle}\index{Cercle@{Cercle}}
+Inheritance diagram for Cercle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cercle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cercle_ace776353d84ed023fe922e3d5307ff80}{Cercle}} (const char $\ast$s, double rayon, const string \&couleur)
+\item 
+\mbox{\hyperlink{class_cercle_ad20b70d1ab62c8c6c874881959a47e99}{Cercle}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&s, double rayon, const string \&couleur)
+\item 
+\mbox{\hyperlink{class_cercle_a9aec4abaceb9ffe17d55ba4dfdf5a65a}{Cercle}} (\mbox{\hyperlink{class_cercle}{Cercle}} \&c)
+\item 
+\mbox{\Hypertarget{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}\label{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}} 
+double {\bfseries get\+Rayon} () const
+\item 
+\mbox{\Hypertarget{class_cercle_ab166965772a83365ac4b7514c0089434}\label{class_cercle_ab166965772a83365ac4b7514c0089434}} 
+void {\bfseries set\+Rayon} (double rayon)
+\item 
+void \mbox{\hyperlink{class_cercle_aee967fd4111e4acb07c5dd05e79d73c1}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_cercle_ab721297e76059a44f61042d2cb8bc11c}{rotation}} (const double rot, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_cercle_a5f54972b0ec21a5cba47336386cb806d}{homotetie}} (const double k, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_cercle_a9db4d8f45eb48b45de897f36f2bdf9dd}{get\+Centre}} () override
+\item 
+\mbox{\hyperlink{class_cercle}{Cercle}} $\ast$ \mbox{\hyperlink{class_cercle_a3a515122bc11e0efbfbbf98d71a1cd2d}{clone}} () override
+\item 
+double \mbox{\hyperlink{class_cercle_a75474403aa640786f8e0565c170699ce}{aire}} () override
+\item 
+void \mbox{\hyperlink{class_cercle_ab8324bdb4a3743dc1ee79d3326d2a981}{draw}} (\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$vis) const override
+\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_cercle_a312438fb18e2ab49eb9120e1a8c0146e}{transform}} (const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&tf) const override
+\item 
+double \mbox{\hyperlink{class_cercle_ae38212e882378703afb791e5b837a456}{get\+HighestX}} () const override
+\item 
+double \mbox{\hyperlink{class_cercle_a81f1b38d6ae1a1de75901d59a7b8cee5}{get\+HighestY}} () const override
+\item 
+double \mbox{\hyperlink{class_cercle_af89879fdaa9578a7e9969eada5b94459}{get\+LowestX}} () const override
+\item 
+double \mbox{\hyperlink{class_cercle_a57fbc6344ff90bb446d4233a04ca8e63}{get\+LowestY}} () const override
+\item 
+string \mbox{\hyperlink{class_cercle_a780b080182a2456a61c44d90fe95bbe3}{to\+String}} () const override
+\item 
+\mbox{\Hypertarget{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}\label{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}} 
+{\bfseries operator string} () const
+\item 
+\mbox{\Hypertarget{class_cercle_a1b3729ee8913994454b3f83cb8ea386c}\label{class_cercle_a1b3729ee8913994454b3f83cb8ea386c}} 
+{\bfseries Cercle} (\mbox{\hyperlink{class_point}{Point}} p, int rayon, String s)  throws Erreur 
+\item 
+\mbox{\Hypertarget{class_cercle_a50d8b49d716958abffb2376d24b3c87a}\label{class_cercle_a50d8b49d716958abffb2376d24b3c87a}} 
+int {\bfseries get\+Rayon} ()
+\item 
+\mbox{\Hypertarget{class_cercle_ad890e5c085bbc7d61dd5f84bf4b28756}\label{class_cercle_ad890e5c085bbc7d61dd5f84bf4b28756}} 
+void {\bfseries set\+Rayon} (int rayon)  throws Erreur 
+\item 
+String \mbox{\hyperlink{class_cercle_a29f2148c6ec74f7fd3c359e937007868}{to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cercle_ace776353d84ed023fe922e3d5307ff80}\label{class_cercle_ace776353d84ed023fe922e3d5307ff80}} 
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{Cercle()}{Cercle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Cercle\+::\+Cercle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{double}]{rayon,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em s} & String\+: Centre du \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+{\em rayon} & double\+: Rayon du \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+{\em couleur} & String\+: Couleur du \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_ad20b70d1ab62c8c6c874881959a47e99}\label{class_cercle_ad20b70d1ab62c8c6c874881959a47e99}} 
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{Cercle()}{Cercle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Cercle\+::\+Cercle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{s,  }\item[{double}]{rayon,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\+: Centre du \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+{\em rayon} & double\+: Rayon du \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+{\em couleur} & String\+: Couleur du \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_a9aec4abaceb9ffe17d55ba4dfdf5a65a}\label{class_cercle_a9aec4abaceb9ffe17d55ba4dfdf5a65a}} 
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{Cercle()}{Cercle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Cercle\+::\+Cercle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cercle}{Cercle}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor par Copy 
+\begin{DoxyParams}{Parameters}
+{\em c} & \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cercle_a75474403aa640786f8e0565c170699ce}\label{class_cercle_a75474403aa640786f8e0565c170699ce}} 
+\index{Cercle@{Cercle}!aire@{aire}}
+\index{aire@{aire}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{aire()}{aire()}}
+{\footnotesize\ttfamily double Cercle\+::aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}aire de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a3a515122bc11e0efbfbbf98d71a1cd2d}\label{class_cercle_a3a515122bc11e0efbfbbf98d71a1cd2d}} 
+\index{Cercle@{Cercle}!clone@{clone}}
+\index{clone@{clone}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cercle}{Cercle}} $\ast$ Cercle\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie un clone de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab93c9c26bc327f91db3cd90b940b432e}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_ab8324bdb4a3743dc1ee79d3326d2a981}\label{class_cercle_ab8324bdb4a3743dc1ee79d3326d2a981}} 
+\index{Cercle@{Cercle}!draw@{draw}}
+\index{draw@{draw}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cercle\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$}]{vis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a9db4d8f45eb48b45de897f36f2bdf9dd}\label{class_cercle_a9db4d8f45eb48b45de897f36f2bdf9dd}} 
+\index{Cercle@{Cercle}!getCentre@{getCentre}}
+\index{getCentre@{getCentre}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{getCentre()}{getCentre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Cercle\+::get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie le centre de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_ae38212e882378703afb791e5b837a456}\label{class_cercle_ae38212e882378703afb791e5b837a456}} 
+\index{Cercle@{Cercle}!getHighestX@{getHighestX}}
+\index{getHighestX@{getHighestX}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{getHighestX()}{getHighestX()}}
+{\footnotesize\ttfamily double Cercle\+::get\+HighestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retroune le plus grand X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a281ca5025c989c3d32e41a38f4943221}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a81f1b38d6ae1a1de75901d59a7b8cee5}\label{class_cercle_a81f1b38d6ae1a1de75901d59a7b8cee5}} 
+\index{Cercle@{Cercle}!getHighestY@{getHighestY}}
+\index{getHighestY@{getHighestY}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{getHighestY()}{getHighestY()}}
+{\footnotesize\ttfamily double Cercle\+::get\+HighestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus grand Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab2dc188653d201c5751f784634f1845c}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_af89879fdaa9578a7e9969eada5b94459}\label{class_cercle_af89879fdaa9578a7e9969eada5b94459}} 
+\index{Cercle@{Cercle}!getLowestX@{getLowestX}}
+\index{getLowestX@{getLowestX}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{getLowestX()}{getLowestX()}}
+{\footnotesize\ttfamily double Cercle\+::get\+LowestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a7867be3da34068ad4d1d465a9c23300a}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a57fbc6344ff90bb446d4233a04ca8e63}\label{class_cercle_a57fbc6344ff90bb446d4233a04ca8e63}} 
+\index{Cercle@{Cercle}!getLowestY@{getLowestY}}
+\index{getLowestY@{getLowestY}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{getLowestY()}{getLowestY()}}
+{\footnotesize\ttfamily double Cercle\+::get\+LowestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a6ac695ee15f115757647998c783aae35}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a5f54972b0ec21a5cba47336386cb806d}\label{class_cercle_a5f54972b0ec21a5cba47336386cb806d}} 
+\index{Cercle@{Cercle}!homotetie@{homotetie}}
+\index{homotetie@{homotetie}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{homotetie()}{homotetie()}}
+{\footnotesize\ttfamily void Cercle\+::homotetie (\begin{DoxyParamCaption}\item[{const double}]{k,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une homotetie de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em k} & Le rapport de l\textquotesingle{}homotetie \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a6cb51e359bf37be04df83c20cc59fd71}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_ab721297e76059a44f61042d2cb8bc11c}\label{class_cercle_ab721297e76059a44f61042d2cb8bc11c}} 
+\index{Cercle@{Cercle}!rotation@{rotation}}
+\index{rotation@{rotation}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily void Cercle\+::rotation (\begin{DoxyParamCaption}\item[{const double}]{rot,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une rotation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em rot} & Le degré de la rotation \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a58f745a9af387147da860f4979b01709}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a29f2148c6ec74f7fd3c359e937007868}\label{class_cercle_a29f2148c6ec74f7fd3c359e937007868}} 
+\index{Cercle@{Cercle}!toString@{toString}}
+\index{toString@{toString}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily String Cercle.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_formes}{Formes}}.
+
+\mbox{\Hypertarget{class_cercle_a780b080182a2456a61c44d90fe95bbe3}\label{class_cercle_a780b080182a2456a61c44d90fe95bbe3}} 
+\index{Cercle@{Cercle}!toString@{toString}}
+\index{toString@{toString}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Cercle\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne la \mbox{\hyperlink{class_forme}{Forme}} au fromat String 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a444ab74b7263e62031d6f7d06185ca5e}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a312438fb18e2ab49eb9120e1a8c0146e}\label{class_cercle_a312438fb18e2ab49eb9120e1a8c0146e}} 
+\index{Cercle@{Cercle}!transform@{transform}}
+\index{transform@{transform}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Cercle\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&}]{tf }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_aee967fd4111e4acb07c5dd05e79d73c1}\label{class_cercle_aee967fd4111e4acb07c5dd05e79d73c1}} 
+\index{Cercle@{Cercle}!translation@{translation}}
+\index{translation@{translation}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily void Cercle\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une translation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} qui permet de faire la translation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Formes/Cercle.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Serveur/Cercle.\+java\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Formes/Cercle.\+cpp\end{DoxyCompactItemize}

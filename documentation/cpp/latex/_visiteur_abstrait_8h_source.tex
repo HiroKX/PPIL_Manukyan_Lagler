@@ -1,0 +1,31 @@
+\hypertarget{_visiteur_abstrait_8h_source}{}\doxysection{Visiteur\+Abstrait.\+h}
+\label{_visiteur_abstrait_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/VisiteurAbstrait.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/VisiteurAbstrait.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by rlagl on 01/03/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CLIENT\_VISITEURABSTRAIT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CLIENT\_VISITEURABSTRAIT\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}h/Formes/Cercle.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}h/Formes/Polygone.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}h/Formes/Triangle.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}h/Formes/GroupeForme.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}h/Formes/Segment.h"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} \{}
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{17         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}} *c) =0;}
+\DoxyCodeLine{18         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} *p) =0;}
+\DoxyCodeLine{19         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_triangle}{Triangle}} *t) =0;}
+\DoxyCodeLine{20         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_groupe_forme}{GroupeForme}} *g) =0;}
+\DoxyCodeLine{21         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}} *s) =0;}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_VISITEURABSTRAIT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\hypertarget{_visiteur_dessine_8h_source}{}\doxysection{Visiteur\+Dessine.\+h}
+\label{_visiteur_dessine_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/VisiteurDessine.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Client/VisiteurDessine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by rlagl on 01/03/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CLIENT\_VISITEURDESSINE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CLIENT\_VISITEURDESSINE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}VisiteurAbstrait.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}h/Client/ClientWin.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_visiteur_dessine}{VisiteurDessine}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} \{}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_client_win}{ClientWin}}* c;}
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{16         vector<Forme*> lFormes;}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_visiteur_dessine}{VisiteurDessine}}(\mbox{\hyperlink{class_client_win}{ClientWin}} *c);}
+\DoxyCodeLine{18         \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}} *c) \textcolor{keyword}{override};}
+\DoxyCodeLine{19         \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} *p) \textcolor{keyword}{override};}
+\DoxyCodeLine{20         \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_triangle}{Triangle}} *t) \textcolor{keyword}{override};}
+\DoxyCodeLine{21         \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_groupe_forme}{GroupeForme}} *g) \textcolor{keyword}{override};}
+\DoxyCodeLine{22         \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}} *s) \textcolor{keyword}{override};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} sauvegarder(\mbox{\hyperlink{class_forme}{Forme}} *f);}
+\DoxyCodeLine{25         \textcolor{keywordtype}{void} enregistrer(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& fileName) \textcolor{keyword}{const};}
+\DoxyCodeLine{26         vector<Forme*> charger(\textcolor{keywordtype}{string} fileName);}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_VISITEURDESSINE\_H}}
+
+\end{DoxyCode}

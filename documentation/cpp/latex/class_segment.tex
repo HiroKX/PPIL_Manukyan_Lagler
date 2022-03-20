@@ -1,0 +1,279 @@
+\hypertarget{class_segment}{}\doxysection{Segment Class Reference}
+\label{class_segment}\index{Segment@{Segment}}
+Inheritance diagram for Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_segment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment_af219a3403c0630143eb55ae89322168c}{Segment}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v2, const string \&couleur)
+\item 
+\mbox{\hyperlink{class_segment_a27d80800781bb90a1a006327c8957a34}{Segment}} (const char $\ast$v1, const char $\ast$v2, const string \&couleur)
+\item 
+\mbox{\hyperlink{class_segment_a838a5b3ea86d07abcbb87b75a2a783c3}{Segment}} (\mbox{\hyperlink{class_segment}{Segment}} \&s)
+\item 
+\mbox{\Hypertarget{class_segment_a5742afc386f1f28f677127cb64446fde}\label{class_segment_a5742afc386f1f28f677127cb64446fde}} 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& {\bfseries get\+Vecteur2} () const
+\item 
+\mbox{\Hypertarget{class_segment_af2bbbeef70dff645e888addf34f4a130}\label{class_segment_af2bbbeef70dff645e888addf34f4a130}} 
+void {\bfseries set\+Vecteur2} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur2)
+\item 
+string \mbox{\hyperlink{class_segment_a4ad27dbc1243539bfd2306ebb244ee54}{to\+String}} () const
+\item 
+void \mbox{\hyperlink{class_segment_a1a3d525a4e72ebb0ec080d967fd4774a}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_segment_a8e040eea51817c954f3fae7a208bac2c}{rotation}} (const double rot, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_segment_ad08799eb355465fb42551a41837b61d3}{homotetie}} (const double k, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_segment_a21cadc0469f5b2c4f052979f87abc3f5}{transform}} (const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&tf) const override
+\item 
+double \mbox{\hyperlink{class_segment_aee72e7c158fb61d5a71af8a7ab04b580}{get\+HighestX}} () const override
+\item 
+double \mbox{\hyperlink{class_segment_a8d231f21b23ac1b3d191d02a987feff8}{get\+HighestY}} () const override
+\item 
+double \mbox{\hyperlink{class_segment_a39d20303055a8a750e8770aea5808dc3}{get\+LowestX}} () const override
+\item 
+double \mbox{\hyperlink{class_segment_ac590393ce7e5666793f59ea581cb685f}{get\+LowestY}} () const override
+\item 
+void \mbox{\hyperlink{class_segment_a583aba959263eb88e06b2fe0fbdc633c}{draw}} (\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$vis) const override
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_af8cc1b1a9eb64c29d2fde61f462fc6d8}{get\+Centre}} () override
+\item 
+\mbox{\hyperlink{class_segment}{Segment}} $\ast$ \mbox{\hyperlink{class_segment_a2536780a4f2fcc5a8dbc1563930f36e8}{clone}} () override
+\item 
+double \mbox{\hyperlink{class_segment_aaa7ed517be88f5eea70c2a4e521c2524}{aire}} () override
+\item 
+\mbox{\Hypertarget{class_segment_a28b3be893a35a0d73574354752c147fd}\label{class_segment_a28b3be893a35a0d73574354752c147fd}} 
+{\bfseries operator string} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_segment_af219a3403c0630143eb55ae89322168c}\label{class_segment_af219a3403c0630143eb55ae89322168c}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v2,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em v1} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\+: 1er \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} du \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+{\em v2} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\+: 2eme \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} du \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+{\em couleur} & String\+: Couleur du \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_segment_a27d80800781bb90a1a006327c8957a34}\label{class_segment_a27d80800781bb90a1a006327c8957a34}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const char $\ast$}]{v1,  }\item[{const char $\ast$}]{v2,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & Char$\ast$\+: 1er \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} du \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+{\em v2} & Char$\ast$\+: 2eme \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} du \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+{\em couleur} & String\+: Couleur du \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_segment_a838a5b3ea86d07abcbb87b75a2a783c3}\label{class_segment_a838a5b3ea86d07abcbb87b75a2a783c3}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_segment}{Segment}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor par copy 
+\begin{DoxyParams}{Parameters}
+{\em s} & Segement \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_segment_aaa7ed517be88f5eea70c2a4e521c2524}\label{class_segment_aaa7ed517be88f5eea70c2a4e521c2524}} 
+\index{Segment@{Segment}!aire@{aire}}
+\index{aire@{aire}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{aire()}{aire()}}
+{\footnotesize\ttfamily double Segment\+::aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}aire de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a2536780a4f2fcc5a8dbc1563930f36e8}\label{class_segment_a2536780a4f2fcc5a8dbc1563930f36e8}} 
+\index{Segment@{Segment}!clone@{clone}}
+\index{clone@{clone}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} $\ast$ Segment\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie un clone de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab93c9c26bc327f91db3cd90b940b432e}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a583aba959263eb88e06b2fe0fbdc633c}\label{class_segment_a583aba959263eb88e06b2fe0fbdc633c}} 
+\index{Segment@{Segment}!draw@{draw}}
+\index{draw@{draw}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Segment\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$}]{vis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_af8cc1b1a9eb64c29d2fde61f462fc6d8}\label{class_segment_af8cc1b1a9eb64c29d2fde61f462fc6d8}} 
+\index{Segment@{Segment}!getCentre@{getCentre}}
+\index{getCentre@{getCentre}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getCentre()}{getCentre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Segment\+::get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie le centre de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_aee72e7c158fb61d5a71af8a7ab04b580}\label{class_segment_aee72e7c158fb61d5a71af8a7ab04b580}} 
+\index{Segment@{Segment}!getHighestX@{getHighestX}}
+\index{getHighestX@{getHighestX}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getHighestX()}{getHighestX()}}
+{\footnotesize\ttfamily double Segment\+::get\+HighestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retroune le plus grand X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a281ca5025c989c3d32e41a38f4943221}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a8d231f21b23ac1b3d191d02a987feff8}\label{class_segment_a8d231f21b23ac1b3d191d02a987feff8}} 
+\index{Segment@{Segment}!getHighestY@{getHighestY}}
+\index{getHighestY@{getHighestY}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getHighestY()}{getHighestY()}}
+{\footnotesize\ttfamily double Segment\+::get\+HighestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus grand Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab2dc188653d201c5751f784634f1845c}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a39d20303055a8a750e8770aea5808dc3}\label{class_segment_a39d20303055a8a750e8770aea5808dc3}} 
+\index{Segment@{Segment}!getLowestX@{getLowestX}}
+\index{getLowestX@{getLowestX}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getLowestX()}{getLowestX()}}
+{\footnotesize\ttfamily double Segment\+::get\+LowestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a7867be3da34068ad4d1d465a9c23300a}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_ac590393ce7e5666793f59ea581cb685f}\label{class_segment_ac590393ce7e5666793f59ea581cb685f}} 
+\index{Segment@{Segment}!getLowestY@{getLowestY}}
+\index{getLowestY@{getLowestY}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getLowestY()}{getLowestY()}}
+{\footnotesize\ttfamily double Segment\+::get\+LowestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a6ac695ee15f115757647998c783aae35}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_ad08799eb355465fb42551a41837b61d3}\label{class_segment_ad08799eb355465fb42551a41837b61d3}} 
+\index{Segment@{Segment}!homotetie@{homotetie}}
+\index{homotetie@{homotetie}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{homotetie()}{homotetie()}}
+{\footnotesize\ttfamily void Segment\+::homotetie (\begin{DoxyParamCaption}\item[{const double}]{k,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une homotetie de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em k} & Le rapport de l\textquotesingle{}homotetie \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a6cb51e359bf37be04df83c20cc59fd71}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a8e040eea51817c954f3fae7a208bac2c}\label{class_segment_a8e040eea51817c954f3fae7a208bac2c}} 
+\index{Segment@{Segment}!rotation@{rotation}}
+\index{rotation@{rotation}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily void Segment\+::rotation (\begin{DoxyParamCaption}\item[{const double}]{rot,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une rotation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em rot} & Le degré de la rotation \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a58f745a9af387147da860f4979b01709}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a4ad27dbc1243539bfd2306ebb244ee54}\label{class_segment_a4ad27dbc1243539bfd2306ebb244ee54}} 
+\index{Segment@{Segment}!toString@{toString}}
+\index{toString@{toString}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Segment\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne la \mbox{\hyperlink{class_forme}{Forme}} au fromat String 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a444ab74b7263e62031d6f7d06185ca5e}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a21cadc0469f5b2c4f052979f87abc3f5}\label{class_segment_a21cadc0469f5b2c4f052979f87abc3f5}} 
+\index{Segment@{Segment}!transform@{transform}}
+\index{transform@{transform}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Segment\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&}]{tf }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a1a3d525a4e72ebb0ec080d967fd4774a}\label{class_segment_a1a3d525a4e72ebb0ec080d967fd4774a}} 
+\index{Segment@{Segment}!translation@{translation}}
+\index{translation@{translation}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily void Segment\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une translation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} qui permet de faire la translation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Formes/Segment.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Formes/Segment.\+cpp\end{DoxyCompactItemize}

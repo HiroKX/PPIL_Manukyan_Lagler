@@ -1,0 +1,63 @@
+\hypertarget{_groupe_forme_8h_source}{}\doxysection{Groupe\+Forme.\+h}
+\label{_groupe_forme_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/GroupeForme.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/GroupeForme.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 20/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CLIENT\_GROUPEFORME\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CLIENT\_GROUPEFORME\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Forme.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_groupe_forme}{GroupeForme}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}} \{}
+\DoxyCodeLine{12     \textcolor{keyword}{private}:}
+\DoxyCodeLine{13         vector<Forme*> groupe;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_groupe_forme_ab3b8f1cee118e1c937efd38a95af7dea}{GroupeForme}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur) : \mbox{\hyperlink{class_forme}{Forme}}(couleur) \{\}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{26         \mbox{\hyperlink{class_groupe_forme_ab9c5a43827a27c6f9f7118394c7e5f82}{GroupeForme}}(\mbox{\hyperlink{class_groupe_forme}{GroupeForme}} \&g) : \mbox{\hyperlink{class_forme}{Forme}}(g.\mbox{\hyperlink{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}{getCouleur}}()), groupe(g.groupe) \{\}}
+\DoxyCodeLine{27         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_groupe_forme}{\string~GroupeForme}}()\{}
+\DoxyCodeLine{28             \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_forme}{Forme}} * f: groupe)\{}
+\DoxyCodeLine{29                 \textcolor{keyword}{delete} f;}
+\DoxyCodeLine{30             \}}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keyword}{const} vector<struct Forme *> \& getGroupe() \textcolor{keyword}{const};}
+\DoxyCodeLine{34         \textcolor{keywordtype}{void} setGroupe(\textcolor{keyword}{const} vector<Forme*> \&groupe);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36         \textcolor{keywordtype}{void} addForme(\mbox{\hyperlink{class_forme}{Forme}}* f);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_forme_a8401e6e225a04f3a8e12c7c80693d647}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_forme_a597c2e85c83befa6b4c62d6b835218af}{rotation}}(\textcolor{keywordtype}{double} rot, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{40         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_forme_a969bb4448cf942a832a0b955625a515a}{homotetie}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} k, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{41         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_groupe_forme_a7fcffced1f7759ddf717cc5bbd7129b3}{getCentre}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \mbox{\hyperlink{class_groupe_forme}{GroupeForme}} * \mbox{\hyperlink{class_groupe_forme_aec3d6a266026ab48a16bfa935ee423c9}{clone}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_groupe_forme_a00c3159883cb42904517cf08d992b177}{aire}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \textcolor{keywordtype}{void} draw(\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} *vis)\textcolor{keyword}{const  override};}
+\DoxyCodeLine{48         \mbox{\hyperlink{class_forme}{Forme}}* transform(\textcolor{keyword}{const} \mbox{\hyperlink{class_transformation_affine}{TransformationAffine}}\& tf) \textcolor{keyword}{const override};}
+\DoxyCodeLine{49         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_groupe_forme_a27c7ca6dbbd83e0029440d4ed8ea6fd1}{getHighestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{50         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_groupe_forme_a6a848fcbcdfc2f02f38ab5110340b4f8}{getHighestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{51         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_groupe_forme_a3dfcb61d60f2427df269465cb8ee8e9c}{getLowestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{52         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_groupe_forme_aede4a3b7c008447c4590a478316325eb}{getLowestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_groupe_forme_aaae1810418bba28327a5c89e133ae31e}{toString}}() \textcolor{keyword}{const override} ;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{keyword}{operator} string()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_groupe_forme_aaae1810418bba28327a5c89e133ae31e}{toString}}();}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keyword}{inline} ostream \&operator<<(ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_groupe_forme}{GroupeForme}} \&groupeForme) \{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{return} os << (string)groupeForme;}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_GROUPEFORME\_H}}
+
+\end{DoxyCode}

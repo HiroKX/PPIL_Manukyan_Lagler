@@ -1,0 +1,179 @@
+\hypertarget{class_vecteur2_d}{}\doxysection{Vecteur2D Class Reference}
+\label{class_vecteur2_d}\index{Vecteur2D@{Vecteur2D}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vecteur2_d_ad9dee29de356e9bd4bee597dddf431b0}\label{class_vecteur2_d_ad9dee29de356e9bd4bee597dddf431b0}} 
+{\bfseries Vecteur2D} (const double \&x=0, const double \&y=0)
+\item 
+\mbox{\hyperlink{class_vecteur2_d_ad42dc9516e287260c4c315830ff057de}{Vecteur2D}} (const char $\ast$s)
+\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}{operator+}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&u) const
+\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_a6bd05da962f203d67a04042c0780023e}{operator$\ast$}} (const double \&a) const
+\item 
+double \mbox{\hyperlink{class_vecteur2_d_ac5550e70ffe0908eb1acc937a229c578}{operator$\ast$}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) const
+\item 
+double \mbox{\hyperlink{class_vecteur2_d_a1bbacc32d863fec29d13e5406f60c88d}{longueur2}} () const
+\item 
+double \mbox{\hyperlink{class_vecteur2_d_aa6a7d501f0421b2c8cab58222fe4bee1}{longueur}} () const
+\item 
+double \mbox{\hyperlink{class_vecteur2_d_a2f70cb8875b437d5bf19254c031bc218}{det}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) const
+\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}{operator-\/}} () const
+\item 
+\mbox{\hyperlink{class_vecteur2_d_a10c83f5b0aaa60cc01912b33e3c76fc5}{operator string}} () const
+\item 
+string \mbox{\hyperlink{class_vecteur2_d_a9ee4609e0dd349d5e1f644d5357513af}{to\+String}} () const
+\item 
+\mbox{\Hypertarget{class_vecteur2_d_aa5ca5fd287d5060b8fe35459818a12b5}\label{class_vecteur2_d_aa5ca5fd287d5060b8fe35459818a12b5}} 
+void {\bfseries set\+Vecteur} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} vecteur2D)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_vecteur2_d_abb7186df2bee549fd3965f673b4f7bfa}{det}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v1, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}\label{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}} 
+double {\bfseries x}
+\item 
+\mbox{\Hypertarget{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}\label{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}} 
+double {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vecteur2_d_ad42dc9516e287260c4c315830ff057de}\label{class_vecteur2_d_ad42dc9516e287260c4c315830ff057de}} 
+\index{Vecteur2D@{Vecteur2D}!Vecteur2D@{Vecteur2D}}
+\index{Vecteur2D@{Vecteur2D}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{Vecteur2D()}{Vecteur2D()}}
+{\footnotesize\ttfamily Vecteur2\+D\+::\+Vecteur2D (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+DONNEES \+: s respectant le format \char`\"{}(  nombre réel, nombre réel)\char`\"{} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vecteur2_d_a2f70cb8875b437d5bf19254c031bc218}\label{class_vecteur2_d_a2f70cb8875b437d5bf19254c031bc218}} 
+\index{Vecteur2D@{Vecteur2D}!det@{det}}
+\index{det@{det}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{det()}{det()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::det (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calcule le Determinant de deux Vecteur2d 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_abb7186df2bee549fd3965f673b4f7bfa}\label{class_vecteur2_d_abb7186df2bee549fd3965f673b4f7bfa}} 
+\index{Vecteur2D@{Vecteur2D}!det@{det}}
+\index{det@{det}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{det()}{det()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double Vecteur2\+D\+::det (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Caclule le Determinant de deux \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\begin{DoxyParams}{Parameters}
+{\em v1} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em v2} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_aa6a7d501f0421b2c8cab58222fe4bee1}\label{class_vecteur2_d_aa6a7d501f0421b2c8cab58222fe4bee1}} 
+\index{Vecteur2D@{Vecteur2D}!longueur@{longueur}}
+\index{longueur@{longueur}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{longueur()}{longueur()}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::longueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calcule la racine Carré d\textquotesingle{}un Vecteur2\+D² \begin{DoxyReturn}{Returns}
+Retourne un double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a1bbacc32d863fec29d13e5406f60c88d}\label{class_vecteur2_d_a1bbacc32d863fec29d13e5406f60c88d}} 
+\index{Vecteur2D@{Vecteur2D}!longueur2@{longueur2}}
+\index{longueur2@{longueur2}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{longueur2()}{longueur2()}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::longueur2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calcule le \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} au carré \begin{DoxyReturn}{Returns}
+Retourne un double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a10c83f5b0aaa60cc01912b33e3c76fc5}\label{class_vecteur2_d_a10c83f5b0aaa60cc01912b33e3c76fc5}} 
+\index{Vecteur2D@{Vecteur2D}!operator string@{operator string}}
+\index{operator string@{operator string}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Vecteur2\+D\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operator string \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a6bd05da962f203d67a04042c0780023e}\label{class_vecteur2_d_a6bd05da962f203d67a04042c0780023e}} 
+\index{Vecteur2D@{Vecteur2D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Multiplication d\textquotesingle{}un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} par un double 
+\begin{DoxyParams}{Parameters}
+{\em a} & double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_ac5550e70ffe0908eb1acc937a229c578}\label{class_vecteur2_d_ac5550e70ffe0908eb1acc937a229c578}} 
+\index{Vecteur2D@{Vecteur2D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Multiplication d\textquotesingle{}un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} par un autre \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retroune un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}\label{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}} 
+\index{Vecteur2D@{Vecteur2D}!operator+@{operator+}}
+\index{operator+@{operator+}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2\+D\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{u }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Addition d\textquotesingle{}un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} par un autre \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\begin{DoxyParams}{Parameters}
+{\em u} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}\label{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}} 
+\index{Vecteur2D@{Vecteur2D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2\+D\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item unaire (c\textquotesingle{}est-\/à-\/ dire opposé d\textquotesingle{}un vecteur) 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vecteur2_d_a9ee4609e0dd349d5e1f644d5357513af}\label{class_vecteur2_d_a9ee4609e0dd349d5e1f644d5357513af}} 
+\index{Vecteur2D@{Vecteur2D}!toString@{toString}}
+\index{toString@{toString}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Vecteur2\+D\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Renvoie le \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} sous la forme d\textquotesingle{}un string \begin{DoxyReturn}{Returns}
+Retourne un string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Formes/Vecteur2\+D.\+h\end{DoxyCompactItemize}

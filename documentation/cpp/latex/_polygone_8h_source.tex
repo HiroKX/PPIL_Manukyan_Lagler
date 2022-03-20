@@ -1,0 +1,61 @@
+\hypertarget{_polygone_8h_source}{}\doxysection{Polygone.\+h}
+\label{_polygone_8h_source}\index{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Polygone.h@{C:/Users/Samvel/Documents/GitHub/PPIL\_Manukyan\_Lagler/Client/h/Formes/Polygone.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Samvel on 02/02/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PPIL\_MANUKYAN\_LAGLER\_RECTANGLE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PPIL\_MANUKYAN\_LAGLER\_RECTANGLE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Vecteur2D.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Forme.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_polygone}{Polygone}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}}\{}
+\DoxyCodeLine{13     \textcolor{keyword}{private}:}
+\DoxyCodeLine{14         vector<Vecteur2D> vecteurs;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_polygone_a23fbdf1725bfd7969a21cb444185c880}{Polygone}}(vector<Vecteur2D> \&vec, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&couleur) : \mbox{\hyperlink{class_forme}{Forme}}(couleur) \{}
+\DoxyCodeLine{23             \mbox{\hyperlink{class_forme_a76bddb1f13564ad3caaecbb86ca94db8}{setVecteur}}(vec.at(0));}
+\DoxyCodeLine{24             vecteurs = vec;}
+\DoxyCodeLine{25         \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{31         \mbox{\hyperlink{class_polygone_a34c38fd13b5f0a47645e07c0c14966bc}{Polygone}}(\mbox{\hyperlink{class_polygone}{Polygone}} \&p) : \mbox{\hyperlink{class_forme}{Forme}}(p.\mbox{\hyperlink{class_forme_a186d1df6c09c4918ede41f00e3cb10bd}{getCouleur}}()), vecteurs(p.vecteurs)\{}
+\DoxyCodeLine{32             \mbox{\hyperlink{class_forme_a76bddb1f13564ad3caaecbb86ca94db8}{setVecteur}}(p.\mbox{\hyperlink{class_forme_abbb007018ed86af4349b732d335e1a95}{getVecteur}}());}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} addVecteur(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_polygone_ae0056b53431b66592aa5afd8a94fda32}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_polygone_a59a088b05c5b0766b6587bbf4afd21b2}{rotation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} rot, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_polygone_a5a0bcd17688c1d94a7a6af0080b10a32}{homotetie}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} k, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{override};}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_polygone_aa53106f20c853ce35dbd5395c0bd5130}{getCentre}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_polygone}{Polygone}} * \mbox{\hyperlink{class_polygone_acb88fcc5ec339c248ac94a3f67f30d47}{clone}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_polygone_ac5a00db359162aa1a7277fe758bf5628}{aire}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{keywordtype}{void} draw(\mbox{\hyperlink{class_visiteur_abstrait}{VisiteurAbstrait}} *vis) \textcolor{keyword}{const override};}
+\DoxyCodeLine{47         \mbox{\hyperlink{class_forme}{Forme}}* transform(\textcolor{keyword}{const} \mbox{\hyperlink{class_transformation_affine}{TransformationAffine}}\& tf) \textcolor{keyword}{const override};}
+\DoxyCodeLine{48         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_polygone_aa92d1984410d8a88ccc6245e9063139d}{getHighestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{49         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_polygone_ab157b7efe1d827ae12ae972160ba5868}{getHighestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{50         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_polygone_ad78ea18111349797c4b9fc301644930c}{getLowestX}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{51         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_polygone_a11b43b2f880f16137085fadbfd101d19}{getLowestY}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_polygone_a9103227ee9cdb3d2711b96ba0b5ed913}{toString}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keyword}{operator} string()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{56             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_polygone_a9103227ee9cdb3d2711b96ba0b5ed913}{toString}}();}
+\DoxyCodeLine{57         \}}
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keyword}{inline} ostream \&operator<<(ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} \&polygone) \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{return} os << (string)polygone;}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PPIL\_MANUKYAN\_LAGLER\_RECTANGLE\_H}}
+
+\end{DoxyCode}

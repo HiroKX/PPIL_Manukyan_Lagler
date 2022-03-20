@@ -1,0 +1,285 @@
+\hypertarget{class_polygone}{}\doxysection{Polygone Class Reference}
+\label{class_polygone}\index{Polygone@{Polygone}}
+Inheritance diagram for Polygone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_polygone}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_polygone_a23fbdf1725bfd7969a21cb444185c880}{Polygone}} (vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ \&vec, const string \&couleur)
+\item 
+\mbox{\hyperlink{class_polygone_a34c38fd13b5f0a47645e07c0c14966bc}{Polygone}} (\mbox{\hyperlink{class_polygone}{Polygone}} \&p)
+\item 
+\mbox{\Hypertarget{class_polygone_a1a5a736c7dde56c9537ba69be958a4ce}\label{class_polygone_a1a5a736c7dde56c9537ba69be958a4ce}} 
+void {\bfseries add\+Vecteur} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecteur)
+\item 
+void \mbox{\hyperlink{class_polygone_ae0056b53431b66592aa5afd8a94fda32}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_polygone_a59a088b05c5b0766b6587bbf4afd21b2}{rotation}} (const double rot, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+void \mbox{\hyperlink{class_polygone_a5a0bcd17688c1d94a7a6af0080b10a32}{homotetie}} (const double k, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) override
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_polygone_aa53106f20c853ce35dbd5395c0bd5130}{get\+Centre}} () override
+\item 
+\mbox{\hyperlink{class_polygone}{Polygone}} $\ast$ \mbox{\hyperlink{class_polygone_acb88fcc5ec339c248ac94a3f67f30d47}{clone}} () override
+\item 
+double \mbox{\hyperlink{class_polygone_ac5a00db359162aa1a7277fe758bf5628}{aire}} () override
+\item 
+void \mbox{\hyperlink{class_polygone_a8f7cf196ac0bf8c7f75abf77b73ff7ac}{draw}} (\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$vis) const override
+\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_polygone_abe17307623ede32c8a83cd1cddba28e5}{transform}} (const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&tf) const override
+\item 
+double \mbox{\hyperlink{class_polygone_aa92d1984410d8a88ccc6245e9063139d}{get\+HighestX}} () const override
+\item 
+double \mbox{\hyperlink{class_polygone_ab157b7efe1d827ae12ae972160ba5868}{get\+HighestY}} () const override
+\item 
+double \mbox{\hyperlink{class_polygone_ad78ea18111349797c4b9fc301644930c}{get\+LowestX}} () const override
+\item 
+double \mbox{\hyperlink{class_polygone_a11b43b2f880f16137085fadbfd101d19}{get\+LowestY}} () const override
+\item 
+string \mbox{\hyperlink{class_polygone_a9103227ee9cdb3d2711b96ba0b5ed913}{to\+String}} () const override
+\item 
+\mbox{\Hypertarget{class_polygone_abd801a84b5306df8021f1571d82deafd}\label{class_polygone_abd801a84b5306df8021f1571d82deafd}} 
+{\bfseries operator string} () const
+\item 
+String \mbox{\hyperlink{class_polygone_ab86c63946c253341f7e89f1d9511be1a}{to\+String}} ()
+\item 
+\mbox{\Hypertarget{class_polygone_ab2c8bf8cd762e484f594cf618ed270bb}\label{class_polygone_ab2c8bf8cd762e484f594cf618ed270bb}} 
+{\bfseries Polygone} (int\mbox{[}$\,$\mbox{]} xP, int\mbox{[}$\,$\mbox{]} yP, String s)
+\item 
+\mbox{\Hypertarget{class_polygone_ae9c593ec556b206e7df628940c70ee0c}\label{class_polygone_ae9c593ec556b206e7df628940c70ee0c}} 
+int\mbox{[}$\,$\mbox{]} {\bfseries getx\+Coord} ()
+\item 
+\mbox{\Hypertarget{class_polygone_a8727f2e6c0e84b3f5f3226c4b7cc1821}\label{class_polygone_a8727f2e6c0e84b3f5f3226c4b7cc1821}} 
+void {\bfseries setx\+Coord} (int\mbox{[}$\,$\mbox{]} x\+Coord)
+\item 
+\mbox{\Hypertarget{class_polygone_abb4a9e64a26ccf9d49cebeccb3d7a1e2}\label{class_polygone_abb4a9e64a26ccf9d49cebeccb3d7a1e2}} 
+int\mbox{[}$\,$\mbox{]} {\bfseries gety\+Coord} ()
+\item 
+\mbox{\Hypertarget{class_polygone_afc1006c2f27779efffc0aff1fe369d97}\label{class_polygone_afc1006c2f27779efffc0aff1fe369d97}} 
+void {\bfseries sety\+Coord} (int\mbox{[}$\,$\mbox{]} y\+Coord)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_polygone_a23fbdf1725bfd7969a21cb444185c880}\label{class_polygone_a23fbdf1725bfd7969a21cb444185c880}} 
+\index{Polygone@{Polygone}!Polygone@{Polygone}}
+\index{Polygone@{Polygone}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{Polygone()}{Polygone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Polygone\+::\+Polygone (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ \&}]{vec,  }\item[{const string \&}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em vec} & vector$<$\+Vecteur2\+D$>$ \+: Liste des \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} du \mbox{\hyperlink{class_polygone}{Polygone}} \\
+\hline
+{\em couleur} & String\+: Couleur du \mbox{\hyperlink{class_polygone}{Polygone}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_polygone_a34c38fd13b5f0a47645e07c0c14966bc}\label{class_polygone_a34c38fd13b5f0a47645e07c0c14966bc}} 
+\index{Polygone@{Polygone}!Polygone@{Polygone}}
+\index{Polygone@{Polygone}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{Polygone()}{Polygone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Polygone\+::\+Polygone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_polygone}{Polygone}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor par copy 
+\begin{DoxyParams}{Parameters}
+{\em p} & \mbox{\hyperlink{class_polygone}{Polygone}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_polygone_ac5a00db359162aa1a7277fe758bf5628}\label{class_polygone_ac5a00db359162aa1a7277fe758bf5628}} 
+\index{Polygone@{Polygone}!aire@{aire}}
+\index{aire@{aire}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{aire()}{aire()}}
+{\footnotesize\ttfamily double Polygone\+::aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}aire de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a87b5ad9358ba584ba4a6da0f8680785e}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_acb88fcc5ec339c248ac94a3f67f30d47}\label{class_polygone_acb88fcc5ec339c248ac94a3f67f30d47}} 
+\index{Polygone@{Polygone}!clone@{clone}}
+\index{clone@{clone}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_polygone}{Polygone}} $\ast$ Polygone\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie un clone de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab93c9c26bc327f91db3cd90b940b432e}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_a8f7cf196ac0bf8c7f75abf77b73ff7ac}\label{class_polygone_a8f7cf196ac0bf8c7f75abf77b73ff7ac}} 
+\index{Polygone@{Polygone}!draw@{draw}}
+\index{draw@{draw}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Polygone\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_abstrait}{Visiteur\+Abstrait}} $\ast$}]{vis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_aa53106f20c853ce35dbd5395c0bd5130}\label{class_polygone_aa53106f20c853ce35dbd5395c0bd5130}} 
+\index{Polygone@{Polygone}!getCentre@{getCentre}}
+\index{getCentre@{getCentre}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{getCentre()}{getCentre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Polygone\+::get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Renvoie le centre de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a04a540f68f097df2bf0f614ec3e05b3e}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_aa92d1984410d8a88ccc6245e9063139d}\label{class_polygone_aa92d1984410d8a88ccc6245e9063139d}} 
+\index{Polygone@{Polygone}!getHighestX@{getHighestX}}
+\index{getHighestX@{getHighestX}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{getHighestX()}{getHighestX()}}
+{\footnotesize\ttfamily double Polygone\+::get\+HighestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retroune le plus grand X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a281ca5025c989c3d32e41a38f4943221}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_ab157b7efe1d827ae12ae972160ba5868}\label{class_polygone_ab157b7efe1d827ae12ae972160ba5868}} 
+\index{Polygone@{Polygone}!getHighestY@{getHighestY}}
+\index{getHighestY@{getHighestY}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{getHighestY()}{getHighestY()}}
+{\footnotesize\ttfamily double Polygone\+::get\+HighestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus grand Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_ab2dc188653d201c5751f784634f1845c}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_ad78ea18111349797c4b9fc301644930c}\label{class_polygone_ad78ea18111349797c4b9fc301644930c}} 
+\index{Polygone@{Polygone}!getLowestX@{getLowestX}}
+\index{getLowestX@{getLowestX}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{getLowestX()}{getLowestX()}}
+{\footnotesize\ttfamily double Polygone\+::get\+LowestX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit X de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a7867be3da34068ad4d1d465a9c23300a}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_a11b43b2f880f16137085fadbfd101d19}\label{class_polygone_a11b43b2f880f16137085fadbfd101d19}} 
+\index{Polygone@{Polygone}!getLowestY@{getLowestY}}
+\index{getLowestY@{getLowestY}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{getLowestY()}{getLowestY()}}
+{\footnotesize\ttfamily double Polygone\+::get\+LowestY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne le plus petit Y de la \mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a6ac695ee15f115757647998c783aae35}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_a5a0bcd17688c1d94a7a6af0080b10a32}\label{class_polygone_a5a0bcd17688c1d94a7a6af0080b10a32}} 
+\index{Polygone@{Polygone}!homotetie@{homotetie}}
+\index{homotetie@{homotetie}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{homotetie()}{homotetie()}}
+{\footnotesize\ttfamily void Polygone\+::homotetie (\begin{DoxyParamCaption}\item[{const double}]{k,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une homotetie de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em k} & Le rapport de l\textquotesingle{}homotetie \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a6cb51e359bf37be04df83c20cc59fd71}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_a59a088b05c5b0766b6587bbf4afd21b2}\label{class_polygone_a59a088b05c5b0766b6587bbf4afd21b2}} 
+\index{Polygone@{Polygone}!rotation@{rotation}}
+\index{rotation@{rotation}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily void Polygone\+::rotation (\begin{DoxyParamCaption}\item[{const double}]{rot,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une rotation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em rot} & Le degré de la rotation \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a58f745a9af387147da860f4979b01709}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_ab86c63946c253341f7e89f1d9511be1a}\label{class_polygone_ab86c63946c253341f7e89f1d9511be1a}} 
+\index{Polygone@{Polygone}!toString@{toString}}
+\index{toString@{toString}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily String Polygone.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_formes}{Formes}}.
+
+\mbox{\Hypertarget{class_polygone_a9103227ee9cdb3d2711b96ba0b5ed913}\label{class_polygone_a9103227ee9cdb3d2711b96ba0b5ed913}} 
+\index{Polygone@{Polygone}!toString@{toString}}
+\index{toString@{toString}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Polygone\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Retourne la \mbox{\hyperlink{class_forme}{Forme}} au fromat String 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a444ab74b7263e62031d6f7d06185ca5e}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_abe17307623ede32c8a83cd1cddba28e5}\label{class_polygone_abe17307623ede32c8a83cd1cddba28e5}} 
+\index{Polygone@{Polygone}!transform@{transform}}
+\index{transform@{transform}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Polygone\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_transformation_affine}{Transformation\+Affine}} \&}]{tf }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_ae0056b53431b66592aa5afd8a94fda32}\label{class_polygone_ae0056b53431b66592aa5afd8a94fda32}} 
+\index{Polygone@{Polygone}!translation@{translation}}
+\index{translation@{translation}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily void Polygone\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Permet de faire une translation de la \mbox{\hyperlink{class_forme}{Forme}} suivant\+: 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} qui permet de faire la translation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme_a8920892d9a8a4bc47ee82887e1ffcb27}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/h/\+Formes/Polygone.\+h\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Serveur/Polygone.\+java\item 
+C\+:/\+Users/\+Samvel/\+Documents/\+Git\+Hub/\+PPIL\+\_\+\+Manukyan\+\_\+\+Lagler/\+Client/cpp/\+Formes/Polygone.\+cpp\end{DoxyCompactItemize}

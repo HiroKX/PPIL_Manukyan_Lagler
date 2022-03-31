@@ -5,15 +5,9 @@
 #include "h/Client/TransformationAffine.h"
 
 TransformationAffine::TransformationAffine(Vecteur2D &P1, Vecteur2D P2, Vecteur2D &P1e, Vecteur2D &P2e) {
-
-    cout << P1 <<endl;
-    cout << P2 <<endl;
     double tempX = abs(P2e.x-P1e.x)/abs(P2.x-P1.x);
-    cout << "tempx" << tempX <<endl;
     double tempY = abs(P2e.y-P1e.y)/abs(P2.y-P1.y);
-    cout <<"tempy "<< tempY <<endl;
     double lambda = min(tempX,tempY);
-    cout << "lambda " << lambda << endl << endl;
     int epsilon1;
     if((P2.x-P1.x<0 && P2e.x-P1e.x <0) || P2.x-P1.x>0 && P2e.x-P1e.x>0){
         epsilon1=1;

@@ -44,9 +44,6 @@ int main(){
     vis.enregistrer("majoliefigure2.txt");
     vector<Forme*> lformes = vis.charger("majoliefigure2.txt");
     Forme *G2 = lformes.at(0);
-    G2->setCouleur("green");
-    G2->draw(&vis);
-    c.dessine();
 
 
 
